@@ -1,0 +1,8 @@
+# 사용금지 폴더는 참조·업로드하지 않는다 (CLAUDE.md 규칙)
+/사용금지/
+
+# OS·에디터 부산물
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.tmp
