@@ -58,4 +58,4 @@
 ## 5. 버전 관리 · GitHub (2026-11-07)
 - Git 저장소는 `19_newItsm` 폴더에만 만든다 (상위 `work`·`workspace` 는 저장소가 아니다). 기본 브랜치 `main`.
 - `.gitignore` 로 `사용금지/` 폴더는 커밋·업로드하지 않는다.
-- 원격(origin)은 GitHub 저장소 하나만 연결하고, 커밋·push 는 사용자가 요청할 때만 한다.
+- 원격 origin = https://github.com/gkonkim/itsm-mockup.git (main 추적). 커밋·push 는 사용자가 요청할 때만 한다.

@@ -144,4 +144,4 @@
   - 19_newItsm 에서 git init (브랜치 main), .gitignore 에 /사용금지/ 와 OS 부산물 제외
   - 첫 커밋: CLAUDE.md·docs·functionMd·inputs·log·outputs
   - CLAUDE.md §5 버전 관리 규칙 추가
-■ 남은 일 : GitHub 원격 저장소 주소 연결 후 push
+■ 원격 : origin = https://github.com/gkonkim/itsm-mockup.git, main push 완료 (main → origin/main 추적)
