@@ -145,3 +145,14 @@
   - 첫 커밋: CLAUDE.md·docs·functionMd·inputs·log·outputs
   - CLAUDE.md §5 버전 관리 규칙 추가
 ■ 원격 : origin = https://github.com/gkonkim/itsm-mockup.git, main push 완료 (main → origin/main 추적)
+
+[2026-11-07] v3.2 서비스포털 — 컬러 이모지 → Google Material Symbols 아이콘
+■ 근거 : 사용자 요청("아이콘들이 너무 색상있고 컬러플하다. 구글에서 제공하는 material 아이콘으로 대체해줘")
+■ 변경 (index.html — 사용자가 outputs/ 에서 루트로 옮긴 파일)
+  - DATA.catalog·DATA.solutions 의 emoji 필드 → icon(Material Symbols 이름)
+    카탈로그: manage_accounts·dns·computer·lan·support_agent·apps
+    바로가기: groups·approval·admin_panel_settings·monitoring·account_tree·folder_shared·school·forum
+  - 서비스카탈로그 카드, 자주 사용하는 서비스 카드·편집 팝업(칩·분류 제목), 업무 시스템 바로가기의 이모지를 단색 아이콘으로 교체
+  - Material Symbols Outlined 부분 글꼴(18개 아이콘, woff2 3.4KB)을 @font-face base64 로 인라인, .msi 클래스 추가
+  - CLAUDE.md §3: 파일 위치(루트 index.html)·아이콘 규칙 반영
+■ 검증 : Playwright — 글꼴 로드 확인, 아이콘 14종 모두 정사각 글리프로 그려짐, 5개 경로 콘솔 오류 0

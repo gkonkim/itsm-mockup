@@ -18,6 +18,7 @@
 
 
 ## 3. 산출물 구조 (2026-11-07 갱신)
-- `outputs/index.html` 한 장으로 동작한다. ECharts(`echarts.js`)·`chart-option.js` 는 index.html 안 `<script>` 에 인라인돼 있고 외부 JS 참조는 없다.
+- 루트의 `index.html` 한 장으로 동작한다 (2026-11-07 outputs/ 에서 루트로 옮김). ECharts(`echarts.js`)·`chart-option.js` 는 index.html 안 `<script>` 에 인라인돼 있고 외부 JS 참조는 없다.
 - 좌측 메뉴의 「(New)」 표시는 쓰지 않는다 (MENU 의 isNew·NEW_TAG 제거).
 - SR 번호 형식: `SR` + 등록일(YYMMDD) + `_` + 5자리 일련번호 (예: `SR261007_00004`). 요청관리 SR·서비스포털 신청(옛 P-2026-*)이 한 일련번호를 공유하며 등록일 순으로 1부터 하나씩 늘린다. 같은 요청(제목·등록일 동일)은 같은 번호.
+- 아이콘은 Google Material Symbols Outlined(FILL 0·wght 400)를 쓴다. 컬러 이모지는 쓰지 않는다. 쓰는 아이콘만 추린 woff2 글꼴을 `<style>` 의 `@font-face` 에 base64 로 넣어 오프라인에서도 보이게 하고, `<span class="msi">아이콘이름</span>` 으로 표시한다. 색은 토큰 한 가지(카탈로그·자주 쓰는 서비스 = --color-primary, 바로가기 = --color-muted-foreground → 호버 시 primary). 새 아이콘이 필요하면 Google Fonts `icon_names=` 로 글꼴을 다시 받아 교체한다.
