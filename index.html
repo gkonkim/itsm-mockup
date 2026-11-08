@@ -10,7 +10,7 @@
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host { --font-sans: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui,
-    'Segoe UI', 'Malgun Gothic', sans-serif; --font-mono: var(--font-sans); --color-red-50: oklch(97.1% 0.013 17.38); --color-red-300: oklch(80.8% 0.114 19.571); --color-red-500: oklch(63.7% 0.237 25.331); --color-red-600: oklch(57.7% 0.245 27.325); --color-orange-500: oklch(70.5% 0.213 47.604); --color-amber-50: oklch(98.7% 0.022 95.277); --color-amber-100: oklch(96.2% 0.059 95.617); --color-amber-200: oklch(92.4% 0.12 95.746); --color-amber-300: oklch(87.9% 0.169 91.605); --color-amber-400: oklch(82.8% 0.189 84.429); --color-amber-500: oklch(76.9% 0.188 70.08); --color-amber-600: oklch(66.6% 0.179 58.318); --color-amber-700: oklch(55.5% 0.163 48.998); --color-amber-800: oklch(47.3% 0.137 46.201); --color-emerald-50: oklch(97.9% 0.021 166.113); --color-emerald-100: oklch(95% 0.052 163.051); --color-emerald-200: oklch(90.5% 0.093 164.15); --color-emerald-300: oklch(84.5% 0.143 164.978); --color-emerald-500: oklch(69.6% 0.17 162.48); --color-emerald-600: oklch(59.6% 0.145 163.225); --color-emerald-700: oklch(50.8% 0.118 165.612); --color-sky-500: oklch(68.5% 0.169 237.323); --color-blue-50: oklch(97% 0.014 254.604); --color-blue-100: oklch(93.2% 0.032 255.585); --color-blue-200: oklch(88.2% 0.059 254.128); --color-blue-300: oklch(80.9% 0.105 251.813); --color-blue-400: oklch(70.7% 0.165 254.624); --color-blue-500: oklch(62.3% 0.214 259.815); --color-blue-600: oklch(54.6% 0.245 262.881); --color-blue-700: oklch(48.8% 0.243 264.376); --color-blue-800: oklch(42.4% 0.199 265.638); --color-violet-50: oklch(96.9% 0.016 293.756); --color-violet-100: oklch(94.3% 0.029 294.588); --color-violet-500: oklch(60.6% 0.25 292.717); --color-violet-600: oklch(54.1% 0.281 293.009); --color-rose-500: oklch(64.5% 0.246 16.439); --color-slate-50: oklch(98.4% 0.003 247.858); --color-slate-100: oklch(96.8% 0.007 247.896); --color-slate-200: oklch(92.9% 0.013 255.508); --color-slate-300: oklch(86.9% 0.022 252.894); --color-slate-400: oklch(70.4% 0.04 256.788); --color-slate-500: oklch(55.4% 0.046 257.417); --color-slate-600: oklch(44.6% 0.043 257.281); --color-slate-700: oklch(37.2% 0.044 257.287); --color-slate-800: oklch(27.9% 0.041 260.031); --color-slate-900: oklch(20.8% 0.042 265.755); --color-black: #000; --color-white: #fff; --spacing: 0.25rem; --container-xs: 20rem; --container-sm: 24rem; --container-md: 28rem; --container-lg: 32rem; --container-xl: 36rem; --container-2xl: 42rem; --container-3xl: 48rem; --container-4xl: 56rem; --container-5xl: 64rem; --container-6xl: 72rem; --text-xs: calc(var(--font-size-base) * 0.78); --text-xs--line-height: calc(1 / 0.75); --text-sm: calc(var(--font-size-base) * 0.92); --text-sm--line-height: calc(1.25 / 0.875); --text-base: var(--font-size-base); --text-base--line-height: calc(1.5 / 1); --text-lg: calc(var(--font-size-base) * 1.07); --text-lg--line-height: calc(1.75 / 1.125); --text-xl: calc(var(--font-size-base) * 1.21); --text-xl--line-height: calc(1.75 / 1.25); --text-2xl: calc(var(--font-size-base) * 1.43); --text-2xl--line-height: calc(2 / 1.5); --text-3xl: calc(var(--font-size-base) * 1.79); --text-3xl--line-height: calc(2.25 / 1.875); --text-4xl: calc(var(--font-size-base) * 2.29); --text-4xl--line-height: calc(2.5 / 2.25); --font-weight-normal: 400; --font-weight-medium: 500; --font-weight-semibold: 600; --font-weight-bold: 700; --font-weight-extrabold: 800; --tracking-tight: -0.025em; --tracking-wide: 0.025em; --tracking-wider: 0.05em; --tracking-widest: 0.1em; --leading-tight: 1.25; --leading-snug: 1.375; --leading-relaxed: 1.625; --leading-loose: 2; --radius-sm: 0.25rem; --radius-md: 0.375rem; --radius-lg: 0.5rem; --radius-xl: 0.75rem; --radius-2xl: 1rem; --ease-out: cubic-bezier(0, 0, 0.2, 1); --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1); --animate-spin: spin 1s linear infinite; --animate-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; --blur-sm: 8px; --blur-3xl: 64px; --default-transition-duration: 150ms; --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); --default-font-family: var(--font-sans); --default-mono-font-family: var(--font-mono); --radius: 0.5rem; --color-border: hsl(214.3 31.8% 91.4%); --color-input: hsl(213 27% 84%); --color-ring: hsl(217.2 91.2% 59.8%); --color-background: hsl(0 0% 100%); --color-foreground: hsl(222.2 47.4% 11.2%); --color-primary: hsl(221.2 83.2% 53.3%); --color-primary-foreground: hsl(210 40% 98%); --color-secondary: hsl(210 40% 96.1%); --color-secondary-foreground: hsl(215.4 25% 26.7%); --color-muted: hsl(210 40% 96.1%); --color-muted-foreground: hsl(215.4 16.3% 46.9%); --color-accent: hsl(210 40% 96.1%); --color-accent-foreground: hsl(215.4 25% 26.7%); --color-destructive: hsl(0 72.2% 50.6%); --color-destructive-foreground: hsl(210 40% 98%); --color-card: hsl(0 0% 100%); --color-card-foreground: hsl(222.2 47.4% 11.2%); --color-field: hsl(0 0% 100%); --color-placeholder: hsl(215 16% 65%); --color-success: hsl(160 84% 31%); --color-success-foreground: hsl(0 0% 100%); --color-warning: hsl(32.1 94.6% 43.7%); --color-warning-foreground: hsl(0 0% 100%); --color-info: hsl(217.2 91.2% 59.8%); --color-info-foreground: hsl(0 0% 100%); --font-size-base: 14px; }
+    'Segoe UI', 'Malgun Gothic', sans-serif; --font-mono: var(--font-sans); --color-red-50: oklch(97.1% 0.013 17.38); --color-red-300: oklch(80.8% 0.114 19.571); --color-red-500: oklch(63.7% 0.237 25.331); --color-red-600: oklch(57.7% 0.245 27.325); --color-orange-500: oklch(70.5% 0.213 47.604); --color-amber-50: oklch(98.7% 0.022 95.277); --color-amber-100: oklch(96.2% 0.059 95.617); --color-amber-200: oklch(92.4% 0.12 95.746); --color-amber-300: oklch(87.9% 0.169 91.605); --color-amber-400: oklch(82.8% 0.189 84.429); --color-amber-500: oklch(76.9% 0.188 70.08); --color-amber-600: oklch(66.6% 0.179 58.318); --color-amber-700: oklch(55.5% 0.163 48.998); --color-amber-800: oklch(47.3% 0.137 46.201); --color-emerald-50: oklch(97.9% 0.021 166.113); --color-emerald-100: oklch(95% 0.052 163.051); --color-emerald-200: oklch(90.5% 0.093 164.15); --color-emerald-300: oklch(84.5% 0.143 164.978); --color-emerald-500: oklch(69.6% 0.17 162.48); --color-emerald-600: oklch(59.6% 0.145 163.225); --color-emerald-700: oklch(50.8% 0.118 165.612); --color-sky-500: oklch(68.5% 0.169 237.323); --color-blue-50: oklch(97% 0.014 254.604); --color-blue-100: oklch(93.2% 0.032 255.585); --color-blue-200: oklch(88.2% 0.059 254.128); --color-blue-300: oklch(80.9% 0.105 251.813); --color-blue-400: oklch(70.7% 0.165 254.624); --color-blue-500: oklch(62.3% 0.214 259.815); --color-blue-600: oklch(54.6% 0.245 262.881); --color-blue-700: oklch(48.8% 0.243 264.376); --color-blue-800: oklch(42.4% 0.199 265.638); --color-violet-50: oklch(96.9% 0.016 293.756); --color-violet-100: oklch(94.3% 0.029 294.588); --color-violet-500: oklch(60.6% 0.25 292.717); --color-violet-600: oklch(54.1% 0.281 293.009); --color-rose-500: oklch(64.5% 0.246 16.439); --color-slate-50: oklch(98.4% 0.003 247.858); --color-slate-100: oklch(96.8% 0.007 247.896); --color-slate-200: oklch(92.9% 0.013 255.508); --color-slate-300: oklch(86.9% 0.022 252.894); --color-slate-400: oklch(70.4% 0.04 256.788); --color-slate-500: oklch(55.4% 0.046 257.417); --color-slate-600: oklch(44.6% 0.043 257.281); --color-slate-700: oklch(37.2% 0.044 257.287); --color-slate-800: oklch(27.9% 0.041 260.031); --color-slate-900: oklch(20.8% 0.042 265.755); --color-black: #000; --color-white: #fff; --spacing: 0.25rem; --container-xs: 20rem; --container-sm: 24rem; --container-md: 28rem; --container-lg: 32rem; --container-xl: 36rem; --container-2xl: 42rem; --container-3xl: 48rem; --container-4xl: 56rem; --container-5xl: 64rem; --container-6xl: 72rem; --text-xs: calc(var(--font-size-base) * 0.78 + 1px + 1px); --text-xs--line-height: calc(1 / 0.75); --text-sm: calc(var(--font-size-base) * 0.92 + 1px + 1px); --text-sm--line-height: calc(1.25 / 0.875); --text-base: var(--font-size-base); --text-base--line-height: calc(1.5 / 1); --text-lg: calc(var(--font-size-base) * 1.07 + 1px + 1px); --text-lg--line-height: calc(1.75 / 1.125); --text-xl: calc(var(--font-size-base) * 1.21 + 1px + 1px); --text-xl--line-height: calc(1.75 / 1.25); --text-2xl: calc(var(--font-size-base) * 1.43 + 1px + 1px); --text-2xl--line-height: calc(2 / 1.5); --text-3xl: calc(var(--font-size-base) * 1.79 + 1px + 1px); --text-3xl--line-height: calc(2.25 / 1.875); --text-4xl: calc(var(--font-size-base) * 2.29 + 1px + 1px); --text-4xl--line-height: calc(2.5 / 2.25); --font-weight-normal: 400; --font-weight-medium: 500; --font-weight-semibold: 600; --font-weight-bold: 700; --font-weight-extrabold: 800; --tracking-tight: -0.025em; --tracking-wide: 0.025em; --tracking-wider: 0.05em; --tracking-widest: 0.1em; --leading-tight: 1.25; --leading-snug: 1.375; --leading-relaxed: 1.625; --leading-loose: 2; --radius-sm: 0.25rem; --radius-md: 0.375rem; --radius-lg: 0.5rem; --radius-xl: 0.75rem; --radius-2xl: 1rem; --ease-out: cubic-bezier(0, 0, 0.2, 1); --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1); --animate-spin: spin 1s linear infinite; --animate-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; --blur-sm: 8px; --blur-3xl: 64px; --default-transition-duration: 150ms; --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); --default-font-family: var(--font-sans); --default-mono-font-family: var(--font-mono); --radius: 0.5rem; --color-border: hsl(214.3 31.8% 91.4%); --color-input: hsl(213 27% 84%); --color-ring: hsl(217.2 91.2% 59.8%); --color-background: hsl(0 0% 100%); --color-foreground: hsl(222.2 47.4% 11.2%); --color-primary: hsl(221.2 83.2% 53.3%); --color-primary-foreground: hsl(210 40% 98%); --color-secondary: hsl(210 40% 96.1%); --color-secondary-foreground: hsl(215.4 25% 26.7%); --color-muted: hsl(210 40% 96.1%); --color-muted-foreground: hsl(215.4 16.3% 46.9%); --color-accent: hsl(210 40% 96.1%); --color-accent-foreground: hsl(215.4 25% 26.7%); --color-destructive: hsl(0 72.2% 50.6%); --color-destructive-foreground: hsl(210 40% 98%); --color-card: hsl(0 0% 100%); --color-card-foreground: hsl(222.2 47.4% 11.2%); --color-field: hsl(0 0% 100%); --color-placeholder: hsl(215 16% 65%); --color-success: hsl(160 84% 31%); --color-success-foreground: hsl(0 0% 100%); --color-warning: hsl(32.1 94.6% 43.7%); --color-warning-foreground: hsl(0 0% 100%); --color-info: hsl(217.2 91.2% 59.8%); --color-info-foreground: hsl(0 0% 100%); --font-size-base: 14px; }
 }
 @layer base {
   *, ::after, ::before, ::backdrop, ::file-selector-button { box-sizing: border-box; margin: 0px; padding: 0px; border: 0px solid; }
@@ -1781,20 +1781,20 @@
   .text-xs { font-size: var(--text-xs); line-height: var(--tw-leading, var(--text-xs--line-height)); }
   .\[font-size\:inherit\] { font-size: inherit; }
   .text-\[0\.55em\] { font-size: 0.55em; }
-  .text-\[2rem\] { font-size: 2rem; }
-  .text-\[6px\] { font-size: 6px; }
-  .text-\[9\.5px\] { font-size: 9.5px; }
-  .text-\[9px\] { font-size: 9px; }
-  .text-\[10\.5px\] { font-size: 10.5px; }
-  .text-\[10px\] { font-size: 10px; }
-  .text-\[11\.5px\] { font-size: 11.5px; }
-  .text-\[11px\] { font-size: 11px; }
-  .text-\[12\.5px\] { font-size: 12.5px; }
-  .text-\[12px\] { font-size: 12px; }
-  .text-\[13\.5px\] { font-size: 13.5px; }
-  .text-\[13px\] { font-size: 13px; }
-  .text-\[14px\] { font-size: 14px; }
-  .text-\[15px\] { font-size: 15px; }
+  .text-\[2rem\] { font-size: calc(2rem + 1px); }
+  .text-\[6px\] { font-size: 8px; }
+  .text-\[9\.5px\] { font-size: 11.5px; }
+  .text-\[9px\] { font-size: 11px; }
+  .text-\[10\.5px\] { font-size: 12.5px; }
+  .text-\[10px\] { font-size: 12px; }
+  .text-\[11\.5px\] { font-size: 13.5px; }
+  .text-\[11px\] { font-size: 13px; }
+  .text-\[12\.5px\] { font-size: 14.5px; }
+  .text-\[12px\] { font-size: 14px; }
+  .text-\[13\.5px\] { font-size: 15.5px; }
+  .text-\[13px\] { font-size: 15px; }
+  .text-\[14px\] { font-size: 16px; }
+  .text-\[15px\] { font-size: 17px; }
   .text-\[length\:calc\(var\(--text-sm\)\+1px\)\] { font-size: calc(var(--text-sm) + 1px); }
   .text-\[length\:var\(--menu-font-size\)\] { font-size: var(--menu-font-size); }
   .text-\[length\:var\(--text-xs\)\] { font-size: var(--text-xs); }
@@ -4291,7 +4291,7 @@ body { background-color: var(--color-background); color: var(--color-foreground)
   100% { opacity: 0; transform: translateY(-8px); }
 }
 :root {
-  --dock-rail-label-size: 11px; --dock-rail-label-size-sm: 9px; --dock-rail-pad: 5px; --dock-rail-w: calc(
+  --dock-rail-label-size: 11px; --dock-rail-label-size-sm: 11px; --dock-rail-pad: 5px; --dock-rail-w: calc(
     max(var(--dock-rail-btn), 2 * var(--dock-rail-label-size)) + 2 * var(--dock-rail-pad)
   ); --dock-panel-w: 400px; --dock-panel-closed-w: 8px; --dock-header-h: var(--d-header-h); --dock-tail: calc(var(--d-section-gap) / 2 + 1px); --dock-tail-sq: calc(var(--dock-tail) * 1.41421356); --dock-rail-btn: 36px; --dock-card-radius: min(var(--radius-xl), var(--dock-rail-btn)); --dock-tab-gap: 7px; --dock-tab-shadow: 2px 0 6px -2px rgb(0 0 0 / 0.08); --dock-tab-active-bg: color-mix(in srgb, hsl(221.2 83.2% 53.3%) 10%, hsl(0 0% 100%));
   @supports (color: color-mix(in lab, red, red)) {
@@ -5223,9 +5223,9 @@ ag-grid, ag-grid-angular { display: block; }
 .itg-html-view[data-v-f0a080ef] ul, .itg-html-view[data-v-f0a080ef] ol { margin: 0px 0px 0.5rem; padding-left: 1.25rem; }
 .itg-html-view[data-v-f0a080ef] ul { list-style: disc; }
 .itg-html-view[data-v-f0a080ef] ol { list-style: decimal; }
-.itg-html-view[data-v-f0a080ef] h1 { font-size: 1.5rem; font-weight: 700; margin: 0.5rem 0px; }
-.itg-html-view[data-v-f0a080ef] h2 { font-size: 1.25rem; font-weight: 700; margin: 0.5rem 0px; }
-.itg-html-view[data-v-f0a080ef] h3 { font-size: 1.125rem; font-weight: 600; margin: 0.5rem 0px; }
+.itg-html-view[data-v-f0a080ef] h1 { font-size: calc(1.5rem + 1px); font-weight: 700; margin: 0.5rem 0px; }
+.itg-html-view[data-v-f0a080ef] h2 { font-size: calc(1.25rem + 1px); font-weight: 700; margin: 0.5rem 0px; }
+.itg-html-view[data-v-f0a080ef] h3 { font-size: calc(1.125rem + 1px); font-weight: 600; margin: 0.5rem 0px; }
 .itg-html-view[data-v-f0a080ef] table { border-collapse: collapse; margin: 0.5rem 0px; }
 .itg-html-view[data-v-f0a080ef] td, .itg-html-view[data-v-f0a080ef] th { border: 1px solid var(--color-border); padding: 0.25rem 0.5rem; }
 .itg-html-view[data-v-f0a080ef] a { color: var(--color-primary); text-decoration: underline; }
@@ -5251,20 +5251,20 @@ ag-grid, ag-grid-angular { display: block; }
 .cap-edit[data-v-56e13449] { position: relative; border-radius: 8px; outline: transparent dashed 1px; outline-offset: 2px; transition: outline-color 0.12s; }
 .cap-edit--hovered[data-v-56e13449] { outline-color: rgb(147, 197, 253); }
 .cap-edit--selected[data-v-56e13449] { outline: rgb(59, 130, 246) solid 2px; outline-offset: 2px; }
-.cap-edit__tag[data-v-56e13449] { position: absolute; top: 4px; left: 4px; z-index: 20; padding: 1px 7px; border-radius: 9999px; background: rgb(59, 130, 246); color: rgb(255, 255, 255); font-size: 10px; font-weight: 600; line-height: 1.4; pointer-events: none; white-space: nowrap; box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px; }
+.cap-edit__tag[data-v-56e13449] { position: absolute; top: 4px; left: 4px; z-index: 20; padding: 1px 7px; border-radius: 9999px; background: rgb(59, 130, 246); color: rgb(255, 255, 255); font-size: 12px; font-weight: 600; line-height: 1.4; pointer-events: none; white-space: nowrap; box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px; }
 .cap-edit--hovered .cap-edit__tag[data-v-56e13449] { background: rgb(96, 165, 250); }
 .cap-edit__tools[data-v-56e13449] { position: absolute; top: 4px; right: 4px; z-index: 30; display: flex; gap: 2px; padding: 2px; border-radius: 8px; background: rgb(30, 41, 59); box-shadow: rgba(0, 0, 0, 0.18) 0px 4px 12px; }
 .cap-edit__tools button[data-v-56e13449] { display: grid; place-items: center; width: 24px; height: 24px; border-radius: 5px; color: rgb(203, 213, 225); }
 .cap-edit__tools button[data-v-56e13449]:hover { background: rgb(51, 65, 85); color: rgb(255, 255, 255); }
 .cap-edit__tools .cap-edit__del[data-v-56e13449]:hover { background: rgb(220, 38, 38); color: rgb(255, 255, 255); }
-.cap-unknown-widget[data-v-56e13449] { padding: 8px 12px; border: 1px dashed rgb(245, 158, 11); border-radius: 6px; color: rgb(180, 83, 9); font-size: 13px; }
+.cap-unknown-widget[data-v-56e13449] { padding: 8px 12px; border: 1px dashed rgb(245, 158, 11); border-radius: 6px; color: rgb(180, 83, 9); font-size: 15px; }
 
 /* source: /frontend/src/platform/widgets/MetaLayout.vue?vue&type=style&index=0&scoped=5c4b0aa3&lang.css */
-.cap-add-region[data-v-5c4b0aa3] { display: flex; width: 100%; align-items: center; justify-content: center; gap: 6px; margin-top: 8px; padding: 12px; border-radius: 12px; border: 1.5px dashed var(--color-border); color: var(--color-muted-foreground); font-size: 13px; font-weight: 500; transition: 0.12s; }
+.cap-add-region[data-v-5c4b0aa3] { display: flex; width: 100%; align-items: center; justify-content: center; gap: 6px; margin-top: 8px; padding: 12px; border-radius: 12px; border: 1.5px dashed var(--color-border); color: var(--color-muted-foreground); font-size: 15px; font-weight: 500; transition: 0.12s; }
 .cap-add-region[data-v-5c4b0aa3]:hover { border-color: var(--color-primary); background: var(--color-accent); color: var(--color-primary); }
 
 /* source: /frontend/src/platform/widgets/EditDropZone.vue?vue&type=style&index=0&scoped=5903bfa6&lang.css */
-.cap-dz[data-v-5903bfa6] { display: flex; align-items: center; justify-content: center; gap: 6px; border-radius: 10px; border: 1.5px dashed rgb(226, 232, 240); color: rgb(148, 163, 184); font-size: 12px; cursor: pointer; transition: 0.12s; }
+.cap-dz[data-v-5903bfa6] { display: flex; align-items: center; justify-content: center; gap: 6px; border-radius: 10px; border: 1.5px dashed rgb(226, 232, 240); color: rgb(148, 163, 184); font-size: 14px; cursor: pointer; transition: 0.12s; }
 .cap-dz--empty[data-v-5903bfa6] { padding: 16px; background: rgb(248, 250, 252); }
 .cap-dz--cell[data-v-5903bfa6] { min-height: 64px; height: 100%; padding: 8px; background: rgb(248, 250, 252); }
 .cap-dz--bar[data-v-5903bfa6] { padding: 6px; }
@@ -5285,7 +5285,7 @@ ag-grid, ag-grid-angular { display: block; }
 .itsm-prev-static[data-v-e754a877] { pointer-events: none; }
 .itsm-prev-static.itsm-prev-controls[data-v-e754a877] { pointer-events: auto; }
 .wiz-preview[data-v-e754a877] .lyra-dummy-slot { position: relative; border: 1px dashed var(--color-input); background: color-mix(in srgb, var(--color-muted) 40%, transparent); }
-.wiz-preview[data-v-e754a877] .lyra-dummy-slot::after { content: "더미 필드 — 공간만 차지"; position: absolute; inset: 0px; display: flex; align-items: center; justify-content: flex-start; padding-left: var(--d-control-px, 0.75rem); font-size: 13px; font-weight: 400; color: var(--color-placeholder, var(--color-muted-foreground)); pointer-events: none; }
+.wiz-preview[data-v-e754a877] .lyra-dummy-slot::after { content: "더미 필드 — 공간만 차지"; position: absolute; inset: 0px; display: flex; align-items: center; justify-content: flex-start; padding-left: var(--d-control-px, 0.75rem); font-size: 15px; font-weight: 400; color: var(--color-placeholder, var(--color-muted-foreground)); pointer-events: none; }
 </style>
 <style>/* ITG AI 제품 :root 변수 고정값 — 로컬 제품 /w/type/MAINHOME 에서 계산된 값 (소스 e87230f, 추출 20260915-1559 KST)
    원래 조건: <html data-theme=nkia-steel data-density=compact data-radius=normal data-font-scale=md data-font-family=pretendard data-reduce-motion=false data-backdrop=clear data-dock-mode=card>
@@ -5354,21 +5354,21 @@ ag-grid, ag-grid-angular { display: block; }
   --container-4xl: 56rem;
   --container-5xl: 64rem;
   --container-6xl: 72rem;
-  --text-xs: calc(14px * 0.78);
+  --text-xs: calc(14px * 0.78 + 1px + 1px);
   --text-xs--line-height: calc(1 / 0.75);
-  --text-sm: calc(14px * 0.92);
+  --text-sm: calc(14px * 0.92 + 1px + 1px);
   --text-sm--line-height: calc(1.25 / 0.875);
-  --text-base: 14px;
+  --text-base: calc(14px + 1px + 1px);
   --text-base--line-height: calc(1.5 / 1);
-  --text-lg: calc(14px * 1.07);
+  --text-lg: calc(14px * 1.07 + 1px + 1px);
   --text-lg--line-height: calc(1.75 / 1.125);
-  --text-xl: calc(14px * 1.21);
+  --text-xl: calc(14px * 1.21 + 1px + 1px);
   --text-xl--line-height: calc(1.75 / 1.25);
-  --text-2xl: calc(14px * 1.43);
+  --text-2xl: calc(14px * 1.43 + 1px + 1px);
   --text-2xl--line-height: calc(2 / 1.5);
-  --text-3xl: calc(14px * 1.79);
+  --text-3xl: calc(14px * 1.79 + 1px + 1px);
   --text-3xl--line-height: calc(2.25 / 1.875);
-  --text-4xl: calc(14px * 2.29);
+  --text-4xl: calc(14px * 2.29 + 1px + 1px);
   --text-4xl--line-height: calc(2.5 / 2.25);
   --font-weight-normal: 400;
   --font-weight-medium: 500;
@@ -5471,7 +5471,7 @@ ag-grid, ag-grid-angular { display: block; }
   --menu-active-bg: hsl(215 45% 30%);
   --menu-active-fg: hsl(210 55% 85%);
   --menu-group-fg: hsl(215 18% 94%);
-  --menu-font-size: calc(14px * 0.92);
+  --menu-font-size: calc(14px * 0.92 + 1px + 1px);
   --menu-item-h: calc(30px + 4px);
   --menu-item-h-sub: calc(calc(30px + 4px) - 4px);
   --menu-indent: 12px;
@@ -5494,7 +5494,7 @@ ag-grid, ag-grid-angular { display: block; }
   --helper-border: color-mix(in srgb, hsl(215 35% 35%) 22%, hsl(220 14% 97%));
   --helper-fg: hsl(220 25% 14%);
   --dock-rail-label-size: 11px;
-  --dock-rail-label-size-sm: 9px;
+  --dock-rail-label-size-sm: 11px;
   --dock-rail-pad: 5px;
   --dock-rail-w: calc(
     max(36px, 2 * 11px) + 2 * 5px
@@ -5655,7 +5655,7 @@ zrender/lib/zrender.js:
     /* ★ 전 차트 종류의 애니메이션을 이 한 줄이 정한다. 종류별 분기에 animation 을 넣지 않는다. */
     var base = {
       color: chartPalette(),
-      textStyle: { fontFamily: token('--font-sans', 'sans-serif'), color: text },
+      textStyle: { fontFamily: token('--font-sans', 'sans-serif'), color: text, fontSize: 14 },  /* ECharts 기본 12px +1 */
       animation: !reduceMotion(),
     };
     for (var k in option) base[k] = option[k];
@@ -5714,7 +5714,7 @@ zrender/lib/zrender.js:
         if (goal && i === 0) {
           one.markLine = {
             silent: true, symbol: 'none',
-            label: { formatter: goal.label || ('목표 ' + goal.value), position: horizontal ? 'insideMiddleTop' : 'insideEndTop', fontSize: 10 },
+            label: { formatter: goal.label || ('목표 ' + goal.value), position: horizontal ? 'insideMiddleTop' : 'insideEndTop', fontSize: 12 },
             lineStyle: { type: 'dashed', width: 1.4 },
             data: [horizontal ? { xAxis: goal.value } : { yAxis: goal.value }],
           };
@@ -5735,7 +5735,7 @@ zrender/lib/zrender.js:
         radius: input.donut ? ['46%', '70%'] : '68%',
         center: ['50%', showLegend ? '46%' : '50%'],
         avoidLabelOverlap: true,
-        label: { fontSize: 11 },
+        label: { fontSize: 13 },
         /* ★ 호버하면 «솟아오른다». ECharts 파이 기본 강조는 scale:true, scaleSize:5 뿐이고
          * 그림자가 없어 「딱딱하다」는 인상을 준다. scaleSize 는 실측으로 12 로 정했다
          * (5 안 보임 · 10 잉크 113% · 16 121% 너무 큼 · 30 캔버스 넘침).
@@ -5874,6 +5874,8 @@ a:not([class]):hover{color:var(--color-primary);text-decoration:underline}
 .x-dday{font-variant-numeric:tabular-nums;font-weight:600}
 .x-chart{width:100%;height:100%;min-height:0}
 .x-zero{color:var(--color-muted-foreground)}
+a.x-go{color:inherit;text-decoration:none;border-radius:4px;padding:0 3px;cursor:pointer}a.x-go:hover{color:var(--color-primary);text-decoration:underline;text-underline-offset:2px}
+.x-tr[data-task-go]{cursor:pointer}.x-tr[data-task-go]:hover>.x-td{background:var(--color-muted)}.x-tr[data-task-go]:hover>.x-td:nth-child(-n+2){color:var(--color-primary)}
 /* 라운드 24 — TPL-2 도넛 + 비율표(§8-7 x-donut-table). 도넛 조각 라벨은 끈다 */
 .x-donut-table{display:flex;align-items:center;gap:10px;height:100%;min-height:0}
 .x-donut-table>.x-c{flex:0 0 36%;max-width:164px;height:100%;min-width:0}
@@ -5898,6 +5900,9 @@ a:not([class]):hover{color:var(--color-primary);text-decoration:underline}
 /* Google Material Symbols Outlined — 쓰는 아이콘만 추린 글꼴(woff2)을 인라인. 아이콘 이름을 글자로 쓰면 그림으로 바뀐다 */
 @font-face{font-family:'Material Symbols Outlined';font-style:normal;font-weight:400;font-display:block;src:url(data:font/woff2;base64,d09GMgABAAAAAA1sAA4AAAAAGSwAAA0VAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHIVSBmA/U1RBVHAAgigRCAqfLJlIC1AAATYCJANQBCAFhHoHIAwHGwQVM1KTeiBTnYkxbuiPX3/+/eCB1v3/mZ258vpq/YlGOb78hcquDCWGbqTf3lGbVRUyYbqbMBn1NfMAI7ZiTj8P1lQi54Kcys9/mvmnbfX3HVZwcg+0weqxYkgDnjsD9hgVg9EY0bjq4jm7zWbiRefMVkPQ79f23T/EK0NS1RMR6KKd6NGSJmhaooVi9n9rqQV2RArYnbB5UTJG3PyZ27zZf5sj+GGcDXEZhY4tSkIUGtBWmMoKqboNZ6QSZt6tZozRHKP63vvbQQB5IoajTZ46ezHl3RsO76WMYqF9KigHd+/YRvbB92dTZAClLRf/xXLKibuBLEIMJCfgIfe4xSV62Ep/7KLLz5PGwKVLlxaShDpZCigYaWJRIPcIJVgwtElImTzHThDq4oMVTu+gUSZNCYlOB8VIxytET0lkVfrYE+ERJEiSErUCthEUCukQuT+BpEOAYigBJnlypGhhoeMjdQnogVTIkqEVUmShp41HFJ3oI3GpkoWjSUxM0ig8AqAnPIBSXoxOqyeHjqHtSBuHFm2i3IjH4RSKvcxlsGllzQZt0NPieCEJOg4WHQ1Io2RUkBXySWx0qYMZRWeZS7hYxOqpQ2LKOgdX1FykiIFhMpBHCaFgtAUk17SpnW0hgiwaCWkqVLpBkMGk4jwpSwcUqHUrJkUU0upQUGCIjhGyo0dD1JxCx6RdhRI8JWTR0q/PIiQcEkDsqxHoKPlYnCPFoVwqL6TQYBivXi1xXdPmzZvGY7x/I5TXew1Uwqrhnod8LB+TxwAFmKWI+lUdiTZ1xuzZZe5y2sIJk4VA7Nt/6KTQ0I5t235YSCRDibCHxNEkGpo4B9p9uRChAjYy8Ih8M+BJms2QIUpVKDPzdJTQaTzjdfzYHuvYwA72c/TNo7dT3s5+O//d4nfP3+ffd94//5D7+Ozj6y/FL0e+3P568mvP9yG/x/wZ/GfUn6t/3v09929Eb69wVTaxm4OVfvWOP0z9lXojdT91L3UndbtsZOkrpfHS5yWPS/oV/138c/Hwov8LRwDk/Z+3Iy+auy93T/bXGW9q32m+tkbrEt6mfmXcFTmsf2leOATppstNpUDDNhA5OWKLUx4KvrR9lVC5SpmTDNLA4kIewIkaCkHIphCQTDA64nkRjBRWExNBSRQhi7EM6cYkKV3JzMzMCIfDUkZGBqGFLEtxzpbGGJXSJEWRI5KcKzF7/i1RkjsVpbBagTKMaSydHSKddVIURkh6iB1WaksII60ZS8sNs79UoYrUVckhEg1pabPq6xbKNTVqHdazxXYMrDh1ksgTNcGf1aQ5V0GwrpCwfQ1Ffl0HDVckjVX6vKf5KnKf2C4ESZ6wY1Z8jp1AkScp1VUnDoIVI8s0zlHkHJlBOEeBc9ylI+CNbDaYnUBUnSSK1InDkiFqDYb9DTJP0md5mFHPhiPQxAgsU7dWDdcWRhvqf2mpE6KvQnfeKbr0uv1q9dG3or6POHsmXHrUGo0oWJ7n9cOjL7WzD1DbRx5QxwPLnYeMcTgImZ+L8yDBk07cijnexvw1683MN2bo0enzCVKkQIEAMaebxgzdnBbVpxqzZ6Exe6ZAxCjMmj2rZa6JUQNMNN8ihydv0vnT50Rx/eHL1LmYM+3gUbCOZK9ZjNMx2h6n4XIkIgEmqkBRFRgSwbZch4BLEVC2RIpEokiWhU2Rhg8jqgIBClRgrmSWZRNF0kCRzFTqELEG60BHOE0AxUSBivqdOZ+4KSzD+fp8mGP84vPA8Sx3DvJX2rwTUMfJOXIin9hu3wNHAOjRmwV65aFLuWONIYd43mBz3OHLeVW04uDFnAn6wINW9qDo+AMXssv9JE/YMSv+eZIn7BjzBvxQU9sZYq8Hmh/hyAkAivyVDtfbjtpdfSnsPlVoFtUDWKbisZ6r5ht2Anmy1+1uxbRg9VmdHjSc65B1jdhX/Ff119TU9QC29M7G4crHghvIUFb57TZVQRAIX7fn6RUXbwJYN6rBipGfr/HrzlXriuO5Z/klZui+b7iuiX0dGmfr/06zDo4fOB5g1OS+7YI+BM+wmC4kixaYpqbPtH2fqKaomZzy/WZcieuC5VEnCIIy6rquS2VV70mWS2apToBjdwqjcgTCoJ2rg60IS6XFVQgsNwEZqsJkKmgilYgY7kdHlhlGgEkqUJlKG4U2dqM9motOW0W61pC67qRCoDJdSyvdaWQdqRBm2n5r8SYZBsIb7LY8Kmtqj2W5rkuYIKpOQBW17pgfb1lbZ9Y+xU6bNhy57/utH5HnzzWIRJjU7l5eXa2h+ncVakUq1IL7i3Zdd+YiOlen5ny6QMcIvPli1xe/2Xx39t25u996++7sN/bOuTu77vbMFujwQUFlwWnz/N2h41wIWZF5kfzIvIi3p32nvNn1TXNIRkuX3fDm8ezwOG9obiez59ixZs9OL77w63A25FBexa8V3/Km36dMGbqUe6Ds9ikWAOxpmjllygdg//ZLi4NvKmQr0Aemnj5d9TRtn1T8WpHftuLXD9kfHPx/kEWy5FnXhOjosv9nFzCnrRhBWF9/whvpjKPV6CM83+gEoRjqatY8R4DvKtME/yrEYeG24Y/SrQOt0x+F7yBDHPXjhfswDuO/OLfyp8lUMvWiNyvDIwGOLgJHQwr3AU18fX38eVsWq1/jvvfX38zajng7lU2mXhg8+uHMGZwkSRIHZ85QKHXqAq80+A+4cBsBroY5T60nnyHPkFyUgbhTzJP06UUphaZsXlNhhSUVAACsuW9Fownp6xvo60MGdk2Mz79javoNUXT+sInpoQvGxp9FAxwkjFwEAwAk43LlBCpncVlyau1GuZGhH3QAJdAhV9LHyQNypdzHpUPCcIAjLLlyr/pu6J6SD3VOVsqVmg4rcRwvwMcBAJJyxgMcRxFEiVJwCsBFuQhKoiSCwOgEG/fjB+/XMJnr68CXo0DcDxkZitWj7IKr2ebfu3bYx+kaSmsOOtCiq+19FRsGds8Tgo9fcr6gFqsmnQVfWLOsv4ALT6rE6gvoBbVkZ9pZ9IWlhWXSp42b3vcZfPfZIUbawmDcZG+Mgt2TA2KMqjc+/c6cF86zc7h3L8XMPyDF7N49hh0vnGfx3o2NbMOYZH8PuBkJAtOYdVAQZt2z1WMPzvmPzfmOw/4+MzhljjMkEkF+IiHkJxT6QULWgdAL6ScH+dI1mASazuAo1+62ajhwoOGs359GTwt9Q+jmoCOIrMtMbPYWCpu8sxIi6nQF9i4CRjpD4OLL/p+tZBZyNsb73gPgEdolo/OlqX3VRskYWMhykZogha1gHaEmeJv3+o/oOL55EtEwQXx9/cH6+nigUeEqSCTKF4kgnNZ/20NHCnaPlDZW4pVBx9wlbh4S8Mg4Yc2tOSW2F0uLVTQnr7klhHWZ1UIJyUZC7N3okDROtqEzt9U+VxReJBz/vK+PU2iYYxcbFoFpCRNT5VC/GaggehapHZWhilItusS4th1vGzAcPN7S5goqCEvJtW/KxeV334oFFYSX5NO/WmJbvMA+46QN57ZESV9WqkhRn7LgHh/QRW/wTpVdyXozxj/dOkuf03NreGjhq7ZBrN90ed1V3GsQB73vCCoIzMnHKZ1ID/MJA2FiOVMuFovlTLkYVJ3LrtyTgDyigTLFaGLKtIFIfgLTqn5/LPvjcRbN+wmoIDJ9ebTI15KILK9Imu0r8KPxzr2t0/TT97Z2VPcOqunqewcPxikutI3Txy+0K/rOt03QJy60ggpCCypgSL39kUY/ROZdwIAIg0RC2Akd7PblE6CCoGdM5BSVjmZnn2Fmn4lMgBWJ4RFnsrJ/ss8y/dcf/GqsfpxYp41pwzthu1uHAvwci6A+u7bX875oMit3lUhg9ETmV3dVlUnaadq8mcDdzXHPYIs4lzKbWoZoz/Z2SlH6dxhQZ/dKciU92WDBeNCpbD8Pl7ZgLT0nKupq1FVdLSktUi5etn/ACZygnThaGPYkopwGl3so/1ScHJE13qHugK7n87+jfifsLExtzkRVvgbLZp+9PIcehHqHuQj5f/nfl+6lKwsDZ4hcQMxcp0mX/y//L9I9zD9MFNIl1/jpdZNS2fKI2q8nTE2i/wrfMrhVnmqxHMHLq8CGCpsSU0vJQQFkkxxIESriKS96CEewM1tyyUPsulnhD4oE+aK5SEakKC2SGOShQU69WFEAMSwXBlJNuy5mdEa9VSQIpbRIRjSxtRLhc2cGkaGxwTIMnwbkU4gdN93YcGJBgZkRNBjQocdNTwEZUGUmxzJwuHk0tOBEgdqSzZY0Y1cXCtxITgzVJg4whwUltm2Xix48XJphohUNarLot0M6PNseBU6GhaSL/24bVmLJJ5sySsmTubZYvvZYXlHsPDk/ygpa6KGHFiqoLhJZyfTMDdiwM1dZGBn0PX0u+RQTSws2bOgww9RYOumkgez/v7BuC9ppIoZLV3SpRq9kzP7HZN5h8UGpnon/hWP5Bg==) format('woff2')}
 .msi{font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;font-feature-settings:'liga';-webkit-font-feature-settings:'liga';-webkit-font-smoothing:antialiased;font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;user-select:none}
+/* MyPage — 머리글 오른쪽 필터 아이콘(제품 화면과 같은 자리) */
+[data-my-wrap] .ag-header-cell{position:absolute}
+[data-my-filter]{position:absolute;right:8px;top:50%;transform:translateY(-50%);display:grid;place-items:center;color:var(--color-muted-foreground);opacity:.8;pointer-events:none}
 /* 서비스포털 — 서비스카탈로그 카드(3×2) + 분류별 업무 오버레이 (proto 토큰만 사용) */
 [data-cat-grid]{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
 [data-cat-card]{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;height:108px;cursor:pointer;transition:border-color .15s,box-shadow .15s,background-color .15s}
@@ -5911,46 +5916,46 @@ a:not([class]):hover{color:var(--color-primary);text-decoration:underline}
 #catMega [data-mega-grid]{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:14px}
 #catMega [data-mega-item]{display:flex;flex-direction:column;align-items:flex-start;gap:6px;min-height:74px;padding:14px 16px;border:1px solid var(--color-border);border-radius:10px;background:var(--color-muted);text-align:left;cursor:pointer;transition:border-color .15s,background-color .15s}
 #catMega [data-mega-item]:hover{border-color:var(--color-primary);background:var(--color-card)}
-#catMega [data-mega-item] b{font-size:15px;font-weight:700;color:var(--color-foreground)}
-#catMega [data-mega-item] span{font-size:12px;color:var(--color-muted-foreground)}
-#catMega [data-mega-close]{display:inline-flex;align-items:center;gap:4px;height:34px;padding:0 12px;border:1px solid var(--color-border);border-radius:8px;background:var(--color-card);font-size:14px;font-weight:500;color:var(--color-foreground)}
+#catMega [data-mega-item] b{font-size:17px;font-weight:700;color:var(--color-foreground)}
+#catMega [data-mega-item] span{font-size:14px;color:var(--color-muted-foreground)}
+#catMega [data-mega-close]{display:inline-flex;align-items:center;gap:4px;height:34px;padding:0 12px;border:1px solid var(--color-border);border-radius:8px;background:var(--color-card);font-size:16px;font-weight:500;color:var(--color-foreground)}
 #catMega [data-mega-close]:hover{background:var(--color-muted)}
 /* 자주 사용하는 서비스 (4칸) + 편집 오버레이 */
 [data-fav-grid]{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
 [data-fav-go],[data-fav-empty]{display:flex;align-items:center;gap:12px;height:76px;padding:0 18px;min-width:0;cursor:pointer;transition:border-color .15s,box-shadow .15s}
 [data-fav-go]:hover{border-color:var(--color-primary);box-shadow:0 0 0 1px var(--color-primary)}
-[data-fav-go] b{font-size:14px;font-weight:600;color:var(--color-foreground)}
+[data-fav-go] b{font-size:16px;font-weight:600;color:var(--color-foreground)}
 [data-fav-icon]{display:grid;place-items:center;flex:0 0 44px;height:44px;border-radius:10px;font-size:26px;color:var(--color-primary);background:var(--color-muted)}
 /* 업무 시스템 바로가기 (4×2) */
 [data-sol-grid]{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:8px;height:100%}
 [data-sol]{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-width:0;border:1px solid var(--color-border);border-radius:10px;text-decoration:none;text-align:center;transition:border-color .15s,background-color .15s}
 [data-sol]:hover{border-color:var(--color-primary);background:var(--color-muted)}
-[data-sol] b{font-size:13px;font-weight:600;color:var(--color-foreground)}
+[data-sol] b{font-size:15px;font-weight:600;color:var(--color-foreground)}
 [data-sol-icon]{font-size:26px;margin-bottom:2px;color:var(--color-muted-foreground);transition:color .15s}
 [data-sol]:hover [data-sol-icon]{color:var(--color-primary)}
 /* FAQ TOP 5 아코디언 */
 [data-faq]{display:flex;flex-direction:column;height:100%;overflow:auto}
 [data-faq-item]{border-bottom:1px solid var(--color-border)}
 [data-faq-item]:last-child{border-bottom:0}
-[data-faq-item] summary{display:flex;align-items:center;gap:8px;height:33px;list-style:none;cursor:pointer;font-size:13px;color:var(--color-foreground)}
+[data-faq-item] summary{display:flex;align-items:center;gap:8px;height:33px;list-style:none;cursor:pointer;font-size:15px;color:var(--color-foreground)}
 [data-faq-item] summary::-webkit-details-marker{display:none}
 [data-faq-item] summary:hover{color:var(--color-primary)}
 [data-faq-item][open] summary{font-weight:600}
-[data-faq-rank]{display:grid;place-items:center;flex:0 0 20px;height:20px;border-radius:6px;background:var(--color-muted);font-size:11px;font-weight:700;color:var(--color-muted-foreground)}
+[data-faq-rank]{display:grid;place-items:center;flex:0 0 20px;height:20px;border-radius:6px;background:var(--color-muted);font-size:13px;font-weight:700;color:var(--color-muted-foreground)}
 [data-faq-item]:nth-child(-n+3) [data-faq-rank]{background:var(--color-primary);color:var(--color-primary-foreground)}
-[data-faq-cat]{flex:0 0 auto;padding:0 6px;border-radius:999px;font-size:11px;line-height:18px;color:var(--color-muted-foreground);box-shadow:inset 0 0 0 1px var(--color-border)}
-[data-faq-item] p{margin:0 0 8px 28px;padding:6px 10px;border-radius:8px;background:var(--color-muted);font-size:12px;line-height:1.6;color:var(--color-muted-foreground)}
+[data-faq-cat]{flex:0 0 auto;padding:0 6px;border-radius:999px;font-size:13px;line-height:18px;color:var(--color-muted-foreground);box-shadow:inset 0 0 0 1px var(--color-border)}
+[data-faq-item] p{margin:0 0 8px 28px;padding:6px 10px;border-radius:8px;background:var(--color-muted);font-size:14px;line-height:1.6;color:var(--color-muted-foreground)}
 /* 자료실 형식 배지 */
-[data-file-kind]{display:inline-block;min-width:40px;padding:0 6px;border-radius:4px;font-size:10px;font-weight:700;line-height:18px;text-align:center;color:#fff;background:#64748b}
+[data-file-kind]{display:inline-block;min-width:40px;padding:0 6px;border-radius:4px;font-size:12px;font-weight:700;line-height:18px;text-align:center;color:#fff;background:#64748b}
 [data-file-kind="PDF"]{background:#dc2626}[data-file-kind="EXE"]{background:#2563eb}[data-file-kind="DOCX"]{background:#1d4ed8}
-[data-fav-empty]{justify-content:center;border:1px dashed var(--color-border);font-size:12px;color:var(--color-muted-foreground);background:transparent}
+[data-fav-empty]{justify-content:center;border:1px dashed var(--color-border);font-size:14px;color:var(--color-muted-foreground);background:transparent}
 [data-fav-empty]:hover{border-color:var(--color-primary);color:var(--color-primary)}
 #catMega [data-fav-picked]{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:14px;padding:10px 12px;border-radius:10px;background:var(--color-muted)}
-#catMega [data-fav-chip]{display:inline-flex;align-items:center;gap:4px;height:26px;padding:0 4px 0 10px;border:1px solid var(--color-primary);border-radius:999px;background:var(--color-card);font-size:12px;color:var(--color-foreground)}
-#catMega [data-fav-chip] button{display:grid;place-items:center;width:18px;height:18px;border-radius:999px;font-size:13px;line-height:1;color:var(--color-muted-foreground)}
+#catMega [data-fav-chip]{display:inline-flex;align-items:center;gap:4px;height:26px;padding:0 4px 0 10px;border:1px solid var(--color-primary);border-radius:999px;background:var(--color-card);font-size:14px;color:var(--color-foreground)}
+#catMega [data-fav-chip] button{display:grid;place-items:center;width:18px;height:18px;border-radius:999px;font-size:15px;line-height:1;color:var(--color-muted-foreground)}
 #catMega [data-fav-chip] button:hover{background:var(--color-muted);color:var(--color-foreground)}
 #catMega [data-fav-cats]{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px 18px;margin-top:14px}
-#catMega [data-fav-toggle]{height:26px;padding:0 10px;border:1px solid var(--color-border);border-radius:999px;background:var(--color-card);font-size:12px;color:var(--color-foreground)}
+#catMega [data-fav-toggle]{height:26px;padding:0 10px;border:1px solid var(--color-border);border-radius:999px;background:var(--color-card);font-size:14px;color:var(--color-foreground)}
 #catMega [data-fav-toggle]:hover:not(:disabled):not([aria-pressed="true"]){border-color:var(--color-primary);color:var(--color-primary)}
 #catMega [data-fav-toggle][aria-pressed="true"]{border-color:var(--color-primary);background:var(--color-primary);color:var(--color-primary-foreground)}
 #catMega [data-fav-toggle]:disabled{opacity:.45;cursor:not-allowed}
@@ -5989,7 +5994,7 @@ a:not([class]):hover{color:var(--color-primary);text-decoration:underline}
           <p class="truncate text-xs leading-4 text-muted-foreground"><span class="sc-interp" id="pageCrumb"></span></p>
         </div>
       </div>
-      <a href="#/request/mypage" class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors text-muted-foreground hover:bg-accent hover:text-accent-foreground h-7 gap-1 px-2.5 text-xs">
+      <a href="#/request/dash-user" class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors text-muted-foreground hover:bg-accent hover:text-accent-foreground h-7 gap-1 px-2.5 text-xs">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5" aria-hidden="true"><path d="M22 12h-6l-2 3h-4l-2-3H2"></path><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path></svg>
         내 작업함
       </a>
@@ -6104,12 +6109,12 @@ const DATA = {
   ],
   /* 부서 월간 지표(관리자 전용). 금월 = sr 원장 집계와 일치 */
   srMonthly: [
-    { m: '5월', 접수: 31, 완료: 29, ontime: 89.7, avgH: 7.4, sat: 4.3 },
-    { m: '6월', 접수: 28, 완료: 30, ontime: 93.3, avgH: 6.9, sat: 4.4 },
-    { m: '7월', 접수: 36, 완료: 33, ontime: 87.9, avgH: 8.1, sat: 4.2 },
-    { m: '8월', 접수: 33, 완료: 34, ontime: 91.2, avgH: 7.0, sat: 4.4 },
-    { m: '9월', 접수: 30, 완료: 31, ontime: 93.5, avgH: 6.2, sat: 4.5 },
-    { m: '10월', 접수: 34, 완료: 15, ontime: 86.7, avgH: 7.8, sat: 4.3 }
+    { m: '5월', 접수: 31, 완료: 29, ontime: 89.7, avgH: 7.4, re: 2, sat: 4.3 },
+    { m: '6월', 접수: 28, 완료: 30, ontime: 93.3, avgH: 6.9, re: 1, sat: 4.4 },
+    { m: '7월', 접수: 36, 완료: 33, ontime: 87.9, avgH: 8.1, re: 3, sat: 4.2 },
+    { m: '8월', 접수: 33, 완료: 34, ontime: 91.2, avgH: 7.0, re: 2, sat: 4.4 },
+    { m: '9월', 접수: 30, 완료: 31, ontime: 93.5, avgH: 6.2, re: 1, sat: 4.5 },
+    { m: '10월', 접수: 34, 완료: 15, ontime: 86.7, avgH: 7.8, re: 2, sat: 4.3 }
   ],
   srTarget: { ontime: 90, avgH: 8, sat: 4.3, recv: 32 },
 
@@ -6276,25 +6281,21 @@ const isOverdue = r => r.status !== '완료' && r.due && days(r.due, DATA.baseDa
 const isSoon = r => r.status !== '완료' && r.due && (n => n >= 0 && n <= 2)(days(r.due, DATA.baseDate));
 
 /* 대시보드 머리 — proto [data-dash-head]. role 배지가 사용자용/관리자용을 가른다.
-   관리자용만 기간 단추(일/주/월/분기) — 사용자용은 proto TPL-5 내 업무판처럼 기간 창이 없다 */
+   기간 단추(일/주/월/분기)는 쓰지 않는다 (2026-11-08) */
 function dashHead({ title, role, desc }) {
   const roleBadge = role === 'admin'
     ? `<span class="${DASH_BADGE}bg-primary/10 text-primary ring-border">관리자용</span>`
     : `<span class="${DASH_BADGE}${TONE.info}">사용자용</span>`;
-  const seg = role === 'admin' ? `<div data-period-seg="" role="group" aria-label="기간" class="inline-flex overflow-hidden rounded-md border border-border">
-      ${['일', '주', '월', '분기'].map(p => `<button type="button" aria-pressed="${p === '월'}" class="${p === '월' ? 'px-2 py-0.5 text-xs bg-primary text-primary-foreground font-medium' : 'px-2 py-0.5 text-xs text-muted-foreground hover:bg-muted'}">${p}</button>`).join('')}
-    </div>` : '';
   const v = member(DATA.viewer[role]);
   const scope = role === 'admin' ? `${DATA.dept} 부서원 ${DATA.members.length}명` : `${v.name} 본인`;
   return `<div data-dash-head="" class="flex flex-wrap items-center gap-2 shrink-0 rounded-xl border border-border bg-card px-3 py-2">
     <h2 class="text-base font-semibold text-foreground">${esc(title)}</h2>
     ${roleBadge}
     <span class="text-xs text-muted-foreground">${esc(desc)}</span>
-    <div class="ml-auto flex flex-wrap items-center gap-1.5">
-      ${seg}
+    ${role === 'admin' ? '' /* 관리자용(MyPage (관리자)·IT자산현황)은 오른쪽 기준·편집을 두지 않는다 */ : `<div class="ml-auto flex flex-wrap items-center gap-1.5">
       <span class="text-xs tabular-nums text-muted-foreground">${esc(scope)} 기준 · 기준일 ${si(DATA.baseDate)}</span>
       <button type="button" data-wgt-edit="" aria-pressed="false" class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-all duration-150 h-7 gap-1 px-2.5 text-xs text-muted-foreground hover:bg-accent hover:text-accent-foreground">${EDIT_SVG}편집</button>
-    </div>
+    </div>`}
   </div>`;
 }
 
@@ -6312,14 +6313,14 @@ function tile({ name, x, v, u, sub, b, warn }) {
   return wgt({ name, x, y: 0, w: 2, h: 1, badge: b, body: `<div class="flex h-full items-center gap-2"><p class="flex shrink-0 items-baseline gap-0.5"><span class="text-2xl font-bold tabular-nums text-foreground">${si(v)}</span><span class="text-xs text-muted-foreground">${si(u)}</span></p>${warn ? WARN : ''}<span data-tile-sub="" class="ml-auto min-w-0 text-right text-xs leading-tight text-muted-foreground" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; word-break: keep-all;">${sub}</span></div>` });
 }
 /* 표 — proto x-tb. cols: [{h, f(row) | k, l(왼쪽 정렬), ell}] */
-function xtb(cols, rows, { foot, fill = rows.length >= 4 } = {}) {
+function xtb(cols, rows, { foot, fill = rows.length >= 4, row } = {}) {
   const head = cols.map((c, i) => `<span role="columnheader" class="x-th${c.l ? ' x-l' : ''}"${i < cols.length - 1 ? ' style="position: relative;"' : ''}>${esc(c.h)}${i < cols.length - 1 ? `<div class="ag-header-cell-resize" aria-hidden="true" data-col-resize="${esc(c.h)}" style="right: 0px; z-index: 3;"></div>` : ''}</span>`).join('');
   const cell = (c, r) => {
     const v = c.f ? c.f(r) : r[c.k];
     const zero = v === 0 || v === '0';
     return `<span role="cell" class="x-td${c.l ? ' x-l' : ''}${c.ell ? ' x-ell' : ''}${zero ? ' x-zero' : ''}"${c.ell ? ` title="${esc(r[c.k])}"` : ''}>${c.f ? v : si(v)}</span>`;
   };
-  const body = rows.length ? rows.map(r => `<div role="row" class="x-tr">${cols.map(c => cell(c, r)).join('')}</div>`).join('')
+  const body = rows.length ? rows.map(r => `<div role="row" class="x-tr"${row ? row(r) : ''}>${cols.map(c => cell(c, r)).join('')}</div>`).join('')
     : `<div role="row" class="x-tr"><span role="cell" class="x-td text-muted-foreground">해당 건이 없습니다</span>${cols.slice(1).map(() => '<span role="cell" class="x-td"></span>').join('')}</div>`;
   const ft = foot ? `<div role="row" class="x-tr x-foot">${cols.map((c, i) => `<span role="cell" class="x-td${c.l ? ' x-l' : ''}">${i === 0 ? '합계' : (foot(c) ?? '')}</span>`).join('')}</div>` : '';
   return `<div class="h-full overflow-auto"><div role="table" class="x-tb${fill ? ' x-fill' : ''}"><div role="row" class="x-tr">${head}</div>${body}${ft}</div></div>`;
@@ -6360,6 +6361,21 @@ function drawCharts() {
   CHARTS.forEach(c => {
     const el = document.querySelector(`[data-dash-chart="${c.key}"]`);
     if (!el) return;
+    if (c.kind === 'mydonut') {
+      window.itgChart(el, 'pie', { rows: c.rows, xField: 'k', series: ['v'], donut: true, legend: true }).then(() => withChart(el, inst => {
+        inst.setOption({ legend: { show: true, bottom: 0, itemWidth: 10, itemHeight: 10, textStyle: { fontSize: 13 } },
+          series: [{ radius: ['42%', '66%'], center: ['50%', '46%'], label: { show: true, position: 'outside', fontSize: 13, formatter: '{b}' },
+            labelLine: { show: true, length: 14, length2: 26 }, data: c.rows.map((r, i) => ({ name: r.k, value: r.v, itemStyle: { color: pal[i % 6] } })) }] });
+      }));
+      return;
+    }
+    if (c.kind === 'myhbar') {
+      window.itgChart(el, 'bar', { rows: c.rows, xField: 'k', series: ['건수'], horizontal: true, legend: false }).then(() => withChart(el, inst => {
+        inst.setOption({ color: [pal[0]], grid: { left: 12, right: 24, top: 16, bottom: 8, containLabel: true }, xAxis: { minInterval: 1 },
+          series: [{ itemStyle: { color: pal[0] }, barMaxWidth: 10 }] });
+      }));
+      return;
+    }
     if (c.kind === 'donut') {
       window.itgChart(el, 'pie', { rows: c.rows, xField: 'k', series: ['v'], donut: true, legend: false }).then(() => withChart(el, inst => {
         inst.setOption({ legend: { show: false }, series: [{ radius: ['50%', '80%'], center: ['50%', '50%'], label: { show: false }, labelLine: { show: false },
@@ -6381,49 +6397,244 @@ function drawCharts() {
    ========================================================================= */
 const SCREENS = {};
 
-/* ── 요청관리 > 대시보드 (사용자) ─────────────────────────────────────── */
-SCREENS['/request/dash-user'] = () => {
-  const me = DATA.viewer.user;
-  const mine = DATA.sr.filter(r => r.assignee === me);
-  const open = mine.filter(r => r.status !== '완료');
-  const by = s => mine.filter(r => r.status === s).length;
-  const doneRows = mine.filter(r => r.done).sort((a, b) => b.done.localeCompare(a.done));
-  const myReq = DATA.myRequests.filter(r => r.owner === me);
-  const queue = open.slice().sort((a, b) => a.due.localeCompare(b.due));
-  const wk = open.filter(r => days(r.due, DATA.baseDate) <= 7).sort((a, b) => a.due.localeCompare(b.due));
-  const types = ['서비스요청', '장애요청', '변경요청', '문제요청'].map(t => ({ k: t, v: mine.filter(r => r.type === t).length }));
-  const daily = []; for (let i = 13; i >= 0; i--) { const d = new Date(new Date(DATA.baseDate) - i * DAY).toISOString().slice(0, 10);
-    daily.push({ d: d.slice(5), 접수: mine.filter(r => r.reg === d).length, 완료: mine.filter(r => r.done === d).length }); }
-  return dashHead({ title: '내 업무판', role: 'user', desc: '나에게 배정된 요청이 어디까지 왔고 기한을 지키고 있는가' }) + grid('ITSM-MY', [
-    tile({ name: '내 담당 진행중', x: 0, v: open.length, u: '건', b: '본인', sub: si(`접수대기 ${by('접수대기')} · 처리중 ${by('처리중')}`) }),
-    tile({ name: '오늘 마감', x: 2, v: open.filter(r => r.due === DATA.baseDate).length, u: '건', b: '본인', sub: si('기한 = 오늘') }),
-    tile({ name: '기한 임박', x: 4, v: open.filter(isSoon).length, u: '건', b: '본인', sub: si('2일 이내') }),
-    tile({ name: '기한 초과', x: 6, v: open.filter(isOverdue).length, u: '건', b: '본인', warn: open.some(isOverdue), sub: si('즉시 조치 필요') }),
-    tile({ name: '승인 대기', x: 8, v: by('승인대기'), u: '건', b: '본인', sub: si('부서장 승인 요청 중') }),
-    tile({ name: '최근 7일 완료', x: 10, v: mine.filter(r => r.done && days(DATA.baseDate, r.done) <= 6).length, u: '건', b: '본인', sub: si(`누적 완료 ${by('완료')}`) }),
-    wgt({ name: '내 처리 단계 (접수→완료)', x: 0, y: 1, w: 4, h: 3, badge: '본인', body: steps([
-      { k: '접수대기', n: by('접수대기'), sub: pct(by('접수대기'), mine.length).toFixed(1) + '%' }, { k: '처리중', n: by('처리중'), sub: pct(by('처리중'), mine.length).toFixed(1) + '%' },
-      { k: '승인대기', n: by('승인대기'), sub: pct(by('승인대기'), mine.length).toFixed(1) + '%' }, { k: '완료', n: by('완료'), sub: pct(by('완료'), mine.length).toFixed(1) + '%' }]),
-      foot: `내 담당 전체 ${si(mine.length)}건` }),
-    wgt({ name: '내 처리 큐 (기한순)', x: 4, y: 1, w: 8, h: 3, badge: '본인', body: xtb([
-      { h: '요청번호', k: 'no' }, { h: '제목', k: 'title', l: true, ell: true }, { h: '분류', k: 'type', l: true }, { h: '요청자', k: 'from', l: true },
-      { h: '상태', f: r => st(r.status) }, { h: '기한', f: r => si(md(r.due)) }, { h: 'D-Day', f: r => dday(r.due) }], queue),
-      foot: si(`진행 ${queue.length}건 · 기한 빠른 순`) }),
-    wgt({ name: '오늘·이번주 마감', x: 0, y: 4, w: 4, h: 3, badge: '본인', pad: 'px-3 py-1', body: alerts(['D-Day', '요청', '기한'],
-      wk.map(r => { const n = days(r.due, DATA.baseDate); return [n < 0 ? 'D+' + (-n) : n === 0 ? 'D-Day' : 'D-' + n, n < 0 ? 'bad' : n <= 2 ? 'warn' : 'mute', r.title, md(r.due)]; })) }),
-    wgt({ name: '내가 요청한 건', x: 4, y: 4, w: 4, h: 3, badge: '요청자', body: xtb([
-      { h: '요청번호', k: 'no' }, { h: '제목', k: 'title', l: true, ell: true }, { h: '처리 부서', k: 'to', l: true }, { h: '상태', f: r => st(r.status) }], myReq),
-      foot: si(`진행 ${myReq.filter(r => r.status !== '완료').length}건 · 완료 ${myReq.filter(r => r.status === '완료').length}건`) }),
-    wgt({ name: '내 요청유형별 분포', x: 8, y: 4, w: 4, h: 3, badge: '본인', body: donutTable('u-type', types) }),
-    wgt({ name: '최근 14일 내 접수·완료', x: 0, y: 7, w: 6, h: 3, badge: '최근 14일', body: chart('u-daily', 'line', { rows: daily, xField: 'd', series: ['접수', '완료'], smooth: false }) }),
-    wgt({ name: '최근 완료한 요청', x: 6, y: 7, w: 6, h: 3, badge: '최근 30일', body: xtb([
-      { h: '요청번호', k: 'no' }, { h: '제목', k: 'title', l: true, ell: true }, { h: '완료일', f: r => si(md(r.done)) },
-      { h: '기한 준수', f: r => r.done <= r.due ? badge('준수', 'ok') : badge(`+${days(r.done, r.due)}일`, 'bad') }], doneRows),
-      foot: si(`완료 ${doneRows.length}건 중 기한 준수 ${doneRows.filter(r => r.done <= r.due).length}건`) })
-  ]);
+/* ── 요청관리 > MyPage (사용자) ───────────────────────────────────────
+   기준: 제품 MyPage(/request/status?f_tab=todo) 화면 + inputs/proto.html #/request/status 마크업.
+   화이트 컨셉(proto 라이트 토큰). 위 「내 작업 현황」(접기) — 왼쪽 숫자 카드 3개 · 상태별 분포 · 요청유형별,
+   아래 그리드 카드 — 검색(대상·키워드·초기화·조회) · 작업함 칩 6개 · ag-grid 표 · 페이지 이동 */
+const MY_TYPES = ['서비스요청', '장애', '변경'];
+const MY_TYPE_OF = { 서비스요청: '서비스요청', 장애요청: '장애', 변경요청: '변경' };
+const MY_GUBUN = { 서비스요청: '신규', 장애: '장애', 변경: '변경' };
+const MY_PROC = { 서비스요청: '서비스요청 절차', 장애: '장애관리', 변경: '변경관리' };
+const MY_STEP = { 접수대기: '요청접수', 처리중: '요청처리', 완료: '완료' };
+const MY_TABS = [['all', '전체'], ['wait', '대기'], ['run', '수행'], ['soon', '기한 임박'], ['over', '기한 초과'], ['done', '최근 완료'], ['sent', '내 요청']];
+/* 이서연 담당 SR — DATA.sr 담당 건 중 7개(번호로 가져옴) + MyPage 용 18개. [번호, 제목, 유형, 요청자, 상태, 등록일, 기한, 완료일] */
+const MY_SR_REUSE = ["SR261031_00055", "SR261030_00051", "SR261027_00041", "SR261026_00038", "SR261008_00012", "SR261014_00018", "SR261022_00032"];
+const MY_SR_ADD = [
+    ["SR261012_00058", "SSL 인증서 교체", "변경", "보안팀 강현수", "완료", "2026-10-12", "2026-10-16", "2026-10-15"],
+    ["SR261015_00059", "서버 OS 패치 적용", "변경", "보안팀 강현수", "완료", "2026-10-15", "2026-10-20", "2026-10-22"],
+    ["SR261016_00060", "VPN 접속 끊김", "장애", "개발1팀 배준서", "완료", "2026-10-16", "2026-10-17", "2026-10-17"],
+    ["SR261019_00061", "프린터 스풀러 오류", "장애", "인사팀 서지아", "완료", "2026-10-19", "2026-10-20", "2026-10-21"],
+    ["SR261020_00062", "NAS 공유폴더 용량 증설", "서비스요청", "데이터팀 문채원", "완료", "2026-10-20", "2026-10-24", "2026-10-23"],
+    ["SR261023_00063", "보안 USB 등록", "서비스요청", "보안팀 강현수", "완료", "2026-10-23", "2026-10-27", "2026-10-27"],
+    ["SR261023_00064", "ERP 로그인 실패", "장애", "구매팀 홍승우", "완료", "2026-10-23", "2026-10-24", "2026-10-24"],
+    ["SR261024_00065", "스위치 VLAN 변경", "변경", "IT기획팀 신예린", "처리중", "2026-10-24", "2026-10-30", null],
+    ["SR261025_00066", "회의실 화상장비 음성 끊김", "장애", "전략기획팀 고은비", "완료", "2026-10-25", "2026-10-26", "2026-10-26"],
+    ["SR261027_00067", "전자결재 첨부 업로드 오류", "장애", "재무팀 김수현", "처리중", "2026-10-27", "2026-10-29", null],
+    ["SR261028_00068", "WAS 설정 변경 (세션 타임아웃)", "변경", "개발1팀 배준서", "처리중", "2026-10-28", "2026-11-02", null],
+    ["SR261029_00069", "ERP 사용자 권한 추가", "서비스요청", "재무팀 김수현", "처리중", "2026-10-29", "2026-11-05", null],
+    ["SR261029_00070", "그룹웨어 결재선 일괄 변경", "변경", "인사팀 서지아", "처리중", "2026-10-29", "2026-11-06", null],
+    ["SR261030_00071", "사내 메신저 그룹 생성", "서비스요청", "영업2팀 유다은", "처리중", "2026-10-30", "2026-11-06", null],
+    ["SR261030_00072", "메일 발송 지연", "장애", "영업1팀 장민호", "처리중", "2026-10-30", "2026-11-01", null],
+    ["SR261030_00073", "DNS 레코드 추가", "변경", "IT기획팀 신예린", "접수대기", "2026-10-30", "2026-11-05", null],
+    ["SR261031_00074", "3층 회의실 무선 AP 불통", "장애", "총무팀 노현우", "접수대기", "2026-10-31", "2026-11-03", null],
+    ["SR261031_00075", "방화벽 정책 변경 (개발망)", "변경", "개발2팀 임태양", "접수대기", "2026-10-31", "2026-11-07", null]
+  ];
+const MY_COLS = [ // [머리글, 폭(px, 0 = 남은 폭), 키, 가운데]
+  ['요청번호', 142, 'no', 1], ['구분', 80, 'gubun', 1], ['유형', 165, 'proc', 1], ['제목', 0, 'title', 0], ['처리상태', 104, 'pst', 1],
+  ['처리단계', 150, 'step', 1], ['현재처리자', 120, 'cur', 1], ['D-Day', 96, 'dd', 1], ['할당일시', 150, 'asg', 1], ['요청자', 100, 'req', 1], ['요청일시', 150, 'reqAt', 1]];
+const myCols = () => MY.tab === 'done' ? MY_COLS.map(c => c[2] === 'dd' ? ['납기준수여부', 128, 'ontime', 1] : c) : MY_COLS;
+const myOntime = r => r.pst !== '완료' ? '<span class="text-muted-foreground">—</span>' : !r.due || r.done <= r.due ? badge('준수', 'ok') : badge('지연', 'bad');
+const myTime = (no, d) => { const n = +String(no).slice(-5) || 7; return `${d} ${String(8 + (n * 7) % 10).padStart(2, '0')}:${String((n * 13) % 60).padStart(2, '0')}`; };
+function myRows() {
+  const me = DATA.viewer.user, mm = member(me).name, lead = member(DATA.viewer.admin).name, out = [];
+  const srs = [...MY_SR_REUSE.map(no => { const r = DATA.sr.find(x => x.no === no); return { ...r, type: MY_TYPE_OF[r.type] }; }),
+    ...MY_SR_ADD.map(r => ({ no: r[0], title: r[1], type: r[2], from: r[3], status: r[4], reg: r[5], due: r[6], done: r[7] }))];
+  srs.forEach(r => {
+    const at = myTime(r.no, r.reg), n = days(r.due, DATA.baseDate);
+    const tab = r.status === '완료' ? 'done' : r.status === '접수대기' ? 'wait' : 'run';
+    out.push({ no: r.no, type: r.type, gubun: MY_GUBUN[r.type], proc: MY_PROC[r.type], title: r.title, pst: tab === 'done' ? '완료' : tab === 'wait' ? '대기' : '진행중',
+      step: MY_STEP[r.status], cur: tab === 'done' ? '—' : mm, asg: at, req: r.from.split(' ').pop(), reqAt: at, reg: r.reg, due: r.due, done: r.done,
+      tabs: ['all', tab, ...(tab === 'run' && n >= 0 && n <= 2 ? ['soon'] : []), ...(tab === 'run' && n < 0 ? ['over'] : [])] });
+  });
+  DATA.portal.filter(p => p.owner === me).forEach(p => {
+    const end = p.step >= 4, at = myTime(p.no, p.reg);
+    out.push({ no: p.no, type: '서비스요청', gubun: '신규', proc: p.cat + ' 요청', title: p.title, pst: end ? '완료' : '진행중', step: p.step === 3 ? '요청자 확인' : DATA.portalSteps[p.step] || '접수',
+      cur: end ? '—' : p.step <= 1 ? lead : p.step === 3 ? mm : p.cat + ' 담당', done: end ? p.reg : null, portal: p.step, asg: p.step >= 2 ? at : '—', req: mm, reqAt: at, reg: p.reg, tabs: ['all', 'sent'] });
+  });
+  return out.sort((a, b) => b.reqAt.localeCompare(a.reqAt));
+}
+const MY = { tab: 'run', type: '전체', col: '전체', q: '', page: 1, size: 20, open: true };
+const MY_SVG = {
+  chev: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide h-4 w-4 transition-transform duration-200" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>',
+  search: '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5" aria-hidden="true"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg>',
+  first: '<path d="m11 17-5-5 5-5"></path><path d="m18 17-5-5 5-5"></path>', prev: '<path d="m15 18-6-6 6-6"></path>',
+  next: '<path d="m9 18 6-6-6-6"></path>', last: '<path d="m13 17 5-5-5-5"></path><path d="m6 17 5-5-5-5"></path>',
+  filter: '<path d="M3 6h18"></path><path d="M7 12h10"></path><path d="M10 18h4"></path>',
+  cols: '<rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M9 3v18"></path><path d="M15 3v18"></path>',
+  down: '<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path><path d="M12 15V3"></path>'
 };
+const mySvg = (d, c = 'h-3.5 w-3.5') => `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="${c}" aria-hidden="true">${d}</svg>`;
+function myFiltered(all) {
+  const q = MY.q.trim().toLowerCase();
+  return all.filter(r => r.tabs.includes(MY.tab) && (MY.type === '전체' || r.type === MY.type) && (!q || (MY.col !== '제목' && r.no.toLowerCase().includes(q)) || (MY.col !== '요청번호' && r.title.toLowerCase().includes(q))));
+}
+const myCard = (name, col, desc, body, tools = '') => `<div data-my-card="${name}" class="flex min-h-0 flex-col overflow-hidden rounded-xl border border-border bg-card md:[grid-column:var(--wdb-col)]" style="--wdb-col: ${col};">
+  <div class="flex shrink-0 items-center gap-1.5 border-b border-border px-3 py-1.5"><span class="whitespace-nowrap text-xs font-medium text-foreground">${name}</span>${desc ? `<span class="min-w-0 truncate text-xs text-muted-foreground">· ${desc}</span>` : ''}<span class="ml-auto"></span>${tools}</div>
+  <div class="min-h-0 flex-1 p-2">${body}</div>
+</div>`;
+/* 내 작업 현황 — 요청유형별 대기·수행·기한 임박·기한 초과·최근 완료 (수행 = 기한 임박·초과 포함) */
+function myWorkTable(all) {
+  const sr = all.filter(r => r.portal == null);
+  const rows = MY_TYPES.map(k => { const t = sr.filter(r => r.type === k), c = tab => t.filter(r => r.tabs.includes(tab)).length;
+    return { k, wait: c('wait'), run: c('run'), soon: c('soon'), over: c('over'), done: c('done') }; });
+  const cols = [{ h: '요청유형', k: 'k', l: true }, { h: '대기', k: 'wait' }, { h: '수행', k: 'run' },
+    { h: '기한 임박', f: r => r.soon ? `<span class="text-warning">${r.soon}</span>` : '0' }, { h: '기한 초과', f: r => r.over ? `<span class="text-destructive">${r.over}</span>` : '0' }, { h: '최근 완료', k: 'done' }];
+  const key = { 대기: 'wait', 수행: 'run', '기한 임박': 'soon', '기한 초과': 'over', '최근 완료': 'done' };
+  return xtb(cols, rows, { fill: true, foot: c => rows.reduce((a, r) => a + r[key[c.h]], 0) }).replace('<span role="cell" class="x-td x-l">합계</span>', '<span role="cell" class="x-td x-l">전체</span>');
+}
+/* 내 요청 현황 — 완료 확인(처리 끝, 요청자 확인 대기) · 대기/수행/완료 */
+function myConfirmList(mine) {
+  const list = mine.filter(r => r.portal === 3);
+  if (!list.length) return '<div class="grid h-full place-items-center text-xs text-muted-foreground">확인할 요청이 없습니다</div>';
+  return `<div class="flex h-full flex-col gap-2 overflow-auto">${list.map(r => `<div data-my-confirm-card="${esc(r.no)}" class="flex shrink-0 items-center gap-2 rounded-lg border border-border bg-card px-2.5 py-2">
+    <div class="min-w-0 flex-1"><div class="truncate text-sm font-medium text-foreground" title="${esc(r.title)}">${si(r.title)}</div>
+      <div class="mt-0.5 truncate text-xs text-muted-foreground">${esc(r.no)} · ${si(r.proc.replace(' 요청', ''))} 담당 처리 완료</div></div>
+    <button type="button" data-my-confirm="${esc(r.no)}" class="inline-flex h-7 shrink-0 items-center rounded-md bg-primary px-2.5 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90 disabled:bg-muted disabled:text-muted-foreground">요청자 확인</button>
+  </div>`).join('')}</div>`;
+}
+function myReqCounts(mine) {
+  const n = [['대기', mine.filter(r => r.portal <= 2).length, 'text-muted-foreground'], ['수행', mine.filter(r => r.portal === 3).length, 'text-info'], ['완료', mine.filter(r => r.portal >= 4).length, 'text-success']];
+  return `<div class="grid h-full grid-cols-3 gap-2">${n.map(([k, v, c]) => `<div data-my-req="${k}" class="flex flex-col items-center justify-center gap-1 rounded-lg bg-muted/50">
+    <span class="text-base font-semibold text-foreground">${k}</span><span class="text-4xl font-bold tabular-nums ${c}">${v}</span></div>`).join('')}</div>`;
+}
+function myGridHtml(all) {
+  const rows = myFiltered(all), pages = Math.max(1, Math.ceil(rows.length / MY.size));
+  MY.page = Math.min(MY.page, pages);
+  const show = rows.slice((MY.page - 1) * MY.size, MY.page * MY.size);
+  const COLS = myCols();
+  const fixed = COLS.reduce((a, c) => a + c[1], 0);
+  let left = 0;
+  const pos = COLS.map(c => { const l = left === 0 ? '0px' : `calc(${left}px${COLS.indexOf(c) > 3 ? ' + var(--my-tw)' : ''})`; const w = c[1] ? c[1] + 'px' : 'var(--my-tw)'; if (c[1]) left += c[1]; return { l, w }; });
+  const head = COLS.map((c, i) => `<div class="ag-header-cell${i === 0 ? ' ag-column-first' : ''}" role="columnheader" style="top: 0px; height: 34px; left: ${pos[i].l}; width: ${pos[i].w};"><div class="ag-header-cell-comp-wrapper"><div class="ag-cell-label-container"><div class="ag-header-cell-label"><span class="ag-header-cell-text">${esc(c[0])}</span></div></div></div><span data-my-filter="" title="${esc(c[0])} 필터" aria-hidden="true">${mySvg(MY_SVG.filter)}</span><div class="ag-header-cell-resize" aria-hidden="true" style="right: 0px; z-index: 3;"></div></div>`).join('');
+  const body = show.map((r, ri) => `<div role="row" data-st-row="" class="ag-row ag-row-position-relative ag-row-level-0 ${ri % 2 ? 'ag-row-odd' : 'ag-row-even'}" tabindex="0" aria-selected="false" style="height: 32px; cursor: pointer;">${COLS.map((c, i) =>
+    `<div role="gridcell" class="ag-cell-value ag-cell${i === 0 ? ' ag-column-first' : ''}${i === COLS.length - 1 ? ' ag-column-last' : ''}${c[3] ? ' lyra-cell-center' : ''}" style="left: ${pos[i].l}; width: ${pos[i].w};">${c[2] === 'dd' ? dday(r.due, r.pst === '완료') : c[2] === 'ontime' ? myOntime(r) : `<span title="${esc(r[c[2]])}">${si(r[c[2]])}</span>`}</div>`).join('')}</div>`).join('')
+    || `<div class="grid h-24 place-items-center text-sm text-muted-foreground">해당 작업이 없습니다</div>`;
+  const pbtn = (lab, d, dis, p) => `<button type="button" aria-label="${lab}" data-my-page="${p}"${dis ? ' disabled=""' : ''} class="inline-flex h-7 min-w-7 items-center justify-center rounded-md bg-transparent px-1 text-xs text-foreground outline-none transition-colors hover:bg-muted disabled:opacity-50 disabled:hover:bg-transparent">${mySvg(d)}</button>`;
+  const from = Math.max(1, Math.min(MY.page - 2, pages - 4)), nums = [];
+  for (let p = from; p <= Math.min(pages, from + 4); p++) nums.push(`<button type="button" data-type="page" data-my-page="${p}" aria-label="Page ${p}"${p === MY.page ? ' aria-current="page"' : ''} class="inline-flex h-7 min-w-7 items-center justify-center rounded-md px-1 text-xs outline-none transition-colors ${p === MY.page ? 'bg-primary text-primary-foreground' : 'bg-transparent text-foreground hover:bg-muted'}">${p}</button>`);
+  return `<div data-my-grid="" class="itg-toolbar flex shrink-0 items-center gap-2 border-b border-border bg-card px-4 py-1 min-h-[var(--d-toolbar-h)]">
+      <span class="h-3.5 w-1 shrink-0 rounded-full bg-primary"></span>
+      <div class="flex min-w-0 items-baseline gap-2"><h3 class="truncate font-semibold tracking-tight text-foreground text-base">MyPage</h3></div>
+      <div class="flex shrink-0 items-center"><span data-count-pill="" class="inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full bg-muted px-2 py-0.5 text-xs font-semibold leading-none tabular-nums text-muted-foreground ring-1 ring-inset ring-border">${rows.length}</span></div>
+      <span class="truncate text-xs text-muted-foreground">더블클릭으로 열기.</span>
+      <div class="ml-auto flex shrink-0 items-center gap-1.5">
+        <button type="button" title="열 설정" class="grid h-6 w-6 shrink-0 place-items-center rounded-md text-muted-foreground transition-colors hover:bg-muted hover:text-foreground">${mySvg(MY_SVG.cols, 'h-4 w-4')}</button>
+        <button type="button" title="엑셀 내려받기 (목업)" class="grid h-6 w-6 shrink-0 place-items-center rounded-md text-muted-foreground transition-colors hover:bg-muted hover:text-foreground">${mySvg(MY_SVG.down, 'h-4 w-4')}</button>
+      </div>
+    </div>
+    <div class="flex min-h-0 w-full flex-1 flex-col">
+      <div class="relative min-h-0 w-full flex-1">
+        <div class="itg-grid ag-theme-buttonStyle-1 ag-theme-columnDropStyle-2 ag-theme-batchEditStyle-3 ag-theme-checkboxStyle-4 ag-theme-iconSet-5 ag-theme-tabStyle-6 ag-theme-inputStyle-7 ag-theme-params-1" style="height: 100%;">
+          <div class="ag-root-wrapper ag-layout-normal ag-ltr" style="height: 100%;"><div class="ag-root-wrapper-body ag-layout-normal" style="min-height: 0px; flex: 1 1 0%;">
+            <div class="ag-root ag-unselectable ag-layout-normal ag-body-horizontal-content-no-gap" role="grid">
+              <div class="ag-header ag-header-allow-overflow" role="presentation" style="height: 35px; min-height: 35px;"><div class="ag-header-viewport" role="rowgroup" style="overflow: hidden;"><div class="ag-header-container" role="presentation" style="width: calc(${fixed}px + var(--my-tw));"><div class="ag-header-row ag-header-row-column" role="row" style="top: 0px; height: 34px; width: calc(${fixed}px + var(--my-tw));">${head}</div></div></div></div>
+              <div class="ag-body ag-layout-normal" role="presentation" style="min-height: 0px; flex: 1 1 0%;"><div class="ag-body-viewport ag-layout-normal" role="presentation" style="height: 100%;"><div class="ag-center-cols-viewport" role="rowgroup"><div class="ag-center-cols-container" role="presentation" style="width: calc(${fixed}px + var(--my-tw));">${body}</div></div></div></div>
+            </div>
+          </div></div>
+        </div>
+      </div>
+      <div class="mt-1 flex shrink-0 items-center justify-end gap-3 px-3 py-1.5">
+        <nav class="flex items-center gap-2" aria-label="페이지 이동">
+          <span class="whitespace-nowrap text-xs text-muted-foreground">페이지 ${MY.page}/${pages}</span>
+          <div class="flex items-center gap-1">${pbtn('First Page', MY_SVG.first, MY.page === 1, 1)}${pbtn('Previous Page', MY_SVG.prev, MY.page === 1, MY.page - 1)}${nums.join('')}${pbtn('Next Page', MY_SVG.next, MY.page === pages, MY.page + 1)}${pbtn('Last Page', MY_SVG.last, MY.page === pages, pages)}</div>
+          <label for="sf-st-size" class="sr-only">쪽당 건수</label>
+          <select id="sf-st-size" data-my-size="" class="ml-1 h-7 w-[6.5rem] rounded-md border border-input bg-field px-2 text-xs text-foreground shadow-sm outline-none">${[20, 50].map(n => `<option value="${n}"${n === MY.size ? ' selected' : ''}>${n} / 페이지</option>`).join('')}</select>
+        </nav>
+      </div>
+    </div>`;
+}
+const MY_CHIP = on => `inline-flex h-7 max-w-full min-w-0 items-center gap-1.5 rounded-full border px-3 text-xs font-semibold transition-colors ${on ? 'border-transparent bg-primary text-primary-foreground' : 'border-border bg-card text-muted-foreground hover:border-muted-foreground/40'}`;
+const myTypeChips = all => ['전체', ...MY_TYPES].map(k => { const on = MY.type === k, n = all.filter(r => r.tabs.includes(MY.tab) && (k === '전체' || r.type === k)).length;
+  return `<button type="button" data-my-type="${k}" aria-pressed="${on}" class="${MY_CHIP(on)}"><span class="min-w-0 truncate">${k}</span><span class="shrink-0 tabular-nums opacity-70">${n}</span></button>`; }).join('');
+const myChips = all => MY_TABS.map(([k, lab]) => { const on = MY.tab === k, n = all.filter(r => r.tabs.includes(k) && (MY.type === '전체' || r.type === MY.type)).length;
+  return `<button type="button" data-st-tab="${k}" aria-pressed="${on}" title="${lab}" class="${MY_CHIP(on)}"><span class="min-w-0 truncate">${lab}</span><span class="shrink-0 tabular-nums opacity-70">${n}</span></button>`; }).join('');
+function myLayout() { /* 제목 열이 남은 폭을 먹는다 — 제품처럼 실제 폭을 재서 넣는다 */
+  const g = document.querySelector('[data-my-wrap] .itg-grid'); if (!g) return;
+  const fixed = myCols().reduce((a, c) => a + c[1], 0);
+  g.style.setProperty('--my-tw', Math.max(240, g.clientWidth - fixed - 2) + 'px');
+}
+function myRedraw() {
+  const all = myRows(), wrap = document.querySelector('[data-my-wrap]'); if (!wrap) return;
+  wrap.querySelector('[data-my-chips]').innerHTML = myChips(all);
+  wrap.querySelector('[data-my-types]').innerHTML = myTypeChips(all);
+  const host = wrap.querySelector('[data-my-gridhost]'); host.innerHTML = myGridHtml(all); myLayout();
+}
+SCREENS['/request/dash-user'] = () => {
+  const all = myRows(), mine = all.filter(r => r.portal != null);
+  const wait = mine.filter(r => r.portal === 3).length;
+  setTimeout(myLayout, 0);
+  return `<div data-my-wrap="" class="flex h-full min-h-0 flex-col gap-[var(--d-section-gap)]" data-screen-label="MyPage">
+  <div class="flex shrink-0 flex-col overflow-hidden rounded-xl border border-border bg-card shadow-sm">
+    <div class="itg-toolbar flex items-center gap-2 bg-card px-4 py-1 min-h-[var(--d-toolbar-h)]${MY.open ? ' border-b border-border' : ''}">
+      <span class="h-3.5 w-1 shrink-0 rounded-full bg-primary"></span>
+      <div class="flex min-w-0 items-baseline gap-2"><h3 class="truncate font-semibold tracking-tight text-foreground text-base">내 작업 · 요청 현황</h3></div>
+      <div class="ml-auto flex shrink-0 items-center gap-1.5"><button type="button" data-panel-toggle="" title="${MY.open ? '접기' : '펼치기'}" aria-expanded="${MY.open}" class="grid h-6 w-6 shrink-0 place-items-center rounded-md text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"${MY.open ? '' : ' style="transform: rotate(180deg);"'}>${MY_SVG.chev}</button></div>
+    </div>
+    <div data-panel-body="" class="relative min-h-0 flex-1 p-[var(--d-card-p)]"${MY.open ? '' : ' hidden'}>
+      <div class="grid grid-cols-1 gap-3 md:[grid-template-columns:repeat(12,minmax(0,1fr))]" style="grid-auto-rows: 236px;">
+        ${myCard('내 작업 현황', '1 / span 6', '수행 = 기한 임박·초과 포함', myWorkTable(all))}
+        ${myCard('완료 확인', '7 / span 3', '처리 끝 · 요청자 확인 후 TASK 처리', myConfirmList(mine), `<span data-my-confirm-n="" class="${DASH_BADGE}${TONE.warn}">${wait}건</span>`)}
+        ${myCard('내 요청 현황', '10 / span 3', '내가 신청한 요청', myReqCounts(mine))}
+      </div>
+    </div>
+  </div>
+  <div data-v-5c1a5426="" class="dg-wrapped flex min-h-[420px] flex-1 flex-col overflow-hidden rounded-xl border border-border bg-card shadow-sm">
+    <div class="dg-searchzone flex shrink-0 flex-col gap-2 border-b border-border px-4 py-3">
+      <div class="flex items-start gap-2">
+        <label for="sf-st-q" class="flex h-[var(--d-control-h)] w-28 shrink-0 items-center text-[11px] font-semibold text-muted-foreground">검색</label>
+        <div class="flex min-w-0 flex-1 items-center gap-2">
+          <div class="w-28 shrink-0" data-search-col=""><label for="sf-st-col" class="sr-only">키워드 대상</label>
+            <select id="sf-st-col" data-search-input="" data-my-col="" class="w-full rounded-md border border-input bg-field px-[var(--d-control-px)] text-sm text-foreground shadow-sm outline-none transition-colors focus-visible:ring-2 focus-visible:ring-ring/30 h-[var(--d-control-h)]">${['전체', '요청번호', '제목'].map(o => `<option value="${o}"${o === MY.col ? ' selected' : ''}>${o}</option>`).join('')}</select></div>
+          <div class="min-w-[180px] max-w-[360px] flex-1"><label for="sf-st-q" class="sr-only">요청번호·제목 검색</label>
+            <input id="sf-st-q" type="text" data-search-input="" data-my-q="" autocomplete="off" placeholder="요청번호·제목 검색" class="w-full rounded-md border border-input bg-field text-sm text-foreground shadow-sm transition-colors placeholder:text-placeholder focus-visible:border-ring focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/30 h-[var(--d-control-h)] px-[var(--d-control-px)]" value="${esc(MY.q)}"></div>
+        </div>
+        <div class="flex shrink-0 flex-nowrap items-center gap-1.5">
+          <button type="button" data-search-reset="" class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium text-muted-foreground transition-all duration-150 hover:bg-accent hover:text-accent-foreground gap-1.5 px-[var(--d-control-px)] text-sm h-[var(--d-control-h)]">초기화</button>
+          <button type="button" data-search-run="" class="inline-flex items-center justify-center whitespace-nowrap rounded-md bg-primary font-medium text-primary-foreground shadow-sm transition-all duration-150 hover:bg-primary/90 gap-1.5 px-[var(--d-control-px)] text-sm h-[var(--d-control-h)]">${MY_SVG.search} 조회</button>
+        </div>
+      </div>
+      <div class="flex items-start gap-2">
+        <label class="flex h-[var(--d-control-h)] w-28 shrink-0 items-center text-[11px] font-semibold text-muted-foreground">요청유형</label>
+        <div data-my-types="" class="flex min-h-[var(--d-control-h)] min-w-0 flex-1 flex-wrap items-center gap-1.5">${myTypeChips(all)}</div>
+      </div>
+      <div class="flex items-start gap-2">
+        <label class="flex h-[var(--d-control-h)] w-28 shrink-0 items-center text-[11px] font-semibold text-muted-foreground">작업함</label>
+        <div data-my-chips="" class="flex min-h-[var(--d-control-h)] min-w-0 flex-1 flex-wrap items-center gap-1.5">${myChips(all)}</div>
+      </div>
+    </div>
+    <div data-my-gridhost="" class="flex min-h-0 flex-1 flex-col">${myGridHtml(all)}</div>
+  </div>
+</div>`;
+};
+SCREENS['/request/dash-user'].full = true;
+document.addEventListener('click', e => {
+  if (!document.querySelector('[data-my-wrap]')) return;
+  const tab = e.target.closest('[data-st-tab]');
+  if (tab) { MY.tab = tab.dataset.stTab; MY.page = 1; return myRedraw(); }
+  const ty = e.target.closest('[data-my-type]');
+  if (ty) { MY.type = ty.dataset.myType; MY.page = 1; return myRedraw(); }
+  const pg = e.target.closest('[data-my-page]');
+  if (pg && !pg.disabled) { MY.page = +pg.dataset.myPage; return myRedraw(); }
+  if (e.target.closest('[data-search-run]')) { MY.col = document.querySelector('[data-my-col]').value; MY.q = document.querySelector('[data-my-q]').value; MY.page = 1; return myRedraw(); }
+  if (e.target.closest('[data-search-reset]')) { MY.col = '전체'; MY.q = ''; MY.page = 1; document.querySelector('[data-my-col]').value = '전체'; document.querySelector('[data-my-q]').value = ''; return myRedraw(); }
+  const cf = e.target.closest('[data-my-confirm]'); /* 요청자 확인 → 해당 SR 의 TASK 단계 화면으로 (목업: 범위 밖 안내) */
+  if (cf) { location.hash = '#/request/task/' + encodeURIComponent(cf.dataset.myConfirm); return; }
+  const tg = e.target.closest('[data-panel-toggle]');
+  if (tg) { MY.open = !MY.open; const card = tg.closest('.rounded-xl'), body = card.querySelector('[data-panel-body]');
+    body.hidden = !MY.open; tg.setAttribute('aria-expanded', String(MY.open)); tg.title = MY.open ? '접기' : '펼치기';
+    tg.style.transform = MY.open ? '' : 'rotate(180deg)'; card.querySelector('.itg-toolbar').classList.toggle('border-b', MY.open); card.querySelector('.itg-toolbar').classList.toggle('border-border', MY.open);
+    if (MY.open) document.querySelectorAll('[data-my-wrap] [data-dash-chart]').forEach(el => el.__itg && el.__itg.chart && el.__itg.chart.resize()); }
+});
+document.addEventListener('keydown', e => { if (e.key === 'Enter' && e.target.matches && e.target.matches('[data-my-q]')) document.querySelector('[data-search-run]').click(); });
+document.addEventListener('change', e => { if (e.target.matches && e.target.matches('[data-my-size]')) { MY.size = +e.target.value; MY.page = 1; myRedraw(); } });
+window.addEventListener('resize', myLayout);
+/* 가로 스크롤 시 머리글도 같이 — ag-grid 처럼 */
+document.addEventListener('scroll', e => {
+  const v = e.target; if (!v.matches || !v.matches('[data-my-wrap] .ag-center-cols-viewport')) return;
+  const h = v.closest('.ag-root').querySelector('.ag-header-viewport'); if (h) h.scrollLeft = v.scrollLeft;
+}, true);
 
-/* ── 요청관리 > 대시보드 (관리자) ─────────────────────────────────────── */
+/* ── 요청관리 > MyPage (관리자) ─────────────────────────────────────── */
 SCREENS['/request/dash-admin'] = () => {
   const me = DATA.viewer.admin, all = DATA.sr;
   const open = all.filter(r => r.status !== '완료');
@@ -6431,147 +6642,152 @@ SCREENS['/request/dash-admin'] = () => {
   const cur = DATA.srMonthly[DATA.srMonthly.length - 1], prev = DATA.srMonthly[DATA.srMonthly.length - 2], T = DATA.srTarget;
   const rows = DATA.members.map(m => {
     const a = all.filter(r => r.assignee === m.id), o = a.filter(r => r.status !== '완료'), d = a.filter(r => r.done && r.done.startsWith(thisMonth));
-    return { m, open: o.length, wait: o.filter(r => r.status === '접수대기').length, soon: o.filter(isSoon).length, over: o.filter(isOverdue).length,
+    return { m, open: o.length, run: o.filter(r => r.status !== '접수대기').length, wait: o.filter(r => r.status === '접수대기').length, soon: o.filter(isSoon).length, over: o.filter(isOverdue).length,
       done: d.length, ontime: d.length ? pct(d.filter(r => r.done <= r.due).length, d.length) : null };
   });
   const S = k => rows.reduce((a, r) => a + r[k], 0);
-  const by = s => all.filter(r => r.status === s).length;
-  const delayed = open.filter(r => isOverdue(r) || isSoon(r)).sort((a, b) => a.due.localeCompare(b.due)).slice(0, 7);
+  /* 숫자 클릭 → 요청현황(부서원·상태 필터), SR 행 클릭 → 해당 SR 의 TASK 단계 */
+  const go = (f, m, v, html) => v ? `<a class="x-go" href="#/request/list?f=${f}${m ? '&m=' + m : ''}" data-list-go="${f}" title="요청현황에서 보기">${html || si(v)}</a>` : si(0);
+  const taskRow = r => ` data-task-go="${esc(r.no)}" title="${esc(r.no)} TASK 처리로 이동"`;
+  const delayed = open.filter(r => isOverdue(r) || isSoon(r)).sort((a, b) => a.due.localeCompare(b.due)).slice(0, 5);
   const diff = (a, b, u = '') => { const d = Math.round((a - b) * 10) / 10; return (d > 0 ? '+' : '') + d + u; };
   const typeRows = ['서비스요청', '장애요청', '변경요청', '문제요청'].map(t => {
     const d = all.filter(r => r.type === t && r.done && r.done.startsWith(thisMonth));
     return { k: t, v: all.filter(r => r.type === t && r.reg.startsWith(thisMonth)).length, n: d.length, ok: d.filter(r => r.done <= r.due).length };
   });
-  const alertRows = [];
-  if (cur.ontime < T.ontime) alertRows.push(['미달', 'warn', `적기처리율 ${cur.ontime}% (목표 ${T.ontime}%)`]);
-  if (S('over') > 0) alertRows.push(['초과', 'bad', `기한 초과 ${S('over')}건 · ${rows.filter(r => r.over).length}명 보유`]);
-  rows.filter(r => r.open >= 5).forEach(r => alertRows.push(['주의', 'warn', `${r.m.name} 진행 ${r.open}건 — 부하 집중`]));
-  if (appr.length) alertRows.push(['주의', 'warn', `부서장 승인 대기 ${appr.length}건`]);
-  return dashHead({ title: '부서 요청 처리 현황판', role: 'admin', desc: '우리 부서가 받은 요청이 누구에게 얼마나 쌓여 있고 기한을 지키고 있는가' }) + grid('ITSM-DEPT', [
+  return dashHead({ title: 'MyPage (관리자)', role: 'admin', desc: '우리 부서가 받은 요청이 누구에게 얼마나 쌓여 있고 기한을 지키고 있는가' }) + grid('ITSM-DEPT', [
     tile({ name: '부서 진행중', x: 0, v: open.length, u: '건', b: '부서', sub: si(`접수대기 ${S('wait')} · 승인대기 ${appr.length}`) }),
     tile({ name: '기한 초과', x: 2, v: S('over'), u: '건', b: '부서', warn: true, sub: si(`임박 ${S('soon')}건 별도`) }),
     tile({ name: '적기처리율', x: 4, v: cur.ontime, u: '%', b: '금월', warn: cur.ontime < T.ontime, sub: si(`목표 ${T.ontime}% · 전월 ${prev.ontime}%`) }),
-    tile({ name: '평균 처리시간', x: 6, v: cur.avgH, u: '시간', b: '금월', sub: si(`전월 ${prev.avgH} · ${diff(cur.avgH, prev.avgH)}`) }),
+    tile({ name: '재처리 건수', x: 6, v: cur.re, u: '건', b: '금월', warn: cur.re > prev.re, sub: si(`전월 ${prev.re} · ${diff(cur.re, prev.re)}`) }),
     tile({ name: '금월 접수', x: 8, v: cur.접수, u: '건', b: '금월', sub: si(`전월 ${prev.접수} · ${diff(cur.접수, prev.접수)}`) }),
     tile({ name: '내 승인 대기', x: 10, v: appr.length, u: '건', b: '본인', sub: si('부서장 승인 요청') }),
     wgt({ name: '부서원별 요청 현황', x: 0, y: 1, w: 8, h: 4, badge: '부서원', body: xtb([
       { h: '부서원', f: r => `${si(r.m.name)} <span class="text-muted-foreground">${esc(r.m.rank)}</span>` },
-      { h: '진행중', k: 'open' }, { h: '접수대기', k: 'wait' },
-      { h: '기한임박', f: r => r.soon ? `<span class="text-warning">${si(r.soon)}</span>` : si(0) },
-      { h: '기한초과', f: r => r.over ? `<span class="x-dday text-destructive">${si(r.over)}</span>` : si(0) },
-      { h: '금월 완료', k: 'done' },
+      { h: '접수대기', f: r => go('wait', r.m.id, r.wait) }, { h: '수행', f: r => go('run', r.m.id, r.run) },
+      { h: '기한임박', f: r => go('soon', r.m.id, r.soon, `<span class="text-warning">${si(r.soon)}</span>`) },
+      { h: '기한초과', f: r => go('over', r.m.id, r.over, `<span class="x-dday text-destructive">${si(r.over)}</span>`) },
+      { h: '금월 완료', f: r => go('done', r.m.id, r.done) },
       { h: '적기처리율', f: r => r.ontime == null ? '<span class="text-muted-foreground">—</span>' : inlineBar(r.ontime.toFixed(1) + '%', r.ontime) }],
-      rows, { foot: c => ({ 진행중: S('open'), 접수대기: S('wait'), 기한임박: S('soon'), 기한초과: S('over'), '금월 완료': S('done'), 적기처리율: cur.ontime + '%' })[c.h] }),
-      foot: si(`본인(${member(me).name}) 포함 · 적기처리율 = 금월 완료 중 기한 내 완료`) }),
+      rows, { foot: c => ({ 접수대기: go('wait', '', S('wait')), 수행: go('run', '', S('run')), 기한임박: go('soon', '', S('soon')), 기한초과: go('over', '', S('over')), '금월 완료': go('done', '', S('done')), 적기처리율: cur.ontime + '%' })[c.h] }),
+      foot: si(`숫자를 누르면 요청현황으로 · 적기처리율 = 금월 완료 중 기한 내 완료`) }),
     wgt({ name: '승인 대기 (부서장)', x: 8, y: 1, w: 4, h: 4, badge: '본인', body: xtb([
-      { h: '요청번호', k: 'no' }, { h: '제목', k: 'title', l: true, ell: true }, { h: '담당', f: r => si(member(r.assignee).name) }, { h: 'D-Day', f: r => dday(r.due) }], appr),
-      foot: si(`승인 ${appr.length}건 · 변경요청`) }),
-    wgt({ name: '지연 위험 TOP 7 (기한 임박·초과)', x: 0, y: 5, w: 6, h: 3, badge: '부서', body: xtb([
-      { h: '업무키', k: 'no' }, { h: '제목', k: 'title', l: true }, { h: '분류', k: 'type', l: true }, { h: '담당', f: r => si(member(r.assignee).name), l: true }, { h: 'D-Day', f: r => dday(r.due) }], delayed),
-      foot: si(`기한 초과 ${S('over')}건 · 임박 ${S('soon')}건 중 상위 7`) }),
-    wgt({ name: 'SR 종합현황 (접수→완료)', x: 6, y: 5, w: 6, h: 3, badge: '부서', body: steps([
-      { k: '접수대기', n: by('접수대기'), sub: pct(by('접수대기'), all.length).toFixed(1) + '%' }, { k: '처리중', n: by('처리중'), sub: pct(by('처리중'), all.length).toFixed(1) + '%' },
-      { k: '승인대기', n: by('승인대기'), sub: pct(by('승인대기'), all.length).toFixed(1) + '%' }, { k: '완료', n: by('완료'), sub: pct(by('완료'), all.length).toFixed(1) + '%' }]),
-      foot: `부서 담당 전체 ${si(all.length)}건` }),
-    wgt({ name: '월별 접수·완료 추이', x: 0, y: 8, w: 4, h: 3, badge: '최근 6개월', body: chart('a-monthly', 'bar', { rows: DATA.srMonthly, xField: 'm', series: ['접수', '완료'], goal: T.recv }),
-      foot: `가로선은 목표 ${si(T.recv)}건` }),
-    wgt({ name: '적기처리율 (요청유형별)', x: 4, y: 8, w: 4, h: 3, badge: '금월', body: xtb([
+      { h: '요청번호', k: 'no' }, { h: '제목', k: 'title', l: true, ell: true }, { h: '담당', f: r => si(member(r.assignee).name) }, { h: 'D-Day', f: r => dday(r.due) }], appr, { row: taskRow }),
+      foot: si(`승인 ${appr.length}건 · SR 을 누르면 TASK 처리로`) }),
+    wgt({ name: '지연 위험 TOP 5 (기한 임박·초과)', x: 0, y: 5, w: 6, h: 3, badge: '부서', body: xtb([
+      { h: '업무키', k: 'no' }, { h: '제목', k: 'title', l: true }, { h: '분류', k: 'type', l: true }, { h: '담당', f: r => si(member(r.assignee).name), l: true }, { h: 'D-Day', f: r => dday(r.due) }], delayed, { row: taskRow }),
+      foot: si(`기한 초과 ${S('over')}건 · 임박 ${S('soon')}건 중 상위 5 · SR 을 누르면 TASK 처리로`) }),
+    wgt({ name: '적기처리율 (요청유형별)', x: 6, y: 5, w: 6, h: 3, badge: '금월', body: xtb([
       { h: '분류', k: 'k' }, { h: '판정 대상', k: 'n' }, { h: '적기', k: 'ok' },
       { h: '적기율', f: r => r.n ? inlineBar(pct(r.ok, r.n).toFixed(1) + '%', pct(r.ok, r.n)) : '<span class="text-muted-foreground">판정 대상 없음</span>' }], typeRows,
       { foot: c => c.h === '판정 대상' ? si(S('done')) : c.h === '적기' ? si(typeRows.reduce((a, r) => a + r.ok, 0)) : c.h === '적기율' ? `<span class="inline-flex items-center justify-end gap-1">${cur.ontime < T.ontime ? WARN : ''}${si(cur.ontime + '%')}</span>` : '' }) }),
-    wgt({ name: '임계치 알림', x: 8, y: 8, w: 4, h: 3, badge: '금월', pad: 'px-3 py-1', body: alerts(['상태', '내용'], alertRows) }),
-    wgt({ name: '당월 · 전월 비교', x: 0, y: 11, w: 4, h: 3, badge: '금월', body: xtb([{ h: '지표', k: 'k' }, { h: '전월', k: 'p' }, { h: '당월', k: 'c' }, { h: '변화', k: 'd' }], [
+    wgt({ name: '당월 · 전월 비교', x: 0, y: 8, w: 4, h: 3, badge: '금월', body: xtb([{ h: '지표', k: 'k' }, { h: '전월', k: 'p' }, { h: '당월', k: 'c' }, { h: '변화', k: 'd' }], [
       { k: '접수', p: prev.접수, c: cur.접수, d: diff(cur.접수, prev.접수) }, { k: '완료', p: prev.완료, c: cur.완료, d: diff(cur.완료, prev.완료) },
       { k: '적기처리율', p: prev.ontime + '%', c: cur.ontime + '%', d: diff(cur.ontime, prev.ontime, '%p') },
-      { k: '평균 처리시간', p: prev.avgH + '시간', c: cur.avgH + '시간', d: diff(cur.avgH, prev.avgH, '시간') },
+      { k: '재처리 건수', p: prev.re, c: cur.re, d: diff(cur.re, prev.re) },
       { k: '만족도', p: prev.sat, c: cur.sat, d: diff(cur.sat, prev.sat) }]), foot: si(`금월은 기준일 ${DATA.baseDate.slice(5, 7)}월 ${+DATA.baseDate.slice(8)}일까지`) }),
-    wgt({ name: '유형별 접수 분포', x: 4, y: 11, w: 4, h: 3, badge: '금월', body: donutTable('a-type', typeRows.map(r => ({ k: r.k, v: r.v }))) }),
-    wgt({ name: '부서원별 접수·처리 TOP 5', x: 8, y: 11, w: 4, h: 3, badge: '금월', pad: 'px-3 py-1', body: hbars(['부서원', '', '진행', '완료'],
+    wgt({ name: '유형별 접수 분포', x: 4, y: 8, w: 4, h: 3, badge: '금월', body: donutTable('a-type', typeRows.map(r => ({ k: r.k, v: r.v }))) }),
+    wgt({ name: '부서원별 접수·처리 TOP 5', x: 8, y: 8, w: 4, h: 3, badge: '금월', pad: 'px-3 py-1', body: hbars(['부서원', '', '진행', '완료'],
       rows.slice().sort((a, b) => (b.open + b.done) - (a.open + a.done)).slice(0, 5).map(r => [r.m.name, r.open + r.done, r.open, r.done])),
       foot: si(`진행 + 금월 완료 기준 상위 5명`) })
   ]);
 };
 
-/* ── 자산관리 > 대시보드 (사용자) ─────────────────────────────────────── */
+/* ── 요청관리 > 요청현황 — MyPage (관리자) 숫자에서 넘어온 필터 결과 ───────────────── */
+const LIST_F = {
+  all: ['전체', r => true], wait: ['접수대기', r => r.status === '접수대기'], run: ['수행', r => r.status !== '완료' && r.status !== '접수대기'],
+  soon: ['기한 임박', isSoon], over: ['기한 초과', isOverdue], done: ['금월 완료', r => r.done && r.done.startsWith(thisMonth)]
+};
+SCREENS['/request/list'] = () => {
+  const f = LIST_F[ROUTE_Q.get('f')] ? ROUTE_Q.get('f') : 'all', m = ROUTE_Q.get('m'), mm = m && DATA.members.find(x => x.id === m);
+  const base = DATA.sr.filter(r => !mm || r.assignee === m);
+  const list = base.filter(LIST_F[f][1]).sort((a, b) => (a.due || '').localeCompare(b.due || ''));
+  const chip = (k, on) => `<a href="#/request/list?f=${k}${mm ? '&m=' + m : ''}" data-list-chip="${k}" class="${MY_CHIP(on)}" style="text-decoration: none;"><span class="min-w-0 truncate">${LIST_F[k][0]}</span><span class="shrink-0 tabular-nums opacity-70">${base.filter(LIST_F[k][1]).length}</span></a>`;
+  const who = DATA.members.map(x => `<option value="${x.id}"${x.id === m ? ' selected' : ''}>${esc(x.name)} ${esc(x.rank)}</option>`).join('');
+  return `<div data-list-wrap="" class="flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-sm">
+  <div class="itg-toolbar flex items-center gap-2 border-b border-border bg-card px-4 py-1 min-h-[var(--d-toolbar-h)]">
+    <span class="h-3.5 w-1 shrink-0 rounded-full bg-primary"></span>
+    <h3 class="truncate text-base font-semibold tracking-tight text-foreground">요청현황</h3>
+    <span data-count-pill="" class="inline-flex shrink-0 items-center rounded-full bg-muted px-2 py-0.5 text-xs font-semibold leading-none tabular-nums text-muted-foreground ring-1 ring-inset ring-border">${list.length}</span>
+    <span class="truncate text-xs text-muted-foreground">MyPage (관리자) 부서원별 요청 현황에서 넘어온 필터 · SR 을 누르면 TASK 처리로</span>
+    <a href="#/request/dash-admin" class="ml-auto inline-flex h-7 shrink-0 items-center rounded-md border border-input bg-card px-2.5 text-xs font-medium text-foreground hover:bg-muted" style="text-decoration: none;">MyPage (관리자)로 돌아가기</a>
+  </div>
+  <div class="dg-searchzone flex flex-col gap-2 border-b border-border px-4 py-3">
+    <div class="flex items-center gap-2"><label for="sf-list-m" class="w-28 shrink-0 text-[11px] font-semibold text-muted-foreground">담당자</label>
+      <select id="sf-list-m" data-list-m="" class="h-[var(--d-control-h)] w-48 rounded-md border border-input bg-field px-[var(--d-control-px)] text-sm text-foreground shadow-sm outline-none"><option value="">부서 전체</option>${who}</select></div>
+    <div class="flex items-center gap-2"><label class="w-28 shrink-0 text-[11px] font-semibold text-muted-foreground">처리상태</label>
+      <div data-list-chips="" class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5">${Object.keys(LIST_F).map(k => chip(k, k === f)).join('')}</div></div>
+  </div>
+  <div class="p-[var(--d-card-p)]">${xtb([
+    { h: '요청번호', k: 'no' }, { h: '제목', k: 'title', l: true, ell: true }, { h: '유형', k: 'type' }, { h: '요청자', k: 'from', l: true },
+    { h: '담당', f: r => si(member(r.assignee).name) }, { h: '처리상태', f: r => st(r.status) }, { h: '등록일', k: 'reg' }, { h: '기한', k: 'due' },
+    { h: f === 'done' ? '납기준수' : 'D-Day', f: r => r.status === '완료' ? (r.done <= r.due ? badge('준수', 'ok') : badge('지연', 'bad')) : dday(r.due) }],
+    list, { fill: false, row: r => ` data-task-go="${esc(r.no)}" title="${esc(r.no)} TASK 처리로 이동"` })}</div>
+</div>`;
+};
+document.addEventListener('change', e => {
+  if (!e.target.matches || !e.target.matches('[data-list-m]')) return;
+  const f = ROUTE_Q.get('f') || 'all', m = e.target.value;
+  location.hash = `#/request/list?f=${f}${m ? '&m=' + m : ''}`;
+});
+/* SR 행 → 해당 SR 의 TASK 단계 (목업: 범위 밖 안내). 돌아갈 화면을 from 으로 넘긴다 */
+document.addEventListener('click', e => {
+  const r = e.target.closest('[data-task-go]'); if (!r) return;
+  location.hash = `#/request/task/${encodeURIComponent(r.dataset.taskGo)}?from=${encodeURIComponent(current())}`;
+});
+
+/* ── 자산관리 공통 (내용연수·점검) ─────────────────────────────────────── */
 const lifeEnd = a => { const d = new Date(a.acq); d.setFullYear(d.getFullYear() + a.life); return d.toISOString().slice(0, 10); };
 const lifeLeft = a => days(lifeEnd(a), DATA.baseDate);
 const needInsp = a => !a.insp || days(DATA.baseDate, a.insp) > DATA.inspectCycleDays;
-SCREENS['/asset/dash-user'] = () => {
-  const me = DATA.viewer.user;
-  const mine = DATA.assets.filter(a => a.owner === me);
-  const lic = DATA.licenses.filter(l => l.users.includes(me));
-  const reqs = DATA.assetReqs.filter(r => r.owner === me);
-  const todo = [
-    ...mine.filter(needInsp).map(a => ['점검', 'warn', `${a.name} 정기점검 필요`, a.insp ? '최종 ' + md(a.insp) : '미점검']),
-    ...mine.filter(a => a.status === '반납예정').map(a => ['반납', 'info', `${a.name} 반납 진행`, a.id]),
-    ...mine.filter(a => lifeLeft(a) <= 180).map(a => [lifeLeft(a) < 0 ? '경과' : '교체', lifeLeft(a) < 0 ? 'bad' : 'warn', `${a.name} 내용연수 ${lifeLeft(a) < 0 ? '경과' : '도래'}`, lifeEnd(a).slice(2)]),
-    ...lic.filter(l => days(l.exp, DATA.baseDate) <= 60).map(l => ['만료', 'warn', `${l.name} 라이선스 만료 예정`, l.exp.slice(2)])
-  ];
-  const cls = ['노트북', '데스크톱', '모니터', '모바일'].map(c => ({ k: c, v: mine.filter(a => a.cls === c).length }));
-  return dashHead({ title: '내 자산 현황', role: 'user', desc: '내가 지급받은 장비·소프트웨어와 지금 해야 할 일' }) + grid('ITAM-MY', [
-    tile({ name: '내 보유 자산', x: 0, v: mine.length, u: '대', b: '본인', sub: si(`${cls.filter(c => c.v).length}개 분류`) }),
-    tile({ name: '사용 중', x: 2, v: mine.filter(a => a.status === '사용').length, u: '대', b: '본인', sub: si(pct(mine.filter(a => a.status === '사용').length, mine.length) + '%') }),
-    tile({ name: '점검 필요', x: 4, v: mine.filter(needInsp).length, u: '대', b: '본인', warn: mine.some(needInsp), sub: si(`주기 ${DATA.inspectCycleDays}일 경과`) }),
-    tile({ name: '내용연수 도래·경과', x: 6, v: mine.filter(a => lifeLeft(a) <= 180).length, u: '대', b: '본인', sub: si('6개월 이내 포함') }),
-    tile({ name: '반납 예정', x: 8, v: mine.filter(a => a.status === '반납예정').length, u: '대', b: '본인', sub: si('반납 요청 진행') }),
-    tile({ name: '내 SW 라이선스', x: 10, v: lic.length, u: '개', b: '본인', sub: si(`만료 60일 내 ${lic.filter(l => days(l.exp, DATA.baseDate) <= 60).length}`) }),
-    wgt({ name: '내 자산 목록', x: 0, y: 1, w: 8, h: 3, badge: '본인', body: xtb([
-      { h: '자산번호', k: 'id' }, { h: '분류', k: 'cls', l: true }, { h: '모델', k: 'name', l: true, ell: true }, { h: '상태', f: a => st(a.status) },
-      { h: '도입일', k: 'acq' }, { h: '사용연수', f: a => { const y = days(DATA.baseDate, a.acq) / 365; return `<span class="${y >= a.life ? 'text-destructive' : ''}">${si(y.toFixed(1) + '/' + a.life + '년')}</span>`; } },
-      { h: '최종 점검', f: a => needInsp(a) ? `<span class="text-warning">${si(a.insp ? md(a.insp) : '미점검')}</span>` : si(md(a.insp)) }], mine),
-      foot: si(`본인 명의 ${mine.length}대 · 점검 주기 ${DATA.inspectCycleDays}일`) }),
-    wgt({ name: '내가 할 일', x: 8, y: 1, w: 4, h: 3, badge: '본인', pad: 'px-3 py-1', body: alerts(['구분', '할 일', '기준'], todo) }),
-    wgt({ name: '내 자산 요청 진행', x: 0, y: 4, w: 4, h: 3, badge: '본인', body: xtb([
-      { h: '요청번호', k: 'no' }, { h: '제목', k: 'title', l: true, ell: true }, { h: '상태', f: r => st(r.status) }], reqs), foot: si('교체·수리·반납 요청') }),
-    wgt({ name: '내 SW 라이선스', x: 4, y: 4, w: 4, h: 3, badge: '본인', body: xtb([
-      { h: '제품', k: 'name' }, { h: '만료일', k: 'exp' },
-      { h: '남은 기간', f: l => { const n = days(l.exp, DATA.baseDate); return `<span class="${n <= 60 ? 'x-dday text-warning' : ''}">${si(n + '일')}</span>`; } }], lic) }),
-    wgt({ name: '내 자산 분류', x: 8, y: 4, w: 4, h: 3, badge: '본인', body: donutTable('u-cls', cls) })
-  ]);
-};
-
-/* ── 자산관리 > 대시보드 (관리자) ─────────────────────────────────────── */
+/* ── 자산관리 > 대시보드 (IT자산현황) ─────────────────────────────────────── */
 SCREENS['/asset/dash-admin'] = () => {
   const me = DATA.viewer.admin, all = DATA.assets;
   const CLS = ['노트북', '데스크톱', '모니터', '모바일'];
-  const appr = DATA.assetReqs.filter(r => r.status === '승인대기');
-  const rows = DATA.members.map(m => {
-    const a = all.filter(x => x.owner === m.id);
-    const r = { m, total: a.length, insp: a.filter(needInsp).length, old: a.filter(x => lifeLeft(x) < 0).length, lic: DATA.licenses.filter(l => l.users.includes(m.id)).length };
-    CLS.forEach(c => r[c] = a.filter(x => x.cls === c).length);
-    return r;
-  });
-  const S = k => rows.reduce((a, r) => a + r[k], 0);
-  const risk = all.filter(a => lifeLeft(a) <= 180).sort((a, b) => lifeLeft(a) - lifeLeft(b));
-  const stat = ['사용', '보관', '수리', '반납예정'].map(s => ({ k: s, v: all.filter(a => a.status === s).length }));
-  const owned = all.filter(a => a.owner).length;
-  return dashHead({ title: '부서 IT 자산 현황판', role: 'admin', desc: '우리 부서가 무엇을 얼마나 보유하고, 언제 교체·점검해야 하는가' }) + grid('ITAM-DEPT', [
-    tile({ name: '부서 전체 자산', x: 0, v: all.length, u: '대', b: '부서', sub: si(`1인당 ${(owned / DATA.members.length).toFixed(1)}대 · 예비 ${all.length - owned}`) }),
-    tile({ name: '사용 중', x: 2, v: stat[0].v, u: '대', b: '부서', sub: si(pct(stat[0].v, all.length) + '%') }),
-    tile({ name: '보관·예비', x: 4, v: stat[1].v, u: '대', b: '부서', sub: si('재배치 가능') }),
-    tile({ name: '내용연수 경과', x: 6, v: all.filter(a => lifeLeft(a) < 0).length, u: '대', b: '부서', warn: true, sub: si(`6개월 내 도래 ${all.filter(a => lifeLeft(a) >= 0 && lifeLeft(a) <= 180).length}`) }),
-    tile({ name: '점검 미완료', x: 8, v: all.filter(needInsp).length, u: '대', b: '부서', sub: si(`주기 ${DATA.inspectCycleDays}일 기준`) }),
-    tile({ name: '자산 요청 승인 대기', x: 10, v: appr.length, u: '건', b: '본인', sub: si('교체 신청') }),
-    wgt({ name: '부서원별 보유 자산', x: 0, y: 1, w: 8, h: 4, badge: '부서원', body: xtb([
-      { h: '부서원', f: r => `${si(r.m.name)} <span class="text-muted-foreground">${esc(r.m.rank)}</span>` },
-      ...CLS.map(c => ({ h: c, k: c })), { h: '합계', k: 'total' }, { h: 'SW', k: 'lic' },
-      { h: '점검 필요', f: r => r.insp ? `<span class="text-warning">${si(r.insp)}</span>` : si(0) },
-      { h: '연수 경과', f: r => r.old ? `<span class="x-dday text-destructive">${si(r.old)}</span>` : si(0) }],
-      rows, { foot: c => CLS.includes(c.h) ? S(c.h) : ({ 합계: S('total'), SW: S('lic'), '점검 필요': S('insp'), '연수 경과': S('old') })[c.h] }),
-      foot: si(`예비(무소유) 자산 ${all.length - owned}대는 합계에서 제외`) }),
-    wgt({ name: '자산 상태별 현황', x: 8, y: 1, w: 4, h: 4, badge: '현재', body: donutTable('a-stat', stat), foot: si(`부서 자산 ${all.length}대 기준`) }),
-    wgt({ name: '교체 대상 (내용연수 경과·6개월 내 도래)', x: 0, y: 5, w: 6, h: 3, badge: '부서', body: xtb([
-      { h: '자산번호', k: 'id' }, { h: '모델', k: 'name', l: true, ell: true }, { h: '사용자', f: a => a.owner ? si(member(a.owner).name) : '<span class="text-muted-foreground">예비</span>', l: true },
-      { h: '만료일', f: a => si(lifeEnd(a)) }, { h: '잔여', f: a => `<span class="x-dday ${lifeLeft(a) < 0 ? 'text-destructive' : 'text-warning'}">${si(lifeLeft(a) < 0 ? 'D+' + (-lifeLeft(a)) : 'D-' + lifeLeft(a))}</span>` }], risk),
-      foot: si(`${risk.length}대 · 잔여 적은 순`) }),
-    wgt({ name: '라이선스 보유 대비 사용', x: 6, y: 5, w: 6, h: 3, badge: '부서', body: xtb([
+  /* 유지보수계약 현황 · 인프라자산 분류 — 예시 수치 (2026-11-08) */
+  const MAINT = [
+    { name: '서버 HW 유지보수', cls: '서버', qty: '128대', from: '2026-01-01', exp: '2026-12-31' },
+    { name: '스토리지 유지보수', cls: '스토리지', qty: '24대', from: '2025-12-01', exp: '2026-11-30' },
+    { name: '네트워크 장비 유지보수', cls: '네트워크', qty: '186대', from: '2026-04-01', exp: '2027-03-31' },
+    { name: '보안장비 유지보수', cls: '보안', qty: '42대', from: '2026-07-01', exp: '2027-06-30' },
+    { name: 'DBMS 기술지원', cls: 'SW', qty: '16식', from: '2025-11-16', exp: '2026-11-15' }
+  ].sort((a, b) => a.exp.localeCompare(b.exp));
+  const INFRA = [{ k: '서버', v: 412 }, { k: '스토리지', v: 58 }, { k: '네트워크', v: 236 }, { k: '보안장비', v: 74 }];
+  /* 내용연수 초과 — 분류별 보유·초과·허용(초과 후 연장 사용 승인)·미입력(내용연수 미등록).
+     인프라는 예시 수치(보유 = INFRA), OA 는 DATA.assets 에서 센다 */
+  const LIFE_INFRA = { 서버: [37, 12, 5], 스토리지: [6, 2, 1], 네트워크: [28, 9, 7], 보안장비: [8, 3, 2] };
+  const LIFE_OA = { 노트북: [1, 0], 데스크톱: [1, 1] }; /* 모니터·모바일은 내용연수 초과 표에서 뺀다 */
+  const life = [...INFRA.map(r => ({ k: r.k, own: r.v, over: LIFE_INFRA[r.k][0], ok: LIFE_INFRA[r.k][1], none: LIFE_INFRA[r.k][2] })),
+    ...Object.keys(LIFE_OA).map(c => { const a = all.filter(x => x.cls === c); const over = a.filter(x => lifeLeft(x) < 0).length; return { k: c, own: a.length, over, ok: Math.min(LIFE_OA[c][0], over), none: LIFE_OA[c][1] }; })];
+  const L = k => life.reduce((a, r) => a + r[k], 0);
+  /* 상단 자산관리 현황 6개 — 전사 예시 수치 (2026-11-08 사용자 지정) */
+  const K = { total: 12450, run: 5217, idle: 980, eol: 315, maint: 86, mismatch: 42 }, n = v => v.toLocaleString('ko-KR');
+  return dashHead({ title: 'IT자산현황', role: 'admin', desc: '우리 부서가 무엇을 얼마나 보유하고, 언제 교체·점검해야 하는가' }) + grid('ITAM-DEPT', [
+    tile({ name: '전체 자산', x: 0, v: n(K.total), u: '건', b: '전체', sub: si('자산구성 등록 기준') }),
+    tile({ name: '운영 자산', x: 2, v: n(K.run), u: '건', b: '전체', sub: si(`사용 중 · ${pct(K.run, K.total)}%`) }),
+    tile({ name: '미사용 자산', x: 4, v: n(K.idle), u: '건', b: '전체', warn: true, sub: si('보관·예비 · 재배치 검토') }),
+    tile({ name: 'EOL/EOS 대상', x: 6, v: n(K.eol), u: '건', b: '전체', warn: true, sub: si('지원 종료 · 교체 검토') }),
+    tile({ name: '유지보수 만료 임박', x: 8, v: n(K.maint), u: '건', b: '전체', warn: true, sub: si('90일 이내 만료') }),
+    tile({ name: '자산정보 불일치', x: 10, v: n(K.mismatch), u: '건', b: '전체', warn: true, sub: si('자산구성 동기화 결과') }),
+    wgt({ name: '내용연수 초과', x: 0, y: 1, w: 8, h: 4, badge: '전체', body: xtb([
+      { h: '분류', k: 'k', l: true }, { h: '보유', f: r => si(n(r.own)) },
+      { h: '초과', f: r => r.over ? `<span class="x-dday text-destructive">${si(r.over)}</span>` : si(0) },
+      { h: '허용', k: 'ok' },
+      { h: '미입력', f: r => r.none ? `<span class="text-warning">${si(r.none)}</span>` : si(0) }],
+      life, { foot: c => ({ 보유: si(n(L('own'))), 초과: si(L('over')), 허용: si(L('ok')), 미입력: si(L('none')) })[c.h] }),
+      foot: si('허용 = 내용연수 초과 후 연장 사용 승인 · 미입력 = 내용연수 미등록') }),
+    wgt({ name: '라이선스 보유 대비 사용', x: 0, y: 5, w: 6, h: 3, badge: '전체', body: xtb([
       { h: '제품', k: 'name' }, { h: '보유', k: 'owned' }, { h: '사용', k: 'used' }, { h: '사용률', f: l => inlineBar(pct(l.used, l.owned) + '%', pct(l.used, l.owned)) },
       { h: '만료', f: l => `<span class="${days(l.exp, DATA.baseDate) <= 60 ? 'text-warning' : ''}">${si(l.exp)}</span>` }], DATA.licenses),
       foot: si('사용률 100% = 추가 구매 검토 · 낮은 사용률 = 회수 검토') }),
-    wgt({ name: '분류별 보유', x: 0, y: 8, w: 4, h: 3, badge: '현재', body: donutTable('a-cls', CLS.map(c => ({ k: c, v: all.filter(a => a.cls === c).length }))) }),
-    wgt({ name: '월별 자산 변동 (입고·반납·폐기)', x: 4, y: 8, w: 4, h: 3, badge: '최근 6개월', body: chart('a-move', 'bar', { rows: DATA.assetMonthly, xField: 'm', series: ['입고', '반납', '폐기'] }) }),
-    wgt({ name: '승인 대기 자산 요청', x: 8, y: 8, w: 4, h: 3, badge: '본인', body: xtb([
-      { h: '요청번호', k: 'no' }, { h: '제목', k: 'title', l: true, ell: true }, { h: '신청자', f: r => si(member(r.owner).name) }], appr), foot: si('부서장 승인 후 구매 요청으로 이어짐') })
+    wgt({ name: '유지보수계약 현황', x: 6, y: 5, w: 6, h: 3, badge: '전체', body: xtb([
+      { h: '계약명', k: 'name', l: true, ell: true }, { h: '대상', k: 'cls', l: true }, { h: '수량', k: 'qty' }, { h: '계약 시작', k: 'from' },
+      { h: '만료일', f: c => `<span class="${days(c.exp, DATA.baseDate) <= 90 ? 'text-warning' : ''}">${si(c.exp)}</span>` },
+      { h: '잔여', f: c => { const d = days(c.exp, DATA.baseDate); return `<span class="x-dday ${d < 0 ? 'text-destructive' : d <= 90 ? 'text-warning' : 'text-muted-foreground'}">${si(d < 0 ? 'D+' + (-d) : 'D-' + d)}</span>`; } }], MAINT),
+      foot: si(`${MAINT.length}건 · 만료일 순 · 90일 이내 ${MAINT.filter(c => days(c.exp, DATA.baseDate) <= 90).length}건`) }),
+    wgt({ name: '인프라자산 분류', x: 0, y: 8, w: 6, h: 3, badge: '현재', body: donutTable('a-infra', INFRA) }),
+    wgt({ name: 'OA 자산 분류', x: 6, y: 8, w: 6, h: 3, badge: '현재', body: donutTable('a-cls', CLS.map(c => ({ k: c, v: all.filter(a => a.cls === c).length }))) }),
+    wgt({ name: '월별 자산 변동 (입고·반납·폐기)', x: 8, y: 1, w: 4, h: 4, badge: '최근 6개월', body: chart('a-move', 'bar', { rows: DATA.assetMonthly, xField: 'm', series: ['입고', '반납', '폐기'] }) }),
   ]);
 };
 
@@ -6579,11 +6795,11 @@ SCREENS['/asset/dash-admin'] = () => {
 function askBox() {
   return `<div data-ask="" class="flex shrink-0 flex-col gap-2 rounded-xl border border-border bg-card p-3 shadow-sm">
     <div class="flex min-w-0 items-baseline gap-2">
-      <h3 class="whitespace-nowrap text-sm font-semibold text-foreground" style="margin: 0px;">무엇이든 물어보세요</h3>
-      <span class="truncate text-xs text-muted-foreground">자료실 문서에서 답을 찾고, 없으면 요청으로 이어 드려요</span>
+      <h3 class="whitespace-nowrap text-sm font-semibold text-foreground" style="margin: 0px;">통합 검색</h3>
+      <span class="truncate text-xs text-muted-foreground">요청 또는 비슷한 요청을 찾거나 메뉴를 찾습니다.</span>
     </div>
     <div class="flex items-center gap-2">
-      <div class="relative min-w-0 flex-1"><input data-ask-input="" type="text" autocomplete="off" placeholder="예: 집에서 VPN 접속이 안 돼요" class="h-[34px] w-full rounded-md border border-input bg-field pl-3 pr-9 text-sm text-foreground outline-none transition-colors placeholder:text-placeholder focus-visible:border-ring focus-visible:ring-2 focus-visible:ring-ring/30" value=""></div>
+      <div class="relative min-w-0 flex-1"><input data-ask-input="" type="text" autocomplete="off" placeholder="예: 비밀번호 초기화는 어디서 하나요?" class="h-[34px] w-full rounded-md border border-input bg-field pl-3 pr-9 text-sm text-foreground outline-none transition-colors placeholder:text-placeholder focus-visible:border-ring focus-visible:ring-2 focus-visible:ring-ring/30" value=""></div>
       <button type="button" data-ask-btn="" class="inline-flex h-[34px] shrink-0 items-center whitespace-nowrap rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90">묻기</button>
     </div>
     <div data-ask-hint="" class="flex flex-wrap items-baseline gap-x-1.5 gap-y-1 px-1 text-xs">
@@ -6592,20 +6808,23 @@ function askBox() {
     </div>
   </div>`;
 }
+/* 위젯 카드(흐름 배치용) — wgt() 와 같은 카드 겉모양·머리줄. 12칸 그리드 밖(높이가 내용에 맞는 블록)에서 쓴다 */
+function secCard({ attr = '', name, desc, tools = '', badge: b, body }) {
+  const bd = b ? `<span data-period-badge="" class="inline-flex shrink-0 items-center whitespace-nowrap rounded-full px-1.5 text-[11px] font-medium text-muted-foreground ring-1 ring-inset ring-border">${esc(b)}</span>` : '';
+  return `<div ${attr} data-name="${esc(name)}" class="relative flex shrink-0 flex-col overflow-hidden rounded-xl border border-border bg-card">
+    <div class="flex shrink-0 items-center gap-1.5 border-b border-border px-3 py-1.5"><span class="whitespace-nowrap text-xs font-medium text-foreground">${si(name)}</span>${desc ? `<span class="min-w-0 truncate text-xs text-muted-foreground">· ${si(desc)}</span>` : ''}<span data-wgt-spacer="" class="ml-auto"></span>${tools}${bd}</div>
+    <div class="p-3">${body}</div>
+  </div>`;
+}
 /* 서비스카탈로그 — 6개 분류 카드(3×2). 카드를 누르면 그 분류의 업무 6개만 오버레이로 표시 */
 function catalogReq() {
-  return `<div data-catalog="" class="flex shrink-0 flex-col gap-2">
-    <div class="flex items-center gap-2 px-1">
-      <h3 class="whitespace-nowrap text-sm font-semibold text-foreground" style="margin: 0px;">서비스카탈로그</h3>
-      <span class="truncate text-xs text-muted-foreground">분류를 누르면 요청할 수 있는 업무가 펼쳐져요</span>
-    </div>
-    <div data-cat-grid="">
-      ${DATA.catalog.map((c, i) => `<div data-cat-card="${i}" role="button" tabindex="0" aria-haspopup="dialog" aria-expanded="false" class="rounded-xl border border-border bg-card shadow-sm">
+  return secCard({ attr: 'data-catalog=""', name: '서비스카탈로그', desc: '분류를 누르면 요청할 수 있는 업무가 펼쳐져요', badge: '전사',
+    body: `<div data-cat-grid="">
+      ${DATA.catalog.map((c, i) => `<div data-cat-card="${i}" role="button" tabindex="0" aria-haspopup="dialog" aria-expanded="false" class="rounded-xl border border-border bg-card">
         <span data-cat-icon="" class="msi" aria-hidden="true">${c.icon}</span>
         <span class="text-sm font-semibold text-foreground">${si(c.k)}</span>
       </div>`).join('')}
-    </div>
-  </div>`;
+    </div>` });
 }
 function megaHtml(i) {
   const c = DATA.catalog[i];
@@ -6661,20 +6880,15 @@ function favSave(v) { try { localStorage.setItem(FAV_KEY, JSON.stringify(v)); } 
 let FAV = favLoad();
 function favHtml() {
   const cards = FAV.map(id => { const { c, t } = favFind(id);
-    return `<button type="button" data-fav-go="${esc(id)}" class="rounded-xl border border-border bg-card shadow-sm">
+    return `<button type="button" data-fav-go="${esc(id)}" class="rounded-xl border border-border bg-card">
       <span data-fav-icon="" class="msi" aria-hidden="true">${c.icon}</span>
       <span class="flex min-w-0 flex-1 flex-col gap-0.5 text-left"><b class="truncate">${si(t[0])}</b><span class="truncate text-xs text-muted-foreground">${si(t[1])}</span></span>
       <span aria-hidden="true" class="shrink-0 text-xs text-muted-foreground">›</span>
     </button>`; });
   for (let i = FAV.length; i < FAV_MAX; i++) cards.push(`<button type="button" data-fav-edit="" data-fav-empty="" class="rounded-xl">+ 서비스 추가</button>`);
-  return `<div data-fav="" class="flex shrink-0 flex-col gap-2">
-    <div class="flex items-center gap-2 px-1">
-      <h3 class="whitespace-nowrap text-sm font-semibold text-foreground" style="margin: 0px;">자주 사용하는 서비스</h3>
-      <span class="truncate text-xs text-muted-foreground">누르면 바로 요청 등록으로 이어져요</span>
-      <button type="button" data-fav-edit="" class="ml-auto inline-flex h-6 shrink-0 items-center gap-1 whitespace-nowrap rounded-md border border-input bg-card px-2 text-xs font-medium text-foreground shadow-sm hover:bg-muted"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg>편집</button>
-    </div>
-    <div data-fav-grid="">${cards.join('')}</div>
-  </div>`;
+  return secCard({ attr: 'data-fav=""', name: '자주 사용하는 서비스', desc: '누르면 바로 요청 등록으로 이어져요', badge: '내 설정',
+    tools: `<button type="button" data-fav-edit="" title="자주 사용하는 서비스 편집" class="inline-flex shrink-0 items-center gap-1 whitespace-nowrap rounded-md border border-input bg-card px-1.5 text-[11px] font-medium text-foreground transition-colors hover:bg-muted" style="height: 18px; margin-block: -1px;"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg>편집</button>`,
+    body: `<div data-fav-grid="">${cards.join('')}</div>` });
 }
 let favDraft = [];
 function favEditHtml() {
@@ -6778,13 +6992,12 @@ const MENU = [
   { label: '서비스포털', icon: '서비스포털', children: [
     { label: '서비스포털', path: '/portal/dash-user', impl: true, title: '서비스포털', role: 'user' }] },
   { label: '요청관리', icon: '요청관리', children: [
-    { label: '대시보드 (사용자)', path: '/request/dash-user', impl: true, title: '대시보드', role: 'user' },
-    { label: '대시보드 (관리자)', path: '/request/dash-admin', impl: true, title: '대시보드', role: 'admin' },
-    { label: 'MyPage', path: '/request/mypage' }, { label: '요청등록', path: '/request/regist' },
-    { label: '요청현황', path: '/request/list' }, { label: '이벤트 현황', path: '/request/event' }] },
+    { label: 'MyPage (사용자)', path: '/request/dash-user', impl: true, title: 'MyPage', role: 'user' },
+    { label: 'MyPage (관리자)', path: '/request/dash-admin', impl: true, title: 'MyPage', role: 'admin' },
+    { label: '요청등록', path: '/request/regist' },
+    { label: '요청현황', path: '/request/list', role: 'admin' }, { label: '이벤트 현황', path: '/request/event' }] },
   { label: '자산관리', icon: '자산구성', children: [
-    { label: '대시보드 (사용자)', path: '/asset/dash-user', impl: true, title: '대시보드', role: 'user' },
-    { label: '대시보드 (관리자)', path: '/asset/dash-admin', impl: true, title: '대시보드', role: 'admin' },
+    { label: '대시보드', path: '/asset/dash-admin', impl: true, title: '대시보드', role: 'admin' },
     { label: '자산구성조회', path: '/asset/view' }, { label: '자산구성관리(통합)', path: '/asset/manage' },
     { label: '점검계획', path: '/asset/insp-plan' }, { label: '점검표 관리', path: '/asset/insp-form' },
     { label: '자산구성동기화', path: '/asset/sync' }, { label: '자산구성동기화이력', path: '/asset/sync-history' }] },
@@ -6823,10 +7036,14 @@ document.getElementById('menu').addEventListener('click', e => {
    ========================================================================= */
 const DEFAULT = '/request/dash-user';
 const current = () => (location.hash.slice(1) || DEFAULT);
+let ROUTE_Q = new URLSearchParams('');
 function render() {
-  const path = current();
-  const hit = leafOf(path) || leafOf(DEFAULT);
-  if (!leafOf(path)) history.replaceState(null, '', '#' + DEFAULT);
+  const [path, qs = ''] = current().split(/\?(.*)/s);
+  ROUTE_Q = new URLSearchParams(qs);
+  const task = (path.match(/^\/request\/task\/(.+)$/) || [])[1];
+  const from = task && ROUTE_Q.get('from') || '/request/dash-user', fromPath = from.split('?')[0];
+  const hit = leafOf(path) || leafOf(task ? (leafOf(fromPath) ? fromPath : '/request/dash-user') : DEFAULT);
+  if (!leafOf(path) && !task) history.replaceState(null, '', '#' + DEFAULT);
   const { g, c } = hit;
   if (!open[g.label]) open[g.label] = true;
   renderMenu(c.path);
@@ -6839,25 +7056,25 @@ function render() {
   document.getElementById('userId').textContent = '@' + v.login;
   CHARTS = [];
   const view = document.getElementById('view');
-  if (SCREENS[c.path]) {
-    view.innerHTML = `<div class="flex flex-col gap-3" data-screen-label="${esc(g.label + ' ' + c.label)}" data-dash="${esc(c.path)}">${SCREENS[c.path]()}</div>`;
+  if (task) {
+    /* 요청자 확인 → TASK 처리 화면 — 이번 목업 범위 밖 */
+    const no = decodeURIComponent(task), p = DATA.portal.find(x => x.no === no) || DATA.sr.find(x => x.no === no);
+    const how = fromPath === '/request/dash-user' ? '「요청자 확인」을 누르면' : 'SR 을 선택하면', back = hit.c.label;
+    document.getElementById('pageTitle').textContent = 'TASK 처리';
+    document.getElementById('pageCrumb').textContent = `${g.label} > ${c.label} > TASK 처리 · /request/task/${no}`;
+    view.innerHTML = `<div class="itg-np" data-task-np="${esc(no)}"><p class="itg-np-title">TASK 처리</p><p class="itg-np-sub">${esc(g.label)} › ${esc(c.label)} › ${fromPath === '/request/dash-user' ? '완료 확인' : 'SR 선택'} › ${esc(no)}${p ? ' ' + esc(p.title) : ''}</p>
+      <div class="itg-np-box">${how} 이 SR 의 <b>TASK 단계</b>로 넘어가 업무를 처리합니다. TASK 처리 화면은 이번 대시보드 목업 범위가 아닙니다.</div>
+      <a href="#${esc(from)}" data-task-back="" class="inline-flex h-8 items-center gap-1.5 rounded-md border border-input bg-card px-3 text-sm font-medium text-foreground transition-colors hover:bg-muted">${esc(back)} 화면으로 돌아가기</a></div>`;
+  } else if (SCREENS[c.path]) {
+    view.innerHTML = `<div class="flex flex-col gap-3${SCREENS[c.path].full ? ' h-full min-h-0' : ''}" data-screen-label="${esc(g.label + ' ' + c.label)}" data-dash="${esc(c.path)}">${SCREENS[c.path]()}</div>`;
     drawCharts();
   } else {
     /* proto .itg-np — 이번 목업 범위가 아닌 메뉴 안내 한 장 */
     view.innerHTML = `<div class="itg-np"><p class="itg-np-title">${esc(c.label)}</p><p class="itg-np-sub">${esc(g.label)} › ${esc(c.label)}</p>
-      <div class="itg-np-box">이 메뉴는 이번 대시보드 목업 범위가 아닙니다. 노란색으로 표시된 「대시보드 (사용자)」·「대시보드 (관리자)」 메뉴에서 화면을 확인하세요.</div></div>`;
+      <div class="itg-np-box">이 메뉴는 이번 대시보드 목업 범위가 아닙니다. 노란색으로 표시된 메뉴(서비스포털, 요청관리 MyPage, 자산관리 대시보드)에서 화면을 확인하세요.</div></div>`;
   }
   view.scrollTop = 0;
 }
-/* 기간 단추 — proto [data-period-seg]: 누른 단추만 채운다 */
-document.getElementById('view').addEventListener('click', e => {
-  const b = e.target.closest('[data-period-seg] button');
-  if (!b) return;
-  const on = 'px-2 py-0.5 text-xs bg-primary text-primary-foreground font-medium', off = 'px-2 py-0.5 text-xs text-muted-foreground hover:bg-muted';
-  b.parentElement.querySelectorAll('button').forEach(x => { const me = x === b; x.className = me ? on : off; x.setAttribute('aria-pressed', String(me)); });
-  const word = { 일: '금일', 주: '금주', 월: '금월', 분기: '금분기' }[b.textContent.trim()];
-  document.querySelectorAll('[data-dash-grid] [data-period-badge]').forEach(x => { if (/^금/.test(x.textContent)) x.textContent = word; });
-});
 window.addEventListener('hashchange', render);
 render();
 </script>
