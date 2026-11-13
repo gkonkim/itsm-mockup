@@ -349,3 +349,26 @@
 ■ 근거 : 사용자 요청("내용연수 초과 위젯에서 모니터 모바일 삭제")
 ■ 변경 (index.html) : LIFE_OA 를 노트북·데스크톱만 두고 OA 행을 Object.keys(LIFE_OA) 로 생성 → 6행+합계(794·86·28·16). OA 자산 분류 donut 은 그대로. CLAUDE.md §2 반영
 ■ 검증 : Playwright — 행 확인, 스크롤 없음, 콘솔 오류 0
+
+[2026-11-13] v4.0 보고서 메뉴 신규 — 보고서생성 · 보고서조회 (좌측 보고서 트리 + 우측 보고서 4종)
+■ 근거 : functionMd/report.md (사용자 요청 "functionMd에서 report.md 파일을 참조하여 수행")
+         요청 프롬프트 — 참고자료로 보고서 작성 / 보고서 유형·폰트·CSS·차트는 index.html 스타일로 변형 / 프롬프트는 CLAUDE.md·report.md 에 저장 후 삭제
+■ 참고 : inputs/ITSM_4종_운영보고서_세로형.html (A4 세로형 4종, 예시 데이터)
+■ 변경 (index.html)
+  - MENU: 서비스관리 다음에 대분류 「보고서」(아이콘 lucide file-text) — 보고서생성 /report/create · 보고서조회 /report/view (impl, role admin). 범위 밖 안내 문구에 「보고서」 추가
+  - REPORTS(4종)·RPT_TREE(NKIA › 품질 4종 · 운영 0)·rptTreeHtml·rptBlock·rptSheet·rptExport·rptFolder 추가, SCREENS 두 개(full 높이)
+  - 보고서 블록을 index.html 조각으로 변환: 지표 → bg-muted 상자, 가로 막대 → hbars, 누적 막대 → donutTable, 표 → xtb, 상태 → badge, 절차 → steps, 분석 → secCard 목록
+  - 요청·장애·변경 번호 INC/REQ/CHG-2026-xxxx → SR 번호 형식(SR261007_00104 ~ SR261029_00152)
+  - CSS 3줄(x-rpt-head·data-rpt-sum·data-rpt-go hover) — 19_newItsm 스타일 블록, proto 토큰만 사용
+  - 보고서생성: 보고기간·작성부서 → 미리보기 반영, 「보고서 생성」 = 생성 완료 안내(목업) + 보고서조회 링크. PDF·DOCX·HWPX 단추는 자리만
+■ 문서 : functionMd/report.md (기본 원칙·구현 표·§4 수행 기록, 「요청 (수행 후 삭제)」 절 삭제), CLAUDE.md §2 보고서 항목
+■ 검증 : Playwright(미리보기 1920×1080) — 4종 보고서 블록·도넛 캔버스 생성, 품질/NKIA 폴더 목록 4행·운영 빈 안내, 트리 접기, 생성 조건 반영(2026.09.01 ~ 2026.09.30 · 인프라운영팀), 기존 5개 화면 포함 콘솔 오류 0
+
+[2026-11-13] v4.1 보고서 — A4 크기로 표시
+■ 근거 : 사용자 요청("보고서 형태는 A4에 맞게 보여줘. 차트나 위젯을 상하로 늘리지는 말고 A4 형태에서 내용이 꽉 차지 않으면 공간을 비워둬. A4로 출력 시 어떻게 출력되는지 미리 알기 위함")
+■ 변경 (index.html)
+  - 보고서 시트: max-width 1000px·p-6·rounded-xl → `.x-rpt-a4`(width 210mm·height 297mm·padding 16mm 16mm 13mm·overflow hidden, 참고자료 .sheet 와 같은 치수)
+  - 꼬리(footer) mt-auto 로 시트 맨 아래 고정 — 내용이 모자라면 그 사이는 빈 공간
+  - A4 한 장 안에 4종이 다 들어가도록 블록 간격 gap-3 → gap-2, 도넛 높이 150 → 140px (위젯을 늘리지는 않음)
+  - functionMd/report.md §2-1, CLAUDE.md §2 반영
+■ 검증 : Playwright 1920×1080 — 4종 시트 794×1123px(A4 96dpi), 넘침 없음, 꼬리 하단 1072px(아래 여백 13mm), 장애 보고서는 내용 아래 빈 공간 확인, 도넛 캔버스 정상

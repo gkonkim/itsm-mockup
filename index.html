@@ -5897,6 +5897,12 @@ a.x-go{color:inherit;text-decoration:none;border-radius:4px;padding:0 3px;cursor
 /* 19_newItsm 프로젝트 규칙(CLAUDE.md) — 목업으로 구현한 메뉴는 노란색·굵게. proto CSS 에는 손대지 않는다. */
 :root{--c-menu-impl:#FFD400}
 [data-impl] .truncate>.sc-interp{color:var(--c-menu-impl);font-weight:700}
+/* 보고서 (2026-11-13) — 보고서 머리 아래 굵은 선 · 표의 합계/종합 행 굵게 (proto 토큰만 사용) */
+.x-rpt-head{border-bottom:2px solid var(--color-foreground)}
+/* 보고서 한 장 = A4 세로(210×297mm, 참고자료와 같은 여백 16·16·13mm). 내용이 모자라면 아래를 비워 두고 꼬리는 맨 아래 — 출력 모양 미리보기 */
+.x-rpt-a4{box-sizing:border-box;width:210mm;height:297mm;padding:16mm 16mm 13mm;overflow:hidden}
+.x-tr[data-rpt-sum]>.x-td{font-weight:700;background:var(--color-muted)}
+[data-rpt-go]:hover>.x-td{background:var(--color-muted)}[data-rpt-go]:hover>.x-td:nth-child(2){color:var(--color-primary)}
 /* Google Material Symbols Outlined — 쓰는 아이콘만 추린 글꼴(woff2)을 인라인. 아이콘 이름을 글자로 쓰면 그림으로 바뀐다 */
 @font-face{font-family:'Material Symbols Outlined';font-style:normal;font-weight:400;font-display:block;src:url(data:font/woff2;base64,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) format('woff2')}
 .msi{font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;font-feature-settings:'liga';-webkit-font-feature-settings:'liga';-webkit-font-smoothing:antialiased;font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;user-select:none}
@@ -6970,6 +6976,242 @@ SCREENS['/portal/dash-user'] = () => {
 };
 
 /* =========================================================================
+   보고서 — 보고서 > 보고서생성 · 보고서조회 (functionMd/report.md, 2026-11-13)
+   좌측 보고서 트리(NKIA › 품질 · 운영) + 우측 보고서. 참고자료 inputs/ITSM_4종_운영보고서_세로형.html 의
+   4종 보고서 내용을 index.html 조각(secCard·xtb·hbars·donutTable·steps·badge)으로 옮겼다.
+   PDF·DOCX·HWPX 단추는 자리만 두고 실제 출력은 하지 않는다. 수치는 참고자료의 예시 데이터.
+   ========================================================================= */
+const RPT_KPI = (name, hint, items) => ({ t: 'kpi', name, hint, items });
+const REPORTS = [
+  { id: 'req', code: 'ITSM REPORT 01 / REQUEST MANAGEMENT', title: 'IT 서비스 요청 처리 현황 보고서',
+    desc: '요청 유형별 접수·처리·완료 현황과 기한 초과 업무를 종합 분석합니다.',
+    meta: [['보고기간', '@period'], ['대상', '전체 IT 서비스 요청'], ['작성부서', 'IT 운영관리팀']],
+    foot: 'ITSM 운영관리 보고서 · 예시 데이터',
+    blocks: [
+      RPT_KPI('01. 주요 운영 지표', '당월 발생 / 당월 완료 기준', [['신규 접수', 184, '건'], ['처리 완료', 169, '건', 'ok'], ['미완료 잔여', 42, '건'], ['기한 초과', 8, '건', 'bad']]),
+      { t: 'cols', items: [
+        { t: 'bars', name: '02. 유형별 접수 현황', head: ['요청 유형', '', '건수', '비율'], rows: [['서비스요청', 95, 95, '52%'], ['장애', 54, 54, '29%'], ['변경', 35, 35, '19%']], note: '서비스요청 52% · 장애 29% · 변경 19%' },
+        { t: 'donut', name: '03. 잔여 업무 상태 분포', key: 'rpt-req-rest', rows: [{ k: '처리 대기', v: 14 }, { k: '수행 중', v: 20 }, { k: '기한 초과', v: 8 }], note: '기한 초과는 미완료 업무 42건의 하위 항목입니다.' }] },
+      { t: 'table', name: '04. 요청 유형별 처리 상세', hint: '완료에는 이전 달 접수분 포함 가능',
+        cols: [{ h: '요청 유형', k: 0 }, { h: '접수', k: 1 }, { h: '완료', k: 2 }, { h: '미완료', k: 3 }, { h: '기한 초과', k: 4 }],
+        rows: [['서비스요청', 95, 88, 18, 3], ['장애관리', 54, 52, 11, 4], ['변경관리', 35, 29, 13, 1]], sum: ['합계', 184, 169, 42, 8] },
+      { t: 'table', name: '05. 주요 지연 요청', hint: '예시 3건',
+        cols: [{ h: '요청번호', k: 0, l: true }, { h: '요청 내용', k: 1, l: true }, { h: '담당조직', k: 2, l: true }, { h: '현황', s: 3 }],
+        rows: [['SR261021_00131', 'ERP 로그인 장애 조치', 'APP 운영', ['초과 2일', 'bad']], ['SR261023_00137', 'DB 접근권한 신청', 'DB 운영', ['승인 지연', 'warn']], ['SR261027_00146', '서버 환경설정 변경', '서버 운영', ['검증 대기', 'warn']]] },
+      { t: 'note', name: '06. 분석 및 조치 계획', items: ['기한 초과 8건의 원인을 승인 대기·기술 조치·검증 지연으로 구분하여 추적합니다.', '반복 발생 요청은 표준 요청 양식과 자동 할당 규칙 개선 대상으로 검토합니다.'] }
+    ] },
+  { id: 'sla', code: 'ITSM REPORT 02 / SERVICE LEVEL', title: 'IT 서비스 수준(SLA) 평가 보고서',
+    desc: '서비스별 목표 이행 현황, SLA 달성 여부 및 개선 과제를 평가합니다.',
+    meta: [['평가기간', '@period'], ['평가대상', '계약 서비스 3개'], ['작성부서', '서비스수준관리팀']],
+    foot: '평가방식·가중치·지표는 계약별 SLA 정의에 따라 조정 필요 · 예시 데이터',
+    blocks: [
+      RPT_KPI('01. SLA 종합 지표', '', [['종합 SLA 점수', '96.3', '점', 'ok'], ['계약 목표', '95.0', '점'], ['적기 처리율', '96.1', '%', 'ok'], ['기한 위반', 7, '건', 'bad']]),
+      { t: 'table', name: '02. 서비스별 SLA 성과', hint: '목표 95점 · 예시 가중치 합계 100%',
+        cols: [{ h: '서비스', k: 0 }, { h: '가중치', k: 1 }, { h: '평가 점수', k: 2 }, { h: '목표', k: 3 }, { h: '판정', s: 4 }],
+        rows: [['서버 운영', '40%', '98.0', '95.0', ['달성', 'ok']], ['DB 운영', '30%', '96.0', '95.0', ['달성', 'ok']], ['애플리케이션 운영', '30%', '94.3', '95.0', ['미달', 'bad']]],
+        sum: ['종합', '100%', '96.3', '95.0', ['달성', 'ok']] },
+      { t: 'cols', items: [
+        { t: 'bars', name: '03. 서비스별 평가 점수', head: ['서비스', '', '점수'], rows: [['서버 운영', 98, '98.0'], ['DB 운영', 96, '96.0'], ['APP 운영', 94.3, '94.3']], note: '종합점수 = 서비스별 평가점수 × 계약 가중치의 합계' },
+        { t: 'bars', name: '04. SLA 위반 원인', head: ['원인', '', '건수'], rows: [['승인 지연', 3, 3], ['기술 조치', 2, 2], ['검증 지연', 2, 2]], note: '위반 7건에 대한 예시 분류입니다.' }] },
+      { t: 'table', name: '05. 핵심 서비스수준지표(SLI)', hint: '',
+        cols: [{ h: '평가지표', k: 0 }, { h: '목표', k: 1 }, { h: '실적', k: 2 }, { h: '결과', s: 3 }],
+        rows: [['장애 복구기한 준수율', '95.0%', '97.0%', ['달성', 'ok']], ['서비스요청 적기 처리율', '95.0%', '96.1%', ['달성', 'ok']], ['변경 작업 성공률', '98.0%', '96.5%', ['미달', 'bad']], ['주요 서비스 가용률', '99.9%', '99.94%', ['달성', 'ok']]] },
+      { t: 'note', name: '06. 평가 의견 및 개선 과제', items: ['종합 SLA 목표는 달성하였으나 애플리케이션 운영 서비스 점수는 목표에 미달했습니다.', '변경 작업 사전 검증 강화 및 승인 지연 유형의 리드타임 개선을 추진합니다.'] }
+    ] },
+  { id: 'inc', code: 'ITSM REPORT 03 / INCIDENT MANAGEMENT', title: '장애 발생 및 조치 분석 보고서',
+    desc: '장애 유형·심각도별 발생 현황과 복구 실적 및 재발 방지 활동을 분석합니다.',
+    meta: [['보고기간', '@period'], ['대상', 'IT 서비스 장애'], ['작성부서', '장애관리팀']],
+    foot: 'MTTR은 복구 완료 장애의 복구 소요시간 평균 · 예시 데이터',
+    blocks: [
+      RPT_KPI('01. 장애관리 핵심 지표', '', [['발생 장애', 54, '건'], ['복구 완료', 52, '건', 'ok'], ['평균 복구시간(MTTR)', '2.8', '시간'], ['동일원인 재발', 5, '건', 'bad']]),
+      { t: 'cols', items: [
+        { t: 'bars', name: '02. 장애 등급별 발생 현황', head: ['등급', '', '건수'], rows: [['긴급(P1)', 4, 4], ['높음(P2)', 15, 15], ['보통(P3)', 22, 22], ['낮음(P4)', 13, 13]] },
+        { t: 'bars', name: '03. 발생 원인 분류', head: ['원인', '', '건수'], rows: [['애플리케이션', 20, 20], ['서버/OS', 13, 13], ['DB', 11, 11], ['네트워크', 10, 10]] }] },
+      { t: 'table', name: '04. 주요 장애 및 대응 결과', hint: '',
+        cols: [{ h: '장애번호', k: 0, l: true }, { h: '장애 내용', k: 1, l: true }, { h: '영향 서비스', k: 2, l: true }, { h: '복구시간', k: 3 }, { h: '상태', s: 4 }],
+        rows: [['SR261008_00106', 'WAS 응답 지연', 'ERP', '1시간 40분', ['복구', 'ok']], ['SR261017_00123', 'DB 연결 오류', '그룹웨어', '3시간 15분', ['복구', 'ok']], ['SR261021_00131', '로그인 서비스 장애', 'ERP', '진행 중', ['조치 중', 'bad']], ['SR261029_00152', '디스크 임계치 초과', '파일 서비스', '45분', ['복구', 'ok']]] },
+      { t: 'steps', name: '05. 장애 대응 및 사후관리 절차', items: [{ k: '① 접수·분류', n: '영향도 판단', sub: '영향도·긴급도 판단' }, { k: '② 진단·복구', n: '원인 조치', sub: '원인분석·조치' }, { k: '③ 결과 검증', n: '정상화 확인', sub: '서비스 정상화 확인' }, { k: '④ 재발 방지', n: '문제관리', sub: '문제관리·개선 연계' }] },
+      { t: 'note', name: '06. 주요 분석 및 개선 계획', items: ['애플리케이션 장애가 20건으로 가장 많아 배포·설정변경 이력과 상관분석을 강화합니다.', '재발 장애 5건은 문제관리로 등록하여 근본 원인과 예방 조치를 추적합니다.'] }
+    ] },
+  { id: 'chg', code: 'ITSM REPORT 04 / CHANGE & RELEASE', title: '변경 및 배포관리 실적 보고서',
+    desc: '변경 승인·수행·배포 실적을 분석하고 변경 실패 및 긴급 변경을 추적합니다.',
+    meta: [['보고기간', '@period'], ['대상', 'IT 서비스 변경 및 배포'], ['작성부서', '변경·배포관리팀']],
+    foot: '변경 성공률·배포 실패 건수는 서로 다른 모집단을 사용할 수 있음 · 예시 데이터',
+    blocks: [
+      RPT_KPI('01. 변경·배포 핵심 지표', '', [['변경 접수', 35, '건'], ['변경 성공률', '96.5', '%', 'ok'], ['운영 배포', 28, '건'], ['배포 실패·롤백', 2, '건', 'bad']]),
+      { t: 'cols', items: [
+        { t: 'bars', name: '02. 변경 유형별 접수 현황', head: ['변경 유형', '', '건수'], rows: [['일반 변경', 23, 23], ['표준 변경', 8, 8], ['긴급 변경', 4, 4]], note: '긴급 변경 비중 11.4% (4/35건)' },
+        { t: 'donut', name: '03. 변경 처리 현황', key: 'rpt-chg-proc', rows: [{ k: '완료', v: 29 }, { k: '진행', v: 4 }, { k: '반려·취소', v: 2 }], note: '변경 성공률은 실제 수행 완료 건을 분모로 별도 산정합니다.' }] },
+      { t: 'table', name: '04. 주요 변경 및 배포 실적', hint: '',
+        cols: [{ h: '변경번호', k: 0, l: true }, { h: '변경 내용', k: 1, l: true }, { h: '대상 시스템', k: 2, l: true }, { h: '배포 결과', s: 3 }],
+        rows: [['SR261007_00104', 'ERP 전표 검증 기능 수정', 'ERP', ['성공', 'ok']], ['SR261016_00121', 'DB 파라미터 조정', '업무 DB', ['성공', 'ok']], ['SR261022_00134', 'API 인증 모듈 교체', '대외 연계', ['롤백', 'bad']], ['SR261027_00148', '서버 보안 설정 변경', 'APP 서버', ['검증 중', 'warn']]] },
+      { t: 'table', name: '05. 변경관리 점검 항목', hint: '',
+        cols: [{ h: '점검 항목', k: 0 }, { h: '상태', s: 1 }, { h: '관리 기준', k: 2, l: true }],
+        rows: [['승인 후 변경 수행 여부', ['확인', 'ok'], '변경승인 이력과 실제 작업시점 대조'], ['테스트 결과 및 증적 등록', ['개선', 'warn'], '사전·사후 검증 결과 첨부 관리'], ['배포 실패 시 복구계획', ['확인', 'ok'], '롤백 계획 및 수행 결과 기록']] },
+      { t: 'note', name: '06. 분석 및 개선 계획', items: ['실패·롤백 2건의 원인과 사전 테스트 범위를 재검토하여 재발 방지 조치를 수립합니다.', '긴급 변경은 사후승인 및 증적 누락이 없는지 별도 점검합니다.'] }
+    ] }
+];
+/* 보고서 트리 — NKIA(최상위) › 품질(참고자료 4종) · 운영 */
+const RPT_TREE = { id: 'nkia', label: 'NKIA', kids: [
+  { id: 'qual', label: '품질', kids: REPORTS.map(r => ({ id: r.id, label: r.title, leaf: true })) },
+  { id: 'ops', label: '운영', kids: [] }] };
+const RPT_OPEN = { nkia: true, qual: true, ops: true };
+const RPT_DEFAULT = { from: '2026-10-01', to: '2026-10-31', dept: '' };
+const REP = { ...RPT_DEFAULT, made: '', rid: '' };
+const rptFind = (id, n = RPT_TREE, path = []) => {
+  if (n.id === id) return { n, path };
+  for (const k of n.kids || []) { const f = rptFind(id, k, [...path, n]); if (f) return f; }
+  return null;
+};
+const rptLeaves = n => n.leaf ? [n] : (n.kids || []).flatMap(rptLeaves);
+const rptPeriod = (p = RPT_DEFAULT) => `${p.from.replace(/-/g, '.')} ~ ${p.to.replace(/-/g, '.')}`;
+const RPT_SVG = {
+  chev: '<path d="m9 18 6-6-6-6"></path>',
+  folder: '<path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"></path>',
+  root: '<path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path><path d="M10 6h4"></path><path d="M10 10h4"></path><path d="M10 14h4"></path><path d="M10 18h4"></path>',
+  file: '<path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path>',
+  down: '<path d="M12 15V3"></path><path d="m7 10 5 5 5-5"></path><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>'
+};
+const rptSvg = (k, size = 16, cls = '') => `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 ${cls}" aria-hidden="true">${RPT_SVG[k]}</svg>`;
+
+/* 좌측 트리 — 메뉴(MENU_SUB)와 같은 높이·글자·활성 표시 */
+function rptTreeHtml(base, sel) {
+  const node = (n, depth) => {
+    const kids = n.kids || [], isOpen = RPT_OPEN[n.id], on = n.id === sel;
+    const icon = n.leaf ? rptSvg('file', 16, 'text-muted-foreground') : rptSvg(depth ? 'folder' : 'root', 16, 'text-primary');
+    const chev = n.leaf ? '<span class="shrink-0" style="width: 18px;"></span>'
+      : `<button type="button" data-rpt-toggle="${n.id}" aria-label="${esc(n.label)} ${isOpen ? '접기' : '펼치기'}" class="grid shrink-0 place-items-center rounded text-muted-foreground hover:bg-muted" style="width: 18px; height: 18px;">${rptSvg('chev', 14, 'transition-transform' + (isOpen ? ' rotate-90' : ''))}</button>`;
+    const cnt = n.leaf ? '' : `<span class="ml-auto shrink-0 text-xs tabular-nums text-muted-foreground">${rptLeaves(n).length}</span>`;
+    const row = `<a href="#${base}?r=${n.id}" role="treeitem" aria-level="${depth + 1}"${n.leaf ? '' : ` aria-expanded="${!!isOpen}"`}${on ? ' aria-selected="true"' : ''} data-rpt-node="${n.id}" title="${esc(n.label)}"
+      class="flex items-center gap-1.5 rounded-md pr-2 text-sm transition-colors ${on ? 'bg-primary/10 font-semibold text-primary' : 'text-foreground hover:bg-muted'}" style="min-height: 32px; padding-left: ${4 + depth * 16}px; text-decoration: none;">
+      ${chev}${icon}<span class="min-w-0 truncate${depth === 0 ? ' font-semibold' : ''}">${si(n.label)}</span>${cnt}</a>`;
+    return row + (!n.leaf && isOpen ? `<div role="group">${kids.map(k => node(k, depth + 1)).join('')}</div>` : '');
+  };
+  return `<div data-rpt-tree="" class="flex w-[280px] shrink-0 flex-col overflow-hidden rounded-xl border border-border bg-card">
+    <div class="flex shrink-0 items-center gap-1.5 border-b border-border px-3 py-1.5"><span class="whitespace-nowrap text-xs font-medium text-foreground">보고서 트리</span><span data-wgt-spacer="" class="ml-auto"></span><span data-period-badge="" class="inline-flex shrink-0 items-center whitespace-nowrap rounded-full px-1.5 text-[11px] font-medium text-muted-foreground ring-1 ring-inset ring-border">${rptLeaves(RPT_TREE).length}종</span></div>
+    <div role="tree" aria-label="보고서 트리" class="min-h-0 flex-1 overflow-y-auto p-2">${node(RPT_TREE, 0)}</div>
+  </div>`;
+}
+
+/* 보고서 본문 블록 → index.html 조각 */
+function rptBlock(b) {
+  if (b.t === 'cols') return `<div class="grid gap-3" style="grid-template-columns: repeat(2, minmax(0px, 1fr));">${b.items.map(rptBlock).join('')}</div>`;
+  const note = b.note ? `<p class="mt-2 text-xs text-muted-foreground">${si(b.note)}</p>` : '';
+  let body = '';
+  if (b.t === 'kpi') {
+    body = `<div class="grid gap-3" style="grid-template-columns: repeat(4, minmax(0px, 1fr));">${b.items.map(([k, v, u, tone]) => `<div data-rpt-kpi="${esc(k)}" class="flex flex-col gap-1 rounded-lg bg-muted px-3 py-2">
+      <span class="truncate text-xs text-muted-foreground">${si(k)}</span>
+      <p class="flex items-baseline gap-0.5"><span class="text-2xl font-bold tabular-nums ${tone === 'ok' ? 'text-success' : tone === 'bad' ? 'text-destructive' : 'text-foreground'}">${si(v)}</span><span class="text-xs text-muted-foreground">${si(u)}</span></p></div>`).join('')}</div>`;
+  } else if (b.t === 'bars') {
+    const cols = b.head.length > 3 ? '96px 1fr 48px 48px' : '96px 1fr 56px';
+    body = `<div style="height: ${20 + b.rows.length * 32}px;">${hbars(b.head, b.rows, cols)}</div>`;
+  } else if (b.t === 'donut') {
+    body = `<div style="height: 140px;">${donutTable(b.key, b.rows)}</div>`;
+  } else if (b.t === 'table') {
+    const cell = (r, c) => c.s != null ? badge(r[c.s][0], r[c.s][1]) : si(r[c.k]);
+    const rows = [...b.rows, ...(b.sum ? [Object.assign(b.sum.slice(), { sum: true })] : [])];
+    body = xtb(b.cols.map(c => ({ h: c.h, l: c.l, f: r => cell(r, c) })), rows, { fill: false, row: r => r.sum ? ' data-rpt-sum=""' : '' });
+  } else if (b.t === 'steps') {
+    body = `<div style="height: 84px;">${steps(b.items)}</div>`;
+  } else if (b.t === 'note') {
+    body = `<ul class="list-disc space-y-1 pl-5 text-sm leading-relaxed text-foreground">${b.items.map(t => `<li>${si(t)}</li>`).join('')}</ul>`;
+  }
+  return secCard({ attr: `data-rpt-block="${b.t}"`, name: b.name, desc: b.hint, body: body + note });
+}
+function rptSheet(r, p = RPT_DEFAULT) {
+  const i = REPORTS.indexOf(r) + 1;
+  const meta = r.meta.map(([k, v]) => `<span><b class="font-semibold text-foreground">${si(k)}</b> ${si(v === '@period' ? rptPeriod(p) : k === '작성부서' && p.dept ? p.dept : v)}</span>`).join('');
+  return `<article data-rpt-sheet="${r.id}" class="x-rpt-a4 mx-auto flex shrink-0 flex-col gap-2 border border-border bg-card shadow-sm">
+    <header class="x-rpt-head flex flex-col gap-1 pb-3">
+      <span class="text-xs font-semibold uppercase tracking-wider text-primary">${si(r.code)}</span>
+      <h1 class="text-2xl font-bold text-foreground" style="margin: 0px;">${si(r.title)}</h1>
+      <p class="text-sm text-muted-foreground" style="margin: 0px;">${si(r.desc)}</p>
+      <div class="mt-2 flex flex-wrap text-xs text-muted-foreground" style="gap: 4px 16px;">${meta}</div>
+    </header>
+    ${r.blocks.map(rptBlock).join('')}
+    <footer class="mt-auto flex shrink-0 items-center justify-between gap-3 border-t border-border pt-2 text-xs text-muted-foreground"><span>${si(r.foot)}</span><span class="tabular-nums">${si(String(i).padStart(2, '0') + ' / ' + String(REPORTS.length).padStart(2, '0'))}</span></footer>
+  </article>`;
+}
+/* 출력 단추 — PDF · DOCX · HWPX (목업: 자리만, 출력하지 않음) */
+const rptExport = r => ['PDF', 'DOCX', 'HWPX'].map(k => `<button type="button" data-rpt-export="${k}" title="${esc(r.title)} ${k} 출력 (목업 — 실제 출력하지 않음)" class="inline-flex h-7 shrink-0 items-center gap-1 whitespace-nowrap rounded-md border border-input bg-card px-2.5 text-xs font-medium text-foreground shadow-sm transition-colors hover:bg-muted">${rptSvg('down', 12)}${k}</button>`).join('');
+const rptBar = (title, count, sub, tools = '') => `<div class="itg-toolbar flex shrink-0 items-center gap-2 rounded-xl border border-border bg-card px-4 py-1 shadow-sm min-h-[var(--d-toolbar-h)]">
+    <span class="h-3.5 w-1 shrink-0 rounded-full bg-primary"></span>
+    <h3 class="truncate text-base font-semibold tracking-tight text-foreground">${si(title)}</h3>
+    ${count != null ? `<span data-count-pill="" class="inline-flex shrink-0 items-center rounded-full bg-muted px-2 py-0.5 text-xs font-semibold leading-none tabular-nums text-muted-foreground ring-1 ring-inset ring-border">${count}</span>` : ''}
+    <span class="min-w-0 truncate text-xs text-muted-foreground">${sub}</span>
+    <div class="ml-auto flex shrink-0 items-center gap-1.5">${tools}</div>
+  </div>`;
+/* 폴더를 고르면 — 그 아래 보고서 목록(행을 누르면 그 보고서로) */
+function rptFolder(base, n) {
+  const list = rptLeaves(n).map(l => REPORTS.find(r => r.id === l.id));
+  const where = rptFind(n.id).path.concat(n).map(x => x.label).join(' › ');
+  const body = list.length ? xtb([
+      { h: '번호', f: r => si(String(REPORTS.indexOf(r) + 1).padStart(2, '0')) }, { h: '보고서명', k: 'title', l: true, ell: true },
+      { h: '구분', f: r => si(r.code.split('/ ')[1]), l: true }, { h: '작성부서', f: r => si(r.meta.find(m => m[0] === '작성부서')[1]), l: true },
+      { h: '기간', f: () => si(rptPeriod()) }], list, { fill: false, row: r => ` data-rpt-go="${r.id}" title="${esc(r.title)} 열기" style="cursor: pointer;"` })
+    : `<div class="itg-np-box" style="margin-top: 0px;">「${esc(n.label)}」 폴더에 등록된 보고서가 없습니다.</div>`;
+  return rptBar(n.label, list.length, esc(where) + ' · 보고서를 고르면 오른쪽에 펼쳐집니다') + `<div class="shrink-0 rounded-xl border border-border bg-card p-3">${body}</div>`;
+}
+
+/* ── 보고서 > 보고서조회 ─────────────────────────────────────────────── */
+SCREENS['/report/view'] = () => {
+  const base = '/report/view', id = ROUTE_Q.get('r') || REPORTS[0].id, hit = rptFind(id) || rptFind(REPORTS[0].id);
+  const r = hit.n.leaf && REPORTS.find(x => x.id === hit.n.id);
+  const right = r
+    ? rptBar(r.title, null, `${esc(hit.path.map(x => x.label).join(' › '))} · ${esc(rptPeriod())}`, rptExport(r)) + rptSheet(r)
+    : rptFolder(base, hit.n);
+  return `<div data-rpt-wrap="view" class="flex min-h-0 flex-1 gap-3">${rptTreeHtml(base, hit.n.id)}<div data-rpt-main="" class="flex min-w-0 flex-1 flex-col gap-3 overflow-y-auto">${right}</div></div>`;
+};
+SCREENS['/report/view'].full = true;
+
+/* ── 보고서 > 보고서생성 — 트리에서 양식을 고르고 조건을 넣어 미리보기 · 생성 ───────── */
+const RPT_DEPTS = ['IT 운영관리팀', '서비스수준관리팀', '장애관리팀', '변경·배포관리팀', '인프라운영팀'];
+SCREENS['/report/create'] = () => {
+  const base = '/report/create', id = ROUTE_Q.get('r') || REPORTS[0].id, hit = rptFind(id) || rptFind(REPORTS[0].id);
+  const r = hit.n.leaf && REPORTS.find(x => x.id === hit.n.id);
+  if (!r) return `<div data-rpt-wrap="create" class="flex min-h-0 flex-1 gap-3">${rptTreeHtml(base, hit.n.id)}<div data-rpt-main="" class="flex min-w-0 flex-1 flex-col gap-3 overflow-y-auto">${rptFolder(base, hit.n)}</div></div>`;
+  if (REP.rid !== r.id) Object.assign(REP, RPT_DEFAULT, { made: '', rid: r.id }); /* 다른 양식을 고르면 조건을 처음 값으로 */
+  const defDept = r.meta.find(m => m[0] === '작성부서')[1];
+  const lab = (t, f) => `<label${f ? ` for="${f}"` : ''} class="w-28 shrink-0 text-[11px] font-semibold text-muted-foreground">${t}</label>`;
+  const inp = 'h-[var(--d-control-h)] rounded-md border border-input bg-field px-[var(--d-control-px)] text-sm text-foreground shadow-sm outline-none';
+  const made = REP.made === r.id ? `<div data-rpt-made="" class="flex shrink-0 items-center gap-2 rounded-lg bg-success/10 px-3 py-2 text-sm text-success">${badge('생성 완료', 'ok')}<span>「${esc(r.title)}」(${esc(rptPeriod(REP))}) 보고서를 생성했습니다 (목업).</span><a href="#/report/view?r=${r.id}" class="ml-auto shrink-0 text-sm font-medium">보고서조회에서 보기</a></div>` : '';
+  const form = `<div data-rpt-form="" class="flex shrink-0 flex-col overflow-hidden rounded-xl border border-border bg-card shadow-sm">
+    <div class="itg-toolbar flex items-center gap-2 border-b border-border bg-card px-4 py-1 min-h-[var(--d-toolbar-h)]">
+      <span class="h-3.5 w-1 shrink-0 rounded-full bg-primary"></span>
+      <h3 class="truncate text-base font-semibold tracking-tight text-foreground">보고서 생성</h3>
+      <span class="min-w-0 truncate text-xs text-muted-foreground">${esc(hit.path.map(x => x.label).join(' › '))} › ${esc(r.title)}</span>
+    </div>
+    <div class="dg-searchzone flex flex-col gap-2 px-4 py-3">
+      <div class="flex items-center gap-2">${lab('보고서 양식')}<span class="text-sm font-medium text-foreground">${si(r.title)}</span><span class="text-xs text-muted-foreground">${si(r.code)}</span></div>
+      <div class="flex items-center gap-2">${lab('보고기간', 'rpt-from')}<input id="rpt-from" data-rpt-from="" type="date" value="${REP.from}" class="${inp} w-48"><span class="text-sm text-muted-foreground">~</span><input data-rpt-to="" type="date" value="${REP.to}" class="${inp} w-48" aria-label="보고기간 종료일"></div>
+      <div class="flex items-center gap-2">${lab('작성부서', 'rpt-dept')}<select id="rpt-dept" data-rpt-dept="" class="${inp} w-48">${RPT_DEPTS.map(d => `<option${(REP.dept || defDept) === d ? ' selected' : ''}>${esc(d)}</option>`).join('')}</select>
+        <div class="ml-auto flex shrink-0 items-center gap-1.5">
+          <button type="button" data-rpt-reset="" class="inline-flex h-8 items-center rounded-md border border-input bg-card px-3 text-sm font-medium text-foreground shadow-sm transition-colors hover:bg-muted">초기화</button>
+          <button type="button" data-rpt-preview="" class="inline-flex h-8 items-center rounded-md border border-input bg-card px-3 text-sm font-medium text-foreground shadow-sm transition-colors hover:bg-muted">미리보기</button>
+          <button type="button" data-rpt-make="${r.id}" class="inline-flex h-8 items-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90">보고서 생성</button>
+        </div></div>
+    </div>
+  </div>`;
+  return `<div data-rpt-wrap="create" class="flex min-h-0 flex-1 gap-3">${rptTreeHtml(base, hit.n.id)}<div data-rpt-main="" class="flex min-w-0 flex-1 flex-col gap-3 overflow-y-auto">${form}${made}${rptBar('미리보기', null, esc(r.title) + ' · ' + esc(rptPeriod(REP)), rptExport(r))}${rptSheet(r, REP)}</div></div>`;
+};
+SCREENS['/report/create'].full = true;
+document.addEventListener('click', e => {
+  const t = e.target.closest('[data-rpt-toggle]');
+  if (t) { e.preventDefault(); e.stopPropagation(); RPT_OPEN[t.dataset.rptToggle] = !RPT_OPEN[t.dataset.rptToggle]; render(); return; }
+  const go = e.target.closest('[data-rpt-go]');
+  if (go) { location.hash = `#${current().split('?')[0]}?r=${go.dataset.rptGo}`; return; }
+  const read = () => {
+    const f = document.querySelector('[data-rpt-from]').value, to = document.querySelector('[data-rpt-to]').value;
+    if (f && to) { REP.from = f <= to ? f : to; REP.to = f <= to ? to : f; }
+    REP.dept = document.querySelector('[data-rpt-dept]').value;
+  };
+  if (e.target.closest('[data-rpt-reset]')) { Object.assign(REP, RPT_DEFAULT, { made: '' }); render(); return; }
+  if (e.target.closest('[data-rpt-preview]')) { read(); REP.made = ''; render(); return; }
+  const mk = e.target.closest('[data-rpt-make]');
+  if (mk) { read(); REP.made = mk.dataset.rptMake; render(); }
+});
+
+/* =========================================================================
    메뉴 — proto MENU_BASE / MENU_SUB / MENU_ACTIVE 마크업. 대분류는 눌러 펼치고 접는다.
    impl = 이번 목업으로 구현한 화면(CLAUDE.md 규칙: 노란색·굵게)
    ========================================================================= */
@@ -6984,6 +7226,7 @@ const ICONS = {
   '요청관리': '<rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="M12 11h4"></path><path d="M12 16h4"></path><path d="M8 11h.01"></path><path d="M8 16h.01"></path>',
   '자산구성': '<path d="M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l3 1.8a2 2 0 0 0 2.06 0L12 19v-5.5l-5-3-4.03 2.42Z"></path><path d="m7 16.5-4.74-2.85"></path><path d="m7 16.5 5-3"></path><path d="M7 16.5v5.17"></path><path d="M12 13.5V19l3.97 2.38a2 2 0 0 0 2.06 0l3-1.8a2 2 0 0 0 .97-1.71v-3.24a2 2 0 0 0-.97-1.71L17 10.5l-5 3Z"></path><path d="m17 16.5-5-3"></path><path d="m17 16.5 4.74-2.85"></path><path d="M17 16.5v5.17"></path><path d="M7.97 4.42A2 2 0 0 0 7 6.13v4.37l5 3 5-3V6.13a2 2 0 0 0-.97-1.71l-3-1.8a2 2 0 0 0-2.06 0l-3 1.8Z"></path>',
   '서비스관리': '<path d="m12 14 4-4"></path><path d="M3.34 19a10 10 0 1 1 17.32 0"></path>',
+  '보고서': '<path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path>',
   '정보관리': '<path d="M12 7v14"></path><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path>',
   '운영관리': '<path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"></path><circle cx="12" cy="12" r="3"></circle>',
   '시스템관리': '<path d="M10 8h4"></path><path d="M12 21v-9"></path><path d="M12 8V3"></path><path d="M17 16h4"></path><path d="M19 12V3"></path><path d="M19 21v-5"></path><path d="M3 14h4"></path><path d="M5 10V3"></path><path d="M5 21v-7"></path>'
@@ -7002,6 +7245,9 @@ const MENU = [
     { label: '점검계획', path: '/asset/insp-plan' }, { label: '점검표 관리', path: '/asset/insp-form' },
     { label: '자산구성동기화', path: '/asset/sync' }, { label: '자산구성동기화이력', path: '/asset/sync-history' }] },
   { label: '서비스관리', icon: '서비스관리', children: [] },
+  { label: '보고서', icon: '보고서', children: [
+    { label: '보고서생성', path: '/report/create', impl: true, title: '보고서생성', role: 'admin' },
+    { label: '보고서조회', path: '/report/view', impl: true, title: '보고서조회', role: 'admin' }] },
   { label: '정보관리', icon: '정보관리', children: [] },
   { label: '운영관리', icon: '운영관리', children: [] },
   { label: '시스템관리', icon: '시스템관리', children: [] }
@@ -7071,7 +7317,7 @@ function render() {
   } else {
     /* proto .itg-np — 이번 목업 범위가 아닌 메뉴 안내 한 장 */
     view.innerHTML = `<div class="itg-np"><p class="itg-np-title">${esc(c.label)}</p><p class="itg-np-sub">${esc(g.label)} › ${esc(c.label)}</p>
-      <div class="itg-np-box">이 메뉴는 이번 대시보드 목업 범위가 아닙니다. 노란색으로 표시된 메뉴(서비스포털, 요청관리 MyPage, 자산관리 대시보드)에서 화면을 확인하세요.</div></div>`;
+      <div class="itg-np-box">이 메뉴는 이번 대시보드 목업 범위가 아닙니다. 노란색으로 표시된 메뉴(서비스포털, 요청관리 MyPage, 자산관리 대시보드, 보고서)에서 화면을 확인하세요.</div></div>`;
   }
   view.scrollTop = 0;
 }
