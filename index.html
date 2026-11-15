@@ -6796,7 +6796,7 @@ SCREENS['/asset/dash-admin'] = () => {
   const L = k => life.reduce((a, r) => a + r[k], 0);
   /* 상단 자산관리 현황 6개 — 전사 예시 수치 (2026-11-08 사용자 지정) */
   const K = { total: 12450, run: 5217, idle: 980, eol: 315, maint: 86, mismatch: 42 }, n = v => v.toLocaleString('ko-KR');
-  return dashHead({ title: 'IT자산현황', role: 'admin', desc: '우리 부서가 무엇을 얼마나 보유하고, 언제 교체·점검해야 하는가' }) + grid('ITAM-DEPT', [
+  return dashHead({ title: 'IT자산현황', role: 'admin', roleBadge: false, desc: '우리 부서가 무엇을 얼마나 보유하고, 언제 교체·점검해야 하는가' }) + grid('ITAM-DEPT', [
     tile({ name: '전체 자산', x: 0, v: n(K.total), u: '건', b: '전체', sub: si('자산구성 등록 기준') }),
     tile({ name: '운영 자산', x: 2, v: n(K.run), u: '건', b: '전체', sub: si(`사용 중 · ${pct(K.run, K.total)}%`) }),
     tile({ name: '미사용 자산', x: 4, v: n(K.idle), u: '건', b: '전체', warn: true, sub: si('보관·예비 · 재배치 검토') }),
@@ -7009,7 +7009,7 @@ const REPORTS = [
   { id: 'req', code: 'ITSM REPORT 01 / REQUEST MANAGEMENT', title: 'IT 서비스 요청 처리 현황 보고서',
     desc: '요청 유형별 접수·처리·완료 현황과 기한 초과 업무를 종합 분석합니다.',
     meta: [['보고기간', '@period'], ['대상', '전체 IT 서비스 요청'], ['작성부서', 'IT 운영관리팀']],
-    foot: 'ITSM 운영관리 보고서 · 예시 데이터',
+    foot: 'ITSM 운영관리 보고서',
     blocks: [
       RPT_KPI('01. 주요 운영 지표', '당월 발생 / 당월 완료 기준', [['신규 접수', 157, '건'], ['처리 완료', 143, '건', 'ok'], ['미완료 잔여', 37, '건'], ['기한 초과', 6, '건', 'bad']]),
       { t: 'cols', items: [
@@ -7026,7 +7026,7 @@ const REPORTS = [
   { id: 'sla', code: 'ITSM REPORT 02 / SERVICE LEVEL', title: 'IT 서비스 수준(SLA) 평가 보고서',
     desc: '서비스별 목표 이행 현황, SLA 달성 여부 및 개선 과제를 평가합니다.',
     meta: [['평가기간', '@period'], ['평가대상', '계약 서비스 3개'], ['작성부서', '서비스수준관리팀']],
-    foot: '평가방식·가중치·지표는 계약별 SLA 정의에 따라 조정 필요 · 예시 데이터',
+    foot: '평가방식·가중치·지표는 계약별 SLA 정의에 따라 조정 필요',
     blocks: [
       RPT_KPI('01. SLA 종합 지표', '', [['종합 SLA 점수', '96.3', '점', 'ok'], ['계약 목표', '95.0', '점'], ['적기 처리율', '96.1', '%', 'ok'], ['기한 위반', 7, '건', 'bad']]),
       { t: 'table', name: '02. 서비스별 SLA 성과', hint: '목표 95점 · 예시 가중치 합계 100%',
@@ -7035,7 +7035,7 @@ const REPORTS = [
         sum: ['종합', '100%', '96.3', '95.0', ['달성', 'ok']] },
       { t: 'cols', items: [
         { t: 'bars', name: '03. 서비스별 평가 점수', head: ['서비스', '', '점수'], rows: [['서버 운영', 98, '98.0'], ['DB 운영', 96, '96.0'], ['APP 운영', 94.3, '94.3']], note: '종합점수 = 서비스별 평가점수 × 계약 가중치의 합계' },
-        { t: 'bars', name: '04. SLA 위반 원인', head: ['원인', '', '건수'], rows: [['승인 지연', 3, 3], ['기술 조치', 2, 2], ['검증 지연', 2, 2]], note: '위반 7건에 대한 예시 분류입니다.' }] },
+        { t: 'bars', name: '04. SLA 위반 원인', head: ['원인', '', '건수'], rows: [['승인 지연', 3, 3], ['기술 조치', 2, 2], ['검증 지연', 2, 2]] }] },
       { t: 'table', name: '05. 핵심 서비스수준지표(SLI)', hint: '',
         cols: [{ h: '평가지표', k: 0 }, { h: '목표', k: 1 }, { h: '실적', k: 2 }, { h: '결과', s: 3 }],
         rows: [['장애 복구기한 준수율', '95.0%', '97.0%', ['달성', 'ok']], ['서비스요청 적기 처리율', '95.0%', '96.1%', ['달성', 'ok']], ['변경 작업 성공률', '98.0%', '96.5%', ['미달', 'bad']], ['주요 서비스 가용률', '99.9%', '99.94%', ['달성', 'ok']]] },
@@ -7044,7 +7044,7 @@ const REPORTS = [
   { id: 'inc', code: 'ITSM REPORT 03 / INCIDENT MANAGEMENT', title: '장애 발생 및 조치 분석 보고서',
     desc: '장애 유형·심각도별 발생 현황과 복구 실적 및 재발 방지 활동을 분석합니다.',
     meta: [['보고기간', '@period'], ['대상', 'IT 서비스 장애'], ['작성부서', '장애관리팀']],
-    foot: 'MTTR은 복구 완료 장애의 복구 소요시간 평균 · 예시 데이터',
+    foot: 'MTTR은 복구 완료 장애의 복구 소요시간 평균',
     blocks: [
       RPT_KPI('01. 장애관리 핵심 지표', '', [['발생 장애', 27, '건'], ['복구 완료', 26, '건', 'ok'], ['평균 복구시간(MTTR)', '2.8', '시간'], ['동일원인 재발', 2, '건', 'bad']]),
       { t: 'table', name: '02. 주요 업무서비스 서비스 영향', hint: '장애별 결과보고서 02 ~ 05쪽',
@@ -7100,7 +7100,7 @@ const REPORTS = [
         impact: '야간 45분 동안 파일 업로드가 되지 않았으며 이용자가 적어 업무 영향은 경미합니다. 데이터 손실은 없습니다.',
         fix: [['백업 임시 경로를 별도 볼륨으로 분리', '스토리지', '2026.11.12', ['진행 중', 'warn']], ['정리 스크립트 실패 알림 추가', '서버 운영', '2026.10.31', ['완료', 'ok']], ['디스크 85% 사전 경고 추가', '관제', '2026.10.30', ['완료', 'ok']]] }
     ].map(x => ({ id: 'inc-' + x.sr, code: `ITSM REPORT 03 / INCIDENT RESULT · ${x.sr}`, title: x.interim ? '장애 결과 보고서 (중간)' : '장애 결과 보고서',
-      desc: `${x.sr} · ${x.name} (${x.svc})`, sign: true, foot: x.interim ? '근본 조치 완료 후 최종 결과 보고서로 갱신 예정 · 예시 데이터' : '장애 결과 보고서 · 예시 데이터',
+      desc: `${x.sr} · ${x.name} (${x.svc})`, sign: true, foot: x.interim ? '근본 조치 완료 후 최종 결과 보고서로 갱신 예정' : '장애 결과 보고서',
       meta: [['보고일', x.date], ['장애등급', x.grade], ['작성부서', '장애관리팀']], state: x.state,
       blocks: [
         { t: 'kv', name: '1. 장애 개요', rows: [['장애번호', x.sr, '장애명', x.name], ...x.kv, ['서비스 영향', x.impact]] },
@@ -7111,7 +7111,7 @@ const REPORTS = [
   { id: 'chg', code: 'ITSM REPORT 04 / CHANGE & RELEASE', title: '변경 및 배포관리 실적 보고서',
     desc: '변경 승인·수행·배포 실적을 분석하고 변경 실패 및 긴급 변경을 추적합니다.',
     meta: [['보고기간', '@period'], ['대상', 'IT 서비스 변경 및 배포'], ['작성부서', '변경·배포관리팀']],
-    foot: '변경 성공률·배포 실패 건수는 서로 다른 모집단을 사용할 수 있음 · 예시 데이터',
+    foot: '변경 성공률·배포 실패 건수는 서로 다른 모집단을 사용할 수 있음',
     blocks: [
       RPT_KPI('01. 변경·배포 핵심 지표', '', [['변경 접수', 35, '건'], ['변경 성공률', '96.5', '%', 'ok'], ['운영 배포', 28, '건'], ['배포 실패·롤백', 2, '건', 'bad']]),
       { t: 'cols', items: [
@@ -7247,12 +7247,11 @@ function statPeriodSel(s, live) {
 function statPane(s, hit, { live = true, title } = {}) {
   const where = hit.path.map(x => x.label).join(' › ');
   const cond = live ? `<div data-stat-cond="" class="dg-searchzone flex shrink-0 items-center gap-2 rounded-xl border border-border bg-card px-4 py-2 shadow-sm">
-      <label for="stat-${s.period === 'year' ? 'y' : 'm'}" class="w-28 shrink-0 text-[11px] font-semibold text-muted-foreground">${s.period === 'year' ? '기준연도' : '기준월'}</label>${statPeriodSel(s, true)}
-      <span class="min-w-0 truncate text-xs text-muted-foreground">${si(s.desc)}</span></div>` : '';
-  return rptBar(title || s.title, null, `${esc(where)} · ${s.period === 'year' ? '연간' : '월간'} · ${esc(statBase(s))}`, statExport(s)) + cond
+      <label for="stat-${s.period === 'year' ? 'y' : 'm'}" class="w-28 shrink-0 text-[11px] font-semibold text-muted-foreground">${s.period === 'year' ? '기준연도' : '기준월'}</label>${statPeriodSel(s, true)}</div>` : '';
+  return rptBar(title || s.title, null, `${esc(where)} · ${esc(statBase(s))}`, statExport(s)) + cond
     + `<div data-stat-card="${s.id}" class="flex min-h-0 flex-1 flex-col overflow-hidden rounded-xl border border-border bg-card shadow-sm" style="min-height: 320px;">
       <div class="min-h-0 flex-1 overflow-auto">${statGrid(s)}</div>
-      <p class="shrink-0 border-t border-border px-3 py-1.5 text-xs text-muted-foreground" style="margin: 0px;">${si(s.note)} · 예시 데이터</p></div>`;
+      <p class="shrink-0 border-t border-border px-3 py-1.5 text-xs text-muted-foreground" style="margin: 0px;">${si(s.note)}</p></div>`;
 }
 
 /* 통계/보고서 트리 (2026-11-15) — NKIA › 업무 분류 6개. 잎은 보고서(leaf 'rpt', A4)·통계(leaf 'stat', 그리드) 두 종류 */
@@ -7275,7 +7274,7 @@ const rptPeriod = () => { const p = rptRange(); return `${p.from.replace(/-/g, '
 /* 기준월 줄 — 통계 조회의 조건 줄과 같은 마크업. 바꾸면 바로 다시 그린다 */
 const rptCond = desc => `<div data-stat-cond="" class="dg-searchzone flex shrink-0 items-center gap-2 rounded-xl border border-border bg-card px-4 py-2 shadow-sm">
       <label for="stat-m" class="w-28 shrink-0 text-[11px] font-semibold text-muted-foreground">기준월</label>${statPeriodSel({ period: 'month' }, true)}
-      <span class="shrink-0 text-xs tabular-nums text-muted-foreground">보고기간 ${si(rptPeriod())}</span><span class="min-w-0 truncate text-xs text-muted-foreground">· ${si(desc)}</span></div>`;
+      <span class="shrink-0 text-xs tabular-nums text-muted-foreground">보고기간 ${si(rptPeriod())}</span></div>`;
 const RPT_SVG = {
   chev: '<path d="m9 18 6-6-6-6"></path>',
   folder: '<path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"></path>',
@@ -7334,7 +7333,7 @@ function rptBlock(b) {
   } else if (b.t === 'note') {
     body = `<ul class="list-disc space-y-1 pl-5 text-sm leading-relaxed text-foreground">${b.items.map(t => `<li>${si(t)}</li>`).join('')}</ul>`;
   }
-  return secCard({ attr: `data-rpt-block="${b.t}"`, name: b.name, desc: b.hint, body: body + note });
+  return secCard({ attr: `data-rpt-block="${b.t}"`, name: b.name, body: body + note }); /* 제목 옆 설명 없음 — 출력용 (2026-11-15) */
 }
 /* 보고서 한 건 = 본문 쪽 + r.pages(덧붙는 쪽). 쪽마다 A4 한 장, 꼬리 쪽번호는 그 보고서 안의 i / n (2026-11-15) */
 const pad2 = n => String(n).padStart(2, '0');
@@ -7344,9 +7343,8 @@ function rptPage(pg, i, n, p) {
   const meta = pg.meta.map(([k, v]) => `<span><b class="font-semibold text-foreground">${si(k)}</b> ${si(v === '@period' ? rptPeriod() : k === '작성부서' && p.dept ? p.dept : v)}</span>`).join('');
   return `<article data-rpt-sheet="${pg.id}" data-rpt-page="${i}" class="x-rpt-a4 mx-auto flex shrink-0 flex-col gap-1.5 border border-border bg-card shadow-sm">
     <header class="x-rpt-head flex items-start gap-4 pb-3"><div class="flex min-w-0 flex-1 flex-col gap-1">
-      <span class="text-xs font-semibold uppercase tracking-wider text-primary">${si(pg.code)}</span>
       <h1 class="flex items-center gap-2 text-2xl font-bold text-foreground" style="margin: 0px;">${si(pg.title)}${pg.state ? badge(pg.state[0], pg.state[1]) : ''}</h1>
-      <p class="text-sm text-muted-foreground" style="margin: 0px;">${si(pg.desc)}</p>
+      ${pg.sign ? `<p class="text-sm text-muted-foreground" style="margin: 0px;">${si(pg.desc)}</p>` : '' /* 본 보고서 설명 문단 없음, 결과 보고서는 SR·장애명 */}
       <div class="mt-2 flex flex-wrap text-xs text-muted-foreground" style="gap: 4px 16px;">${meta}</div>
     </div>${pg.sign ? RPT_SIGN : ''}</header>
     ${pg.blocks.map(rptBlock).join('')}
@@ -7375,11 +7373,11 @@ function rptFolder(base, n) {
       { h: '번호', f: l => si(String(list.indexOf(l) + 1).padStart(2, '0')) },
       { h: '구분', f: l => l.leaf === 'stat' ? badge('통계', 'ok') : badge('보고서', 'info'), l: true },
       { h: '이름', f: l => si(l.label), l: true }, { h: '분류', f: l => si(rptFind(l.id).path.slice(-1)[0].label), l: true },
-      { h: '보기', f: l => si(l.leaf === 'stat' ? '그리드 · EXCEL' : `A4 ${1 + (REPORTS.find(x => x.id === l.id).pages || []).length}쪽 · PDF · DOCX · HWPX`), l: true },
+      { h: '쪽수', f: l => si(l.leaf === 'stat' ? '—' : `${1 + (REPORTS.find(x => x.id === l.id).pages || []).length}쪽`) }, { h: '출력', f: l => si(l.leaf === 'stat' ? 'EXCEL' : 'PDF · DOCX · HWPX'), l: true },
       { h: '기준', f: l => si(l.leaf === 'stat' ? (statOf(l).period === 'year' ? '연간' : '월간') : rptPeriod()) }],
       list, { fill: false, row: l => ` data-rpt-go="${l.id}" title="${esc(l.label)} 열기" style="cursor: pointer;"` })
     : `<div class="itg-np-box" style="margin-top: 0px;">「${esc(n.label)}」 분류에 등록된 통계·보고서가 없습니다.</div>`;
-  return rptBar(n.label, list.length, esc(where) + ' · 통계·보고서를 고르면 오른쪽에 펼쳐집니다') + `<div class="shrink-0 rounded-xl border border-border bg-card p-3">${body}</div>`;
+  return rptBar(n.label, list.length, esc(where)) + `<div class="shrink-0 rounded-xl border border-border bg-card p-3">${body}</div>`;
 }
 
 /* ── 통계/보고서 > 통계/보고서조회 — 보고서는 A4, 통계는 그리드 ─────────────────── */
@@ -7408,10 +7406,10 @@ SCREENS['/report/create'] = () => {
   const when = r ? statBase({ period: 'month' }) : statBase(st);
   const made = REP.made === it.id ? `<div data-rpt-made="" class="flex shrink-0 items-center gap-2 rounded-lg bg-success/10 px-3 py-2 text-sm text-success">${badge('생성 완료', 'ok')}<span>「${esc(it.title)}」(${esc(when)}) ${kind}를 생성했습니다 (목업).</span><a href="#/report/view?r=${it.id}" class="ml-auto shrink-0 text-sm font-medium">통계/보고서조회에서 보기</a></div>` : '';
   const rows = r ? `
-      <div class="flex items-center gap-2">${lab('기준월', 'stat-m')}${statPeriodSel({ period: 'month' }, false)}<span class="text-xs tabular-nums text-muted-foreground">보고기간 ${si(rptPeriod())} (기준월 1일 ~ 말일)</span></div>
+      <div class="flex items-center gap-2">${lab('기준월', 'stat-m')}${statPeriodSel({ period: 'month' }, false)}<span class="text-xs tabular-nums text-muted-foreground">보고기간 ${si(rptPeriod())}</span></div>
       <div class="flex items-center gap-2">${lab('작성부서', 'rpt-dept')}<select id="rpt-dept" data-rpt-dept="" class="${inp} w-48">${RPT_DEPTS.map(d => `<option${(REP.dept || r.meta.find(m => m[0] === '작성부서')[1]) === d ? ' selected' : ''}>${esc(d)}</option>`).join('')}</select>`
     : `
-      <div class="flex items-center gap-2">${lab(st.period === 'year' ? '기준연도' : '기준월', st.period === 'year' ? 'stat-y' : 'stat-m')}${statPeriodSel(st, false)}<span class="min-w-0 truncate text-xs text-muted-foreground">${si(st.desc)}</span>`;
+      <div class="flex items-center gap-2">${lab(st.period === 'year' ? '기준연도' : '기준월', st.period === 'year' ? 'stat-y' : 'stat-m')}${statPeriodSel(st, false)}`;
   const form = `<div data-rpt-form="" class="flex shrink-0 flex-col overflow-hidden rounded-xl border border-border bg-card shadow-sm">
     <div class="itg-toolbar flex items-center gap-2 border-b border-border bg-card px-4 py-1 min-h-[var(--d-toolbar-h)]">
       <span class="h-3.5 w-1 shrink-0 rounded-full bg-primary"></span>
@@ -7419,7 +7417,7 @@ SCREENS['/report/create'] = () => {
       <span class="min-w-0 truncate text-xs text-muted-foreground">${esc(hit.path.map(x => x.label).join(' › '))} › ${esc(it.title)}</span>
     </div>
     <div class="dg-searchzone flex flex-col gap-2 px-4 py-3">
-      <div class="flex items-center gap-2">${lab(kind + ' 양식')}${r ? badge('보고서', 'info') : badge('통계', 'ok')}<span class="text-sm font-medium text-foreground">${si(it.title)}</span><span class="text-xs text-muted-foreground">${si(r ? r.code : (st.period === 'year' ? '연간' : '월간') + ' · 그리드')}</span></div>${rows}
+      <div class="flex items-center gap-2">${lab(kind + ' 양식')}${r ? badge('보고서', 'info') : badge('통계', 'ok')}<span class="text-sm font-medium text-foreground">${si(it.title)}</span></div>${rows}
         <div class="ml-auto flex shrink-0 items-center gap-1.5">
           <button type="button" data-rpt-reset="" class="${btn}">초기화</button>
           <button type="button" data-rpt-preview="" class="${btn}">미리보기</button>
@@ -7541,7 +7539,7 @@ function render() {
   if (!open[g.label]) open[g.label] = true;
   renderMenu(c.path);
   document.getElementById('pageTitle').textContent = c.title || c.label;
-  document.getElementById('pageCrumb').textContent = `${c === g ? g.label : `${g.label} > ${c.label}`} · ${c.path}`;
+  document.getElementById('pageCrumb').textContent = c === g ? g.label : `${g.label} > ${c.label}`; /* 메뉴만 — 경로 표기 없음 (2026-11-15) */
   /* 머리줄 사용자 — 사용자용은 부서원, 관리자용은 부서장으로 로그인한 시점 */
   const v = member(DATA.viewer[c.role || 'user']);
   document.getElementById('userAv').textContent = v.name[0];
@@ -7554,7 +7552,7 @@ function render() {
     const no = decodeURIComponent(task), p = DATA.portal.find(x => x.no === no) || DATA.sr.find(x => x.no === no);
     const how = fromPath === '/request/dash-user' ? '「요청자 확인」을 누르면' : 'SR 을 선택하면', back = hit.c.label;
     document.getElementById('pageTitle').textContent = 'TASK 처리';
-    document.getElementById('pageCrumb').textContent = `${g.label} > ${c.label} > TASK 처리 · /request/task/${no}`;
+    document.getElementById('pageCrumb').textContent = `${g.label} > ${c.label} > TASK 처리`;
     view.innerHTML = `<div class="itg-np" data-task-np="${esc(no)}"><p class="itg-np-title">TASK 처리</p><p class="itg-np-sub">${esc(g.label)} › ${esc(c.label)} › ${fromPath === '/request/dash-user' ? '완료 확인' : 'SR 선택'} › ${esc(no)}${p ? ' ' + esc(p.title) : ''}</p>
       <div class="itg-np-box">${how} 이 SR 의 <b>TASK 단계</b>로 넘어가 업무를 처리합니다. TASK 처리 화면은 이번 대시보드 목업 범위가 아닙니다.</div>
       <a href="#${esc(from)}" data-task-back="" class="inline-flex h-8 items-center gap-1.5 rounded-md border border-input bg-card px-3 text-sm font-medium text-foreground transition-colors hover:bg-muted">${esc(back)} 화면으로 돌아가기</a></div>`;
