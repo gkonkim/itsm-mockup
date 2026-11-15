@@ -5975,7 +5975,10 @@ a.x-go{color:inherit;text-decoration:none;border-radius:4px;padding:0 3px;cursor
 [data-faq-rank]{display:grid;place-items:center;flex:0 0 20px;height:20px;border-radius:6px;background:var(--color-muted);font-size:13px;font-weight:700;color:var(--color-muted-foreground)}
 [data-faq-item]:nth-child(-n+3) [data-faq-rank]{background:var(--color-primary);color:var(--color-primary-foreground)}
 [data-faq-cat]{flex:0 0 auto;padding:0 6px;border-radius:999px;font-size:13px;line-height:18px;color:var(--color-muted-foreground);box-shadow:inset 0 0 0 1px var(--color-border)}
-[data-faq-item] p{margin:0 0 8px 28px;padding:6px 10px;border-radius:8px;background:var(--color-muted);font-size:14px;line-height:1.6;color:var(--color-muted-foreground)}
+[data-faq-a]{display:flex;align-items:flex-start;gap:12px;margin:0 0 8px 28px;padding:6px 10px;border-radius:8px;background:var(--color-muted);font-size:14px;line-height:1.6;color:var(--color-muted-foreground)}
+[data-faq-a]>span{flex:1;min-width:0}
+/* FAQ 답변 오른쪽 요청 링크 — 서비스카탈로그 업무 이름 (2026-11-15) */
+[data-faq-go]{flex-shrink:0;margin-left:auto;white-space:nowrap;font-weight:600;color:var(--color-primary);text-decoration:none}[data-faq-go]:hover{text-decoration:underline;text-underline-offset:2px}
 /* 자료실 형식 배지 */
 [data-file-kind]{display:inline-block;min-width:40px;padding:0 6px;border-radius:4px;font-size:12px;font-weight:700;line-height:18px;text-align:center;color:#fff;background:#64748b}
 [data-file-kind="PDF"]{background:#dc2626}[data-file-kind="EXE"]{background:#2563eb}[data-file-kind="DOCX"]{background:#1d4ed8}
@@ -6246,11 +6249,11 @@ const DATA = {
   notices: [['점검', '11/8(토) 02:00~06:00 그룹웨어 정기 점검', '인프라운영팀 박정훈', '10-30'], ['필독', '하반기 정보보호 교육 이수 안내 (~11/14)', '정보보호팀 강현수', '10-28'],
     ['안내', 'IT 자산 정기 실사 일정 안내', '자산관리팀 오세훈', '10-24'], ['안내', 'VPN 클라이언트 신규 버전 배포', '네트워크팀 정하늘', '10-20'], ['안내', '서비스포털 서비스카탈로그 개편 안내', 'IT기획팀 신예린', '10-15']],
   faqTop: [
-    { q: '비밀번호를 잊어버렸어요. 어떻게 초기화하나요?', c: '계정 · 권한', v: 1284, a: '로그인 화면의 「비밀번호 찾기」에서 사번·휴대폰 인증 후 바로 재설정할 수 있어요. 인증이 안 되면 서비스카탈로그 > 계정 · 권한 > 계정 잠금해제로 요청하세요.' },
-    { q: '집에서 VPN 접속이 안 돼요.', c: '네트워크', v: 967, a: 'VPN 클라이언트를 최신 버전(자료실)으로 다시 설치하고, OTP 시간이 맞는지 확인하세요. 계속 안 되면 네트워크 > VPN 접속 장애로 요청하세요.' },
-    { q: '프린터가 목록에 안 보여요.', c: '기술지원', v: 742, a: '자료실의 「층별 프린터 드라이버」를 내려받아 설치하면 자동으로 등록돼요. 설치 후에도 안 보이면 기술지원 > 프린터·복합기 지원으로 요청하세요.' },
-    { q: '업무용 소프트웨어 설치는 어떻게 신청하나요?', c: 'IT자산', v: 615, a: '허용 목록에 있는 SW는 사내 앱스토어에서 바로 설치돼요. 목록에 없으면 IT자산 > 소프트웨어 설치로 요청하면 라이선스 검토 후 설치해 드려요.' },
-    { q: '메일함 용량이 꽉 찼다고 나와요.', c: '기술지원', v: 538, a: '오래된 메일을 보관함(PST)으로 옮기거나 첨부를 문서중앙화로 옮기면 용량이 확보돼요. 증설이 필요하면 기술지원 > 메일·그룹웨어 문의로 요청하세요.' }
+    { q: '비밀번호를 잊어버렸어요. 어떻게 초기화하나요?', c: '계정 · 권한', v: 1284, a: '로그인 화면의 「비밀번호 찾기」에서 사번·휴대폰 인증 후 바로 재설정할 수 있어요.', go: ['계정 · 권한', '계정 잠금해제'] },
+    { q: '집에서 VPN 접속이 안 돼요.', c: '네트워크', v: 967, a: 'VPN 클라이언트를 최신 버전(자료실)으로 다시 설치하고, OTP 시간이 맞는지 확인하세요.', go: ['네트워크', 'VPN 접속 장애'] },
+    { q: '프린터가 목록에 안 보여요.', c: '기술지원', v: 742, a: '자료실의 「층별 프린터 드라이버」를 내려받아 설치하면 자동으로 등록돼요.', go: ['기술지원', '프린터·복합기 지원'] },
+    { q: '업무용 소프트웨어 설치는 어떻게 신청하나요?', c: 'IT자산', v: 615, a: '허용 목록에 있는 SW는 사내 앱스토어에서 바로 설치돼요.', go: ['IT자산', '소프트웨어 설치'] },
+    { q: '메일함 용량이 꽉 찼다고 나와요.', c: '기술지원', v: 538, a: '오래된 메일을 보관함(PST)으로 옮기거나 첨부를 문서중앙화로 옮기면 용량이 확보돼요.', go: ['기술지원', '메일·그룹웨어 문의'] }
   ],
   library: [
     { t: 'VPN 클라이언트 설치 가이드 (v5.2)', k: 'PDF', size: '2.4MB', d: '10-20', n: 412 },
@@ -6313,7 +6316,7 @@ const isSoon = r => r.status !== '완료' && r.due && (n => n >= 0 && n <= 2)(da
 
 /* 대시보드 머리 — proto [data-dash-head]. role 배지가 사용자용/관리자용을 가른다.
    기간 단추(일/주/월/분기)는 쓰지 않는다 (2026-11-08) */
-function dashHead({ title, role, desc }) {
+function dashHead({ title, role, desc, roleBadge: showRole = true }) {
   const roleBadge = role === 'admin'
     ? `<span class="${DASH_BADGE}bg-primary/10 text-primary ring-border">관리자용</span>`
     : `<span class="${DASH_BADGE}${TONE.info}">사용자용</span>`;
@@ -6321,8 +6324,8 @@ function dashHead({ title, role, desc }) {
   const scope = role === 'admin' ? `${DATA.dept} 부서원 ${DATA.members.length}명` : `${v.name} 본인`;
   return `<div data-dash-head="" class="flex flex-wrap items-center gap-2 shrink-0 rounded-xl border border-border bg-card px-3 py-2">
     <h2 class="text-base font-semibold text-foreground">${esc(title)}</h2>
-    ${roleBadge}
-    <span class="text-xs text-muted-foreground">${esc(desc)}</span>
+    ${showRole ? roleBadge : ''}
+    ${desc ? `<span class="text-xs text-muted-foreground">${esc(desc)}</span>` : ''}
     ${role === 'admin' ? '' /* 관리자용(MyPage (관리자)·IT자산현황)은 오른쪽 기준·편집을 두지 않는다 */ : `<div class="ml-auto flex flex-wrap items-center gap-1.5">
       <span class="text-xs tabular-nums text-muted-foreground">${esc(scope)} 기준 · 기준일 ${si(DATA.baseDate)}</span>
       <button type="button" data-wgt-edit="" aria-pressed="false" class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-all duration-150 h-7 gap-1 px-2.5 text-xs text-muted-foreground hover:bg-accent hover:text-accent-foreground">${EDIT_SVG}편집</button>
@@ -6827,15 +6830,10 @@ function askBox() {
   return `<div data-ask="" class="flex shrink-0 flex-col gap-2 rounded-xl border border-border bg-card p-3 shadow-sm">
     <div class="flex min-w-0 items-baseline gap-2">
       <h3 class="whitespace-nowrap text-sm font-semibold text-foreground" style="margin: 0px;">통합 검색</h3>
-      <span class="truncate text-xs text-muted-foreground">요청 또는 비슷한 요청을 찾거나 메뉴를 찾습니다.</span>
     </div>
     <div class="flex items-center gap-2">
-      <div class="relative min-w-0 flex-1"><input data-ask-input="" type="text" autocomplete="off" placeholder="예: 비밀번호 초기화는 어디서 하나요?" class="h-[34px] w-full rounded-md border border-input bg-field pl-3 pr-9 text-sm text-foreground outline-none transition-colors placeholder:text-placeholder focus-visible:border-ring focus-visible:ring-2 focus-visible:ring-ring/30" value=""></div>
+      <div class="relative min-w-0 flex-1"><input data-ask-input="" type="text" autocomplete="off" placeholder="예: 비밀번호 초기화하는 방법은?" class="h-[34px] w-full rounded-md border border-input bg-field pl-3 pr-9 text-sm text-foreground outline-none transition-colors placeholder:text-placeholder focus-visible:border-ring focus-visible:ring-2 focus-visible:ring-ring/30" value=""></div>
       <button type="button" data-ask-btn="" class="inline-flex h-[34px] shrink-0 items-center whitespace-nowrap rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90">묻기</button>
-    </div>
-    <div data-ask-hint="" class="flex flex-wrap items-baseline gap-x-1.5 gap-y-1 px-1 text-xs">
-      <span class="whitespace-nowrap text-xs text-muted-foreground">이렇게 물어보세요</span>
-      ${DATA.asks.map((q, i) => `${i ? '<span aria-hidden="true" class="text-placeholder">/</span>' : ''}<button type="button" data-ask-ex="${esc(q)}" class="whitespace-nowrap text-xs text-placeholder transition-colors hover:text-foreground hover:underline underline-offset-2">${si(q)}</button>`).join('')}
     </div>
   </div>`;
 }
@@ -6849,7 +6847,7 @@ function secCard({ attr = '', name, desc, tools = '', badge: b, body }) {
 }
 /* 서비스카탈로그 — 6개 분류 카드(3×2). 카드를 누르면 그 분류의 업무 6개만 오버레이로 표시 */
 function catalogReq() {
-  return secCard({ attr: 'data-catalog=""', name: '서비스카탈로그', desc: '분류를 누르면 요청할 수 있는 업무가 펼쳐져요', badge: '전사',
+  return secCard({ attr: 'data-catalog=""', name: '서비스카탈로그', badge: '전사',
     body: `<div data-cat-grid="">
       ${DATA.catalog.map((c, i) => `<div data-cat-card="${i}" role="button" tabindex="0" aria-haspopup="dialog" aria-expanded="false" class="rounded-xl border border-border bg-card">
         <span data-cat-icon="" class="msi" aria-hidden="true">${c.icon}</span>
@@ -6917,7 +6915,7 @@ function favHtml() {
       <span aria-hidden="true" class="shrink-0 text-xs text-muted-foreground">›</span>
     </button>`; });
   for (let i = FAV.length; i < FAV_MAX; i++) cards.push(`<button type="button" data-fav-edit="" data-fav-empty="" class="rounded-xl">+ 서비스 추가</button>`);
-  return secCard({ attr: 'data-fav=""', name: '자주 사용하는 서비스', desc: '누르면 바로 요청 등록으로 이어져요', badge: '내 설정',
+  return secCard({ attr: 'data-fav=""', name: '자주 사용하는 서비스', badge: '내 설정',
     tools: `<button type="button" data-fav-edit="" title="자주 사용하는 서비스 편집" class="inline-flex shrink-0 items-center gap-1 whitespace-nowrap rounded-md border border-input bg-card px-1.5 text-[11px] font-medium text-foreground transition-colors hover:bg-muted" style="height: 18px; margin-block: -1px;"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg>편집</button>`,
     body: `<div data-fav-grid="">${cards.join('')}</div>` });
 }
@@ -6977,7 +6975,7 @@ document.addEventListener('click', e => {
 /* FAQ TOP 5 — 질문을 누르면 답이 펼쳐진다(한 번에 하나) */
 const faqTop = () => `<div data-faq="">${DATA.faqTop.map((f, i) => `<details data-faq-item=""${i === 0 ? ' open' : ''}>
   <summary><span data-faq-rank="">${i + 1}</span><span class="min-w-0 flex-1 truncate">${si(f.q)}</span><span data-faq-cat="">${si(f.c)}</span><span class="shrink-0 text-xs tabular-nums text-muted-foreground">${f.v.toLocaleString()}</span></summary>
-  <p>${si(f.a)}</p></details>`).join('')}</div>`;
+  <div data-faq-a=""><span>${si(f.a)}</span><a href="#/request/regist" data-faq-go="${esc(f.go.join('|'))}" title="서비스카탈로그 › ${esc(f.go[0])} › ${esc(f.go[1])} 요청">[${si(f.go[1])}]</a></div></details>`).join('')}</div>`;
 document.addEventListener('toggle', e => {
   const d = e.target; if (!d.matches || !d.matches('[data-faq-item]') || !d.open) return;
   d.parentElement.querySelectorAll('[data-faq-item][open]').forEach(x => { if (x !== d) x.open = false; });
@@ -6987,7 +6985,7 @@ const solLinks = () => `<div data-sol-grid="">${DATA.solutions.map(x => `<a data
   <span data-sol-icon="" class="msi" aria-hidden="true">${x.icon}</span><b>${si(x.k)}</b><span class="text-xs text-muted-foreground">${si(x.d)}</span></a>`).join('')}</div>`;
 const STEP_TONE = (i, last) => i === last ? 'ok' : i === 1 ? 'warn' : 'info';
 SCREENS['/portal/dash-user'] = () => {
-  return dashHead({ title: '서비스포털', role: 'user', desc: '필요한 것을 묻고, 요청하고, 필요한 시스템으로 바로 이동' }) + askBox() + catalogReq() + favHtml() + grid('PORTAL-MY', [
+  return dashHead({ title: '서비스포털', role: 'user', desc: '', roleBadge: false }) /* 사용자용 배지·설명 문구 없음 (2026-11-15) */ + askBox() + catalogReq() + favHtml() + grid('PORTAL-MY', [
     wgt({ name: '업무 시스템 바로가기', x: 0, y: 0, w: 6, h: 3, badge: '전사', body: solLinks() }),
     wgt({ name: '공지사항', x: 6, y: 0, w: 6, h: 3, badge: '전사', body: xtb([
       { h: '구분', f: n => badge(n[0], n[0] === '필독' ? 'bad' : n[0] === '점검' ? 'warn' : 'mute', ' style="min-width: 44px; justify-content: center;"') },
@@ -7476,8 +7474,8 @@ const ICONS = {
   '시스템관리': '<path d="M10 8h4"></path><path d="M12 21v-9"></path><path d="M12 8V3"></path><path d="M17 16h4"></path><path d="M19 12V3"></path><path d="M19 21v-5"></path><path d="M3 14h4"></path><path d="M5 10V3"></path><path d="M5 21v-7"></path>'
 };
 const MENU = [
-  { label: '서비스포털', icon: '서비스포털', children: [
-    { label: '서비스포털', path: '/portal/dash-user', impl: true, title: '서비스포털', role: 'user' }] },
+  /* 서비스포털은 하위 없이 1Depth 메뉴 자체가 화면 (2026-11-15) */
+  { label: '서비스포털', icon: '서비스포털', path: '/portal/dash-user', impl: true, title: '서비스포털', role: 'user', children: [] },
   { label: '요청관리', icon: '요청관리', children: [
     { label: 'MyPage (사용자)', path: '/request/dash-user', impl: true, title: 'MyPage', role: 'user' },
     { label: 'MyPage (관리자)', path: '/request/dash-admin', impl: true, title: 'MyPage', role: 'admin' },
@@ -7498,10 +7496,15 @@ const MENU = [
 ];
 const open = {};
 MENU.forEach(g => { open[g.label] = g.children.some(c => c.impl); });
-function leafOf(path) { for (const g of MENU) for (const c of g.children) if (c.path === path) return { g, c }; return null; }
+function leafOf(path) { for (const g of MENU) { if (g.path === path) return { g, c: g }; for (const c of g.children) if (c.path === path) return { g, c }; } return null; }
 
 function renderMenu(path) {
   document.getElementById('menu').innerHTML = MENU.map(g => {
+    /* 1Depth 화면 메뉴(g.path) — 펼침 표시 없이 바로 이동, 활성 표시는 MENU_ACTIVE */
+    if (g.path) return `<a class="${g.path === path ? MENU_ACTIVE : ''}${MENU_BASE}" title="${esc(g.label)}" tabindex="0" data-menu-leaf="1" data-menu-path="${g.path}" href="#${g.path}"${g.impl ? ' data-impl=""' : ''}${g.path === path ? ' aria-current="page"' : ''} style="padding-left: 0px;">
+      <span class="grid h-[var(--menu-item-h)] w-[var(--menu-icon-slot)] shrink-0 place-items-center">${ICON(ICONS[g.icon] || '')}</span>
+      <span class="truncate"><span class="sc-interp">${esc(g.label)}</span></span>
+    </a>`;
     const head = `<a class="${MENU_BASE}" title="${esc(g.label)}" role="button" tabindex="0" aria-expanded="${open[g.label]}" data-menu-group="${esc(g.label)}"${g.children.some(c => c.impl) ? ' data-impl=""' : ''} style="padding-left: 0px;">
       <span class="grid h-[var(--menu-item-h)] w-[var(--menu-icon-slot)] shrink-0 place-items-center">${ICON(ICONS[g.icon] || '')}</span>
       <span class="truncate"><span class="sc-interp">${esc(g.label)}</span></span>
@@ -7538,7 +7541,7 @@ function render() {
   if (!open[g.label]) open[g.label] = true;
   renderMenu(c.path);
   document.getElementById('pageTitle').textContent = c.title || c.label;
-  document.getElementById('pageCrumb').textContent = `${g.label} > ${c.label} · ${c.path}`;
+  document.getElementById('pageCrumb').textContent = `${c === g ? g.label : `${g.label} > ${c.label}`} · ${c.path}`;
   /* 머리줄 사용자 — 사용자용은 부서원, 관리자용은 부서장으로 로그인한 시점 */
   const v = member(DATA.viewer[c.role || 'user']);
   document.getElementById('userAv').textContent = v.name[0];

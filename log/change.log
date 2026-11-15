@@ -428,3 +428,14 @@
   - 블록 kv·text, 표 열 wrap / CSS x-kv·x-sign·x-wrap, A4 안 블록 카드 본문 여백 8·12px, 시트 블록 간격 gap-1.5, 가로 막대 행 32→28px
   - functionMd/report.md §2-1·§4, CLAUDE.md §2 반영
 ■ 검증 : Playwright 1920×1080 — 장애 보고서 5장 모두 A4 넘침 없음(내용 하단 1001~1037px), 쪽번호 01~05 / 05, 다른 보고서 3종 01 / 01·넘침 없음, 생성 미리보기 5장, 콘솔 오류 0
+
+[2026-11-15] v4.8 서비스포털 정리 — 1Depth 메뉴·설명 문구·예시·FAQ 링크
+■ 근거 : 사용자 요청(서비스포털: 위젯 제목 옆 설명 삭제 / 서비스포털 > 서비스포털 하위 삭제, 1Depth 메뉴에서 보기 / 사용자용 표시·「필요한 것을 묻고…」 문구 삭제, 통합 검색: 「이렇게 물어보세요 …」 삭제, FAQ: 「인증이 안 되면 … 요청하세요」 삭제하고 [계정 잠금해제] 요청 링크 우측 정렬 — 5개 모두)
+■ 변경 (index.html)
+  - MENU: 서비스포털 대분류에 path·impl·title·role 을 두고 children 비움. leafOf 가 대분류 path 도 찾고, renderMenu 는 path 가 있는 대분류를 펼침 표시 없는 링크(활성 MENU_ACTIVE)로 그림. 머리줄 경로 「서비스포털 · /portal/dash-user」
+  - dashHead: roleBadge 끄기 옵션, desc 없으면 생략 → 서비스포털은 제목·오른쪽 기준·편집만
+  - 설명 문구 삭제: askBox 「요청 또는 비슷한 요청을…」, 서비스카탈로그·자주 사용하는 서비스 desc
+  - askBox 「이렇게 물어보세요」 예시 줄(data-ask-hint) 삭제
+  - FAQ: DATA.faqTop 답변에서 「…로 요청하세요」 문장 삭제, go: [분류, 업무] 추가 → 답변 상자([data-faq-a]) 오른쪽 끝에 [업무] 링크(#/request/regist). CSS [data-faq-a]·[data-faq-go]
+  - functionMd/dashboard.md(서비스포털 변경 절), CLAUDE.md §2 반영
+■ 검증 : Playwright 1920×1080 — 메뉴 첫 줄 서비스포털(하위 없음, 활성), 머리 카드·통합 검색·카탈로그·자주 사용 머리줄 문구 없음, FAQ 5개 링크 오른쪽 끝·스크롤 없음, 링크 → 요청등록, 다른 메뉴 갔다 돌아오기, 콘솔 오류 0
